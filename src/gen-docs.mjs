@@ -6,10 +6,11 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "./paths.mjs";
 import { PATTERNS, FIELDS, FAMILIES, FAMILY_OF } from "./taxonomy.mjs";
 import { CAPABILITIES } from "./capabilities.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DOCS = path.join(HERE, "..", "docs");
 const evidence = JSON.parse(fs.readFileSync(path.join(HERE, "..", "data", "evidence.json"), "utf8"));
 

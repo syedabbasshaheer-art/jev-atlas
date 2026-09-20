@@ -10,8 +10,9 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "./paths.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DATA = path.join(HERE, "..", "data");
 const RAW = path.join(DATA, "raw");
 

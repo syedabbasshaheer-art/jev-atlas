@@ -1,11 +1,12 @@
 // build.mjs - merge the layers into one payload, and REFUSE to build on a dangling reference.
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "./paths.mjs";
 import { FIELDS, PATTERNS, FAMILIES, FAMILY_OF } from "./taxonomy.mjs";
 import { CAPABILITIES } from "./capabilities.mjs";
 import { BLUEPRINTS } from "./blueprints.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DIR = path.join(HERE, "..", "data");
 const evidence = JSON.parse(fs.readFileSync(path.join(DIR, "evidence.json"), "utf8"));
 

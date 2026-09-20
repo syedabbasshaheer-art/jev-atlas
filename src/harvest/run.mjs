@@ -10,9 +10,11 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "../paths.mjs";
 import { DISCOVERY, ENRICHERS } from "./sources.mjs";
+import { judge } from "./relevance.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DATA = path.join(HERE, "..", "..", "data");
 const arg = (f) => process.argv.includes(f);
 const val = (f, d) => { const i = process.argv.indexOf(f); return i > -1 ? process.argv[i + 1] : d; };
@@ -28,7 +30,10 @@ const QUERIES = {
   jevable: [""],
 };
 // Anything that matches none of these is almost certainly a different Jev.
-const RELEVANT = /\bjev\b|typesafe|system[\s-]?one|systemone/i;
+// Bare "typesafe" is ordinary TypeScript vocabulary: it pulled in typesafe-i18n,
+// typesafe-actions, typesafe-path and typesafe-decorators, none of which have
+// anything to do with Jev. Bind it to ai/jev, or require the word jev itself.
+// The accept/reject gate lives in relevance.mjs: precision over recall.
 
 const norm = (u) => {
   if (!u) return "";
@@ -59,7 +64,7 @@ async function sweep() {
 
   // relevance, then dedupe by canonical url, then by author+title
   const relevant = all.filter((r) => r.source === "jevable" ||
-    RELEVANT.test(`${r.title} ${r.text} ${(r.tags || []).join(" ")}`));
+    judge(r).accept);
   const byUrl = new Map(), bySig = new Map();
   for (const r of relevant) {
     const u = norm(r.url), sig = r.handle.toLowerCase() + "|" + slug(r.title);

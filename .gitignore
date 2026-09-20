@@ -9,3 +9,4 @@ data/raw/
 # Regenerable sweep artefacts
 data/harvest.json
 data/corpus-additions.json
+data/corpus.backup.json

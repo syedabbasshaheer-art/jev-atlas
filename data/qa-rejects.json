@@ -1,0 +1,97 @@
+[
+ {
+  "title": "tinystruct",
+  "url": "https://github.com/tinystruct/tinystruct",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "supercov",
+  "url": "https://github.com/supercorp-ai/supercov",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "cultivar",
+  "url": "https://github.com/pinecone-io/cultivar",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "loki",
+  "url": "https://github.com/wundercorp/loki",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "snifftest",
+  "url": "https://github.com/DanRWilloughby/snifftest",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "typesafe-jev-workflow",
+  "url": "https://github.com/GiesN/typesafe-jev-workflow",
+  "reason": "nothing to show a reader: no description and a bare title"
+ },
+ {
+  "title": "get-fable",
+  "url": "https://github.com/imMamdouhaboammar/get-fable",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "dinostomp",
+  "url": "https://github.com/collapseindex/dinostomp",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "jevprune",
+  "url": "https://github.com/ibrahemid/jevprune",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "typedecide",
+  "url": "https://github.com/shkumbinhasani/typedecide",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "tg_accessor",
+  "url": "https://github.com/solovieff/tg_accessor",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "Eugeniusz",
+  "url": "https://github.com/komorra/Eugeniusz",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "edgejev",
+  "url": "https://github.com/yzfly/edgejev",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "Ask HN: What do you think of Noul, a new decision primitive",
+  "url": "https://news.ycombinator.com/item?id=49760225",
+  "reason": "never names jev / typesafe-ai / system-one"
+ },
+ {
+  "title": "AI Startup launches a faster and cheaper alternative to LLMs for AI automation",
+  "url": "https://theframenews.org/en/typesafe-jev-faster-cheaper-llm-alternative/",
+  "reason": "no Jev reference in title or description"
+ },
+ {
+  "title": "I let an LLM judge inside Python's if statements, then ran Ansible's own tests on it",
+  "url": "https://dev.to/tdual/i-let-an-llm-judge-inside-pythons-if-statements-then-ran-ansibles-own-tests-on-it-43fo",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "Your certificate inventory is exact. Your tickets are not.",
+  "url": "https://dev.to/dmj_jones_8ec54a3564709a8/your-certificate-inventory-is-exact-your-tickets-are-not-41gj",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "My AI Agent Has 100 Tools. Why Should I Send All 100 to the LLM?",
+  "url": "https://dev.to/gopinarayanasw3/my-ai-agent-has-100-tools-why-should-i-send-all-100-to-the-llm-c08",
+  "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "title": "Your LLM vendor can change its mind overnight. Here's how we started catching it.",
+  "url": "https://dev.to/akshay_kanthed_26a9f5ef10/your-llm-vendor-can-change-its-mind-overnight-heres-how-we-started-catching-it-14d0",
+  "reason": "Jev appears only in tags, not in the title or description"
+ }
+]

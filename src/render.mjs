@@ -5,9 +5,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "./paths.mjs";
 import { LIGHT, DARK, audit, cssBlock } from "./tokens.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DATA = path.join(HERE, "..", "data");
 const OUT = path.join(HERE, "..", "public");
 

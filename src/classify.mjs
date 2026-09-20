@@ -4,10 +4,11 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { dirOf } from "./paths.mjs";
 import { FIELDS } from "./taxonomy.mjs";
 import { PATTERNS } from "./taxonomy.mjs";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
+const HERE = dirOf(import.meta.url);
 const DIR = path.join(HERE, "..", "data");
 
 // ---------- CATEGORY RULES (category is the core axis) ----------
