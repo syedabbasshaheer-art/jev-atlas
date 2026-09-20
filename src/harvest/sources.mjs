@@ -168,4 +168,46 @@ export async function resolveShort(url) {
 
 export const ENRICHERS = { xSyndication, xEnrich, resolveShort };
 
-export const DISCOVERY = { github, hackernews, devto, npm, jevable };
+export const DISCOVERY = { github, hackernews, devto, npm, jevable, awesome };
+
+/* ── AWESOME LISTS. A curated list is a hand-made corpus: someone already did
+      the finding and the vetting. Six of them exist for Jev and they cross-link
+      each other, so the union is close to the community's own view of what
+      counts. Parse the raw README rather than the rendered page. ── */
+const AWESOME_LISTS = [
+  "v-modal/awesome-jev-tools",
+  "Anil-matcha/awesome-jev-by-typesafe",
+  "yibie/awesome-jev",
+  "cobanov/awesome-jev",
+  "hellogumbo/awesome-jev",
+  "AbdelStark/awesome-typesafe",
+];
+export async function awesome(_query, o = {}) {
+  const out = [];
+  for (const repo of (o.lists || AWESOME_LISTS)) {
+    let md = null;
+    for (const branch of ["main", "master"]) {
+      try {
+        const res = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/README.md`,
+          { headers: { "user-agent": UA } });
+        if (res.ok) { md = await res.text(); break; }
+      } catch { /* try the next branch */ }
+    }
+    if (!md) continue;
+    // [name](url) followed by a dash and a description, the awesome-list convention
+    const re = /\[([^\]\n]{2,90})\]\((https?:\/\/[^)\s]+)\)\s*(?:[-–—:]\s*([^\n|]{0,300}))?/g;
+    let m;
+    while ((m = re.exec(md))) {
+      const [, name, url, desc] = m;
+      if (/shields\.io|badge|img\.shields|\.(png|jpg|svg|gif)(\?|$)/i.test(url)) continue;
+      if (/^https?:\/\/(github\.com\/(sindresorhus|topics)|awesome\.re)/i.test(url)) continue;
+      out.push({
+        source: "awesome", sid: url, url, title: name.trim(),
+        text: (desc || "").trim(), author: repo.split("/")[0], handle: repo.split("/")[0],
+        date: null, stars: 0, tags: [], kind: "listed", from_list: repo,
+      });
+    }
+    await sleep(o.pause ?? 500);
+  }
+  return out;
+}

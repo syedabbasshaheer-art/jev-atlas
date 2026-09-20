@@ -4,25 +4,25 @@
 
 A capability is a **job to be done** inside a build, not a product. Typed classification is one of these. Keeping this layer provider-agnostic is what stops the catalogue dying when a vendor changes.
 
-Across the 1055 projects, the median build draws on about 3 of them.
+Across the 1442 projects, the median build draws on about 3 of them.
 
 | Capability | Projects | Latency | Cost shape | Job |
 |---|---:|---|---|---|
-| [Typed classification & decision](#classify) | 1055 | ~100ms | per item, ~free | Turn messy input into a typed answer software can branch on, with a confidence number. |
-| [Data store](#store) | 504 | ms | per GB | Hold the corpus, the judgments, and the provenance. |
-| [Orchestration & scheduling](#orchestrate) | 502 | n/a | compute | Run the whole thing repeatedly, in parallel, without tripping a rate limit. |
-| [Fetch, scrape & ingest](#fetch) | 471 | varies | bandwidth | Get the raw corpus in: pages, feeds, APIs, catalogues, PDFs. |
-| [Realtime transport](#realtime) | 294 | ms | connection time | Stream partial results so the interface never looks frozen. |
-| [Safety & guardrails](#guardrail) | 230 | ~0 | one extra question | Refuse to do the irreversible thing without a human. |
-| [Search & retrieval](#search) | 151 | 50-500ms | per query | Find the candidate set worth judging. |
-| [Browser automation](#browser) | 141 | 100ms-2s per action | compute | Drive a real web page: click, type, select, scroll, read state. |
-| [Text generation](#textgen) | 103 | 200ms-2s | per token | Write the strings a typed model structurally cannot emit: queries, form values, copy, code. |
-| [Image understanding](#vision) | 48 | 100ms-3s | per image | Read what is in a picture: a label, a garment, a screen, a document. |
-| [Page state extraction](#domsnapshot) | 43 | <50ms | free | Turn a live page into an indexed list of things that can be acted on. |
-| [Voice input](#voicein) | 25 | ~100-300ms | per minute | Turn speech into text, and know when the speaker has finished. |
-| [Mobile & desktop control](#mobile) | 10 | 200ms-2s | compute | Drive a native app rather than a web page. |
-| [Image generation & try-on](#imagegen) | 6 | 2-30s | per image | Render something that does not exist yet: a garment on a body, a variant, a scene. |
-| [Voice output](#voiceout) | 3 | 200ms-1s | per character | Speak back, or confirm a risky action out loud. |
+| [Typed classification & decision](#classify) | 1442 | ~100ms | per item, ~free | Turn messy input into a typed answer software can branch on, with a confidence number. |
+| [Orchestration & scheduling](#orchestrate) | 748 | n/a | compute | Run the whole thing repeatedly, in parallel, without tripping a rate limit. |
+| [Data store](#store) | 744 | ms | per GB | Hold the corpus, the judgments, and the provenance. |
+| [Fetch, scrape & ingest](#fetch) | 703 | varies | bandwidth | Get the raw corpus in: pages, feeds, APIs, catalogues, PDFs. |
+| [Realtime transport](#realtime) | 373 | ms | connection time | Stream partial results so the interface never looks frozen. |
+| [Safety & guardrails](#guardrail) | 309 | ~0 | one extra question | Refuse to do the irreversible thing without a human. |
+| [Browser automation](#browser) | 200 | 100ms-2s per action | compute | Drive a real web page: click, type, select, scroll, read state. |
+| [Search & retrieval](#search) | 195 | 50-500ms | per query | Find the candidate set worth judging. |
+| [Text generation](#textgen) | 132 | 200ms-2s | per token | Write the strings a typed model structurally cannot emit: queries, form values, copy, code. |
+| [Image understanding](#vision) | 66 | 100ms-3s | per image | Read what is in a picture: a label, a garment, a screen, a document. |
+| [Page state extraction](#domsnapshot) | 58 | <50ms | free | Turn a live page into an indexed list of things that can be acted on. |
+| [Voice input](#voicein) | 33 | ~100-300ms | per minute | Turn speech into text, and know when the speaker has finished. |
+| [Mobile & desktop control](#mobile) | 15 | 200ms-2s | compute | Drive a native app rather than a web page. |
+| [Image generation & try-on](#imagegen) | 9 | 2-30s | per image | Render something that does not exist yet: a garment on a body, a variant, a scene. |
+| [Voice output](#voiceout) | 4 | 200ms-1s | per character | Speak back, or confirm a risky action out loud. |
 
 ---
 
@@ -31,7 +31,7 @@ Across the 1055 projects, the median build draws on about 3 of them.
 
 **Turn messy input into a typed answer software can branch on, with a confidence number.**
 
-Used by **1055** of 1055 projects, most in Engineering (581), Making & Motion (174), Communication & Reach (104). Typical latency ~100ms; billed per item, ~free.
+Used by **1442** of 1442 projects, most in Engineering (836), Making & Motion (214), Communication & Reach (138). Typical latency ~100ms; billed per item, ~free.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -41,25 +41,12 @@ Used by **1055** of 1055 projects, most in Engineering (581), Making & Motion (1
 | [openjev-sglang](https://github.com/ekzhang/openjev-sglang) | self-host | prefill-only, needs a serious GPU |
 | LLM + structured output | fallback | 10-100x slower and dearer; fine below ~100 items |
 
-## Data store
-<a id="store"></a>
-
-**Hold the corpus, the judgments, and the provenance.**
-
-Used by **504** of 1055 projects, most in Engineering (333), Communication & Reach (41), Making & Motion (39). Typical latency ms; billed per GB.
-
-| Provider | Kind | Notes |
-|---|---|---|
-| SQLite / Postgres | db | judgments are rows; keep the raw input beside the verdict |
-| Static JSON | file | fine into the low thousands, trivially deployable |
-| Object storage | hosted | media and large artifacts |
-
 ## Orchestration & scheduling
 <a id="orchestrate"></a>
 
 **Run the whole thing repeatedly, in parallel, without tripping a rate limit.**
 
-Used by **502** of 1055 projects, most in Engineering (320), Making & Motion (48), Communication & Reach (43). Typical latency n/a; billed compute.
+Used by **748** of 1442 projects, most in Engineering (490), Making & Motion (66), Communication & Reach (65). Typical latency n/a; billed compute.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -69,12 +56,25 @@ Used by **502** of 1055 projects, most in Engineering (320), Making & Motion (48
 
 > **Watch out.** 1,200 req/min is the real ceiling. One item per request means about 20 items a second, whatever your budget says.
 
+## Data store
+<a id="store"></a>
+
+**Hold the corpus, the judgments, and the provenance.**
+
+Used by **744** of 1442 projects, most in Engineering (507), Communication & Reach (57), Making & Motion (55). Typical latency ms; billed per GB.
+
+| Provider | Kind | Notes |
+|---|---|---|
+| SQLite / Postgres | db | judgments are rows; keep the raw input beside the verdict |
+| Static JSON | file | fine into the low thousands, trivially deployable |
+| Object storage | hosted | media and large artifacts |
+
 ## Fetch, scrape & ingest
 <a id="fetch"></a>
 
 **Get the raw corpus in: pages, feeds, APIs, catalogues, PDFs.**
 
-Used by **471** of 1055 projects, most in Engineering (292), Communication & Reach (47), Operations & Money (41). Typical latency varies; billed bandwidth.
+Used by **703** of 1442 projects, most in Engineering (458), Communication & Reach (62), Operations & Money (57). Typical latency varies; billed bandwidth.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -88,7 +88,7 @@ Used by **471** of 1055 projects, most in Engineering (292), Communication & Rea
 
 **Stream partial results so the interface never looks frozen.**
 
-Used by **294** of 1055 projects, most in Making & Motion (133), Engineering (76), Communication & Reach (39). Typical latency ms; billed connection time.
+Used by **373** of 1442 projects, most in Making & Motion (158), Engineering (108), Communication & Reach (53). Typical latency ms; billed connection time.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -100,7 +100,7 @@ Used by **294** of 1055 projects, most in Making & Motion (133), Engineering (76
 
 **Refuse to do the irreversible thing without a human.**
 
-Used by **230** of 1055 projects, most in Engineering (169), Communication & Reach (21), Operations & Money (15). Typical latency ~0; billed one extra question.
+Used by **309** of 1442 projects, most in Engineering (224), Communication & Reach (29), Operations & Money (17). Typical latency ~0; billed one extra question.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -109,12 +109,26 @@ Used by **230** of 1055 projects, most in Engineering (169), Communication & Rea
 
 > **Watch out.** Ride the risk question along in the SAME call as the action question. It costs almost nothing and it is the difference between a demo and a product.
 
+## Browser automation
+<a id="browser"></a>
+
+**Drive a real web page: click, type, select, scroll, read state.**
+
+Used by **200** of 1442 projects, most in Engineering (101), Communication & Reach (49), Everyday & Commerce (18). Typical latency 100ms-2s per action; billed compute.
+
+| Provider | Kind | Notes |
+|---|---|---|
+| [Playwright](https://playwright.dev) | library | headless driver, used by jev-browser |
+| Chrome DevTools Protocol | protocol | jev-ultrafast connects directly |
+| [Stagehand](https://github.com/browserbase/stagehand) | framework | act/observe API, has a Jev path |
+| Chrome extension APIs | in-browser | the only route to a logged-in session |
+
 ## Search & retrieval
 <a id="search"></a>
 
 **Find the candidate set worth judging.**
 
-Used by **151** of 1055 projects, most in Engineering (70), Operations & Money (31), Communication & Reach (20). Typical latency 50-500ms; billed per query.
+Used by **195** of 1442 projects, most in Engineering (96), Operations & Money (36), Communication & Reach (27). Typical latency 50-500ms; billed per query.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -124,26 +138,12 @@ Used by **151** of 1055 projects, most in Engineering (70), Operations & Money (
 
 > **Watch out.** Retrieve wide and cheap, then judge narrow and typed. Never ask the typed model to scan everything.
 
-## Browser automation
-<a id="browser"></a>
-
-**Drive a real web page: click, type, select, scroll, read state.**
-
-Used by **141** of 1055 projects, most in Engineering (64), Communication & Reach (38), Everyday & Commerce (16). Typical latency 100ms-2s per action; billed compute.
-
-| Provider | Kind | Notes |
-|---|---|---|
-| [Playwright](https://playwright.dev) | library | headless driver, used by jev-browser |
-| Chrome DevTools Protocol | protocol | jev-ultrafast connects directly |
-| [Stagehand](https://github.com/browserbase/stagehand) | framework | act/observe API, has a Jev path |
-| Chrome extension APIs | in-browser | the only route to a logged-in session |
-
 ## Text generation
 <a id="textgen"></a>
 
 **Write the strings a typed model structurally cannot emit: queries, form values, copy, code.**
 
-Used by **103** of 1055 projects, most in Engineering (50), Everyday & Commerce (16), Making & Motion (14). Typical latency 200ms-2s; billed per token.
+Used by **132** of 1442 projects, most in Engineering (66), Everyday & Commerce (17), Communication & Reach (16). Typical latency 200ms-2s; billed per token.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -156,7 +156,7 @@ Used by **103** of 1055 projects, most in Engineering (50), Everyday & Commerce 
 
 **Read what is in a picture: a label, a garment, a screen, a document.**
 
-Used by **48** of 1055 projects, most in Making & Motion (22), Engineering (10), Operations & Money (6). Typical latency 100ms-3s; billed per image.
+Used by **66** of 1442 projects, most in Making & Motion (29), Engineering (17), Operations & Money (6). Typical latency 100ms-3s; billed per image.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -171,7 +171,7 @@ Used by **48** of 1055 projects, most in Making & Motion (22), Engineering (10),
 
 **Turn a live page into an indexed list of things that can be acted on.**
 
-Used by **43** of 1055 projects, most in Engineering (22), Everyday & Commerce (12), Making & Motion (5). Typical latency <50ms; billed free.
+Used by **58** of 1442 projects, most in Engineering (34), Everyday & Commerce (12), Making & Motion (5). Typical latency <50ms; billed free.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -184,7 +184,7 @@ Used by **43** of 1055 projects, most in Engineering (22), Everyday & Commerce (
 
 **Turn speech into text, and know when the speaker has finished.**
 
-Used by **25** of 1055 projects, most in Engineering (11), Everyday & Commerce (5), Making & Motion (5). Typical latency ~100-300ms; billed per minute.
+Used by **33** of 1442 projects, most in Engineering (15), Everyday & Commerce (7), Making & Motion (5). Typical latency ~100-300ms; billed per minute.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -199,7 +199,7 @@ Used by **25** of 1055 projects, most in Engineering (11), Everyday & Commerce (
 
 **Drive a native app rather than a web page.**
 
-Used by **10** of 1055 projects, most in Engineering (5), Operations & Money (2), Making & Motion (1). Typical latency 200ms-2s; billed compute.
+Used by **15** of 1442 projects, most in Engineering (8), Making & Motion (2), People & Care (2). Typical latency 200ms-2s; billed compute.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -213,7 +213,7 @@ Used by **10** of 1055 projects, most in Engineering (5), Operations & Money (2)
 
 **Render something that does not exist yet: a garment on a body, a variant, a scene.**
 
-Used by **6** of 1055 projects, most in Making & Motion (6). Typical latency 2-30s; billed per image.
+Used by **9** of 1442 projects, most in Making & Motion (8), Communication & Reach (1). Typical latency 2-30s; billed per image.
 
 | Provider | Kind | Notes |
 |---|---|---|
@@ -227,7 +227,7 @@ Used by **6** of 1055 projects, most in Making & Motion (6). Typical latency 2-3
 
 **Speak back, or confirm a risky action out loud.**
 
-Used by **3** of 1055 projects, most in Engineering (1), Making & Motion (1), Everyday & Commerce (1). Typical latency 200ms-1s; billed per character.
+Used by **4** of 1442 projects, most in Engineering (1), Making & Motion (1), Everyday & Commerce (1). Typical latency 200ms-1s; billed per character.
 
 | Provider | Kind | Notes |
 |---|---|---|

@@ -26,6 +26,16 @@ for (const [scheme, name] of [[LIGHT, "LIGHT"], [DARK, "DARK"]]) {
 }
 const raw = fs.readFileSync(path.join(DATA, "site-data.json"), "utf8");
 
+// Thumbnails are inlined as data URIs. The published artifact's CSP blocks
+// every cross-origin image, so a twimg URL would simply not render there.
+// Inlining costs a few MB and makes the page work everywhere, offline included.
+let thumbs = "{}";
+const thumbFile = path.join(DATA, "thumbs.json");
+if (fs.existsSync(thumbFile)) {
+  thumbs = fs.readFileSync(thumbFile, "utf8");
+  console.log(`  thumbnails: ${Object.keys(JSON.parse(thumbs)).length} inlined, ${(Buffer.byteLength(thumbs)/1024/1024).toFixed(1)} MB`);
+}
+
 // Escape the characters that could end the <script> block early or break a JS
 // string literal. The blob is read back with JSON.parse, which accepts \uXXXX.
 const ESC = { "<": "\\u003c", ">": "\\u003e", "&": "\\u0026" };
@@ -39,8 +49,9 @@ let html = tpl
   .replace("__TOKENS_LIGHT__", () => cssBlock(LIGHT, "  "))
   .replace("__TOKENS_DARK__", () => cssBlock(DARK, "  "))
   .replace("__TOKENS_DARK_2__", () => cssBlock(DARK, "  "))
-  .replace("__DATA__", () => safe);
-if (html.includes("__DATA__") || html.includes("__TOKENS_")) { console.error("RENDER FAILED: placeholder survived"); process.exit(1); }
+  .replace("__DATA__", () => safe)
+  .replace("__THUMBS__", () => thumbs);
+if (html.includes("__DATA__") || html.includes("__TOKENS_") || html.includes("__THUMBS__")) { console.error("RENDER FAILED: placeholder survived"); process.exit(1); }
 
 // Cheap structural guards. A JS syntax error or an unbalanced tag blanks the
 // page, and that is not something to discover after deploying.

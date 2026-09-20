@@ -191,6 +191,13 @@ const rows = posts.map((p) => {
     effort,
     start_here: impact >= 4 && effort <= 2,
     media: (p.media || []).length ? p.media[0].poster || p.media[0].src : null,
+    // carried straight through from the harvest, so the UI can show where a
+    // row came from and sort on a real number rather than a guess
+    discovered_via: p.discovered_via || ["jevable"],
+    stars: typeof p.stars === "number" ? p.stars : null,
+    kind: p.kind || p.format || null,
+    centrality: p.centrality || null,
+    curated_label: p.curated_label || "",
   };
 });
 
