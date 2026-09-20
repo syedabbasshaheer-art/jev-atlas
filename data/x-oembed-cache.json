@@ -1,0 +1,90 @@
+{
+ "https://x.com/sachpatro97/status/2101064273187274838": {
+  "author": "Sachin",
+  "author_url": "https://x.com/sachpatro97",
+  "text": "wanted to see what happens when a few Jevs play Catan so I forked...after a while the Jevs just refuse to negotiate with each other and end up doing nothing on their turns 😭\n\nreally fun model to play around with!! @typesafeai \n\nawesome idea to try jev with games @Vtrivedy10 https://t.co/C8A2NNX2QI pic.twitter.com/aTpWJLHmSk &mdash; Sachin (@sachpatro97) September 18, 2026",
+  "links": [
+   "https://t.co/C8A2NNX2QI",
+   "https://t.co/aTpWJLHmSk"
+  ],
+  "resolved": []
+ },
+ "https://x.com/waynesutton/status/2100487878992388279": {
+  "author": "Wayne Sutton",
+  "author_url": "https://x.com/waynesutton",
+  "text": "Ask Jev anything. Give it a try at https://t.co/P9QMfdDc0r \n\nIt won't answer. It will judge.\n\nLet's see if we can get to 1 million questions. @typesafeai 🤝 @convex work great together. @hmartenjoyer @CompleteSkeptic @justKDeng @mikeysee pic.twitter.com/3efLDDGKqN &mdash; Wayne Sutton (@waynesutton) September 17, 2026",
+  "links": [
+   "https://t.co/P9QMfdDc0r",
+   "https://t.co/3efLDDGKqN"
+  ],
+  "resolved": [
+   "https://askjev.ai/"
+  ]
+ },
+ "https://x.com/prkeshari/status/2101048015720951975": {
+  "author": "Prateek K. Keshari",
+  "author_url": "https://x.com/prkeshari",
+  "text": "i put Jev inside a pigeon. it has one job: find jargon in your writing and take a dump on it. https://t.co/Fxd9fh0ukN pic.twitter.com/X9aMtMAMsb &mdash; Prateek K. Keshari (@prkeshari) September 18, 2026",
+  "links": [
+   "https://t.co/Fxd9fh0ukN",
+   "https://t.co/X9aMtMAMsb"
+  ],
+  "resolved": []
+ },
+ "https://x.com/tamirspiritt/status/2101079101997982037": {
+  "author": "Tamir",
+  "author_url": "https://x.com/TamirSPIRITT",
+  "text": "introducing JevForm, a form that dynamically branches and chooses what to ask next usinng @typesafeai ’s Jev\n\nin my life i’ve made hundreds of forms with crazy if/then logic. Jev solves it.\n\nbuilt with @vercel json-render (by @ctatedev ), so theoretically it can support any… pic.twitter.com/KJTUJcO5lK &mdash; Tamir (@TamirSPIRITT) September 18, 2026",
+  "links": [
+   "https://t.co/KJTUJcO5lK"
+  ],
+  "resolved": []
+ },
+ "https://x.com/GNUmanth/status/2100963107552280754": {
+  "author": "Hemanth.HM",
+  "author_url": "https://x.com/GNUmanth",
+  "text": "Baked traffic-guard: an offline bot gate for reverse proxies with zero dependencies.\n\nUses wire-order header checks, stateless HMAC tokens, and exploit patterns.\n\nBlocks scrapers & attacks without breaking real users.\nDemo: https://t.co/vCZuP98Peb \n\nIndeed you can plug jev :-) pic.twitter.com/IexMUmO4ZC &mdash; Hemanth.HM (@GNUmanth) September 18, 2026",
+  "links": [
+   "https://t.co/vCZuP98Peb",
+   "https://t.co/IexMUmO4ZC"
+  ],
+  "resolved": [
+   "https://hemanth.github.io/traffic-guard/"
+  ]
+ },
+ "https://x.com/GNUmanth/status/2100609220555215208": {
+  "author": "Hemanth.HM",
+  "author_url": "https://x.com/GNUmanth",
+  "text": "For years I wanted to classify @TC39 proposals to spot common patterns.\n\nUsing @typesafeai 's Jev, I evaluated 324 proposals across 9 dimensions in 12.7s (~25.5 proposals/sec)! https://t.co/Upy9pnsjY4 https://t.co/8L1NLITs0t #tc39 #javascript #ai pic.twitter.com/ZNm2nXbBcF &mdash; Hemanth.HM (@GNUmanth) September 17, 2026",
+  "links": [
+   "https://t.co/Upy9pnsjY4",
+   "https://t.co/8L1NLITs0t",
+   "https://t.co/ZNm2nXbBcF"
+  ],
+  "resolved": [
+   "https://h3manth.com/fun/tc39-atlas/",
+   "https://h3manth.com/scribe/classifying-tc39-proposals/"
+  ]
+ },
+ "https://x.com/GNUmanth/status/2100405456187564201": {
+  "author": "Hemanth.HM",
+  "author_url": "https://x.com/GNUmanth",
+  "text": "So, I baked pkg-gate with @typesafeai ! \n\nnpm lifecycle scripts can run arbitrary code on install.\n\npkg-gate: a ~100ms pre-install gate using Jev\n\n4 typed primitives:\n \n- Choice: intent\n- Score: severity\n- Nouls: exfil & curl-to-bash\n\n$ npx pkg-gate <pkg> #node #npm #security pic.twitter.com/BmME1WJ0vt &mdash; Hemanth.HM (@GNUmanth) September 17, 2026",
+  "links": [
+   "https://t.co/BmME1WJ0vt"
+  ],
+  "resolved": []
+ },
+ "https://x.com/kushwho11146/status/2101103318386758011": {
+  "author": "Kushal Agarwal",
+  "author_url": "https://x.com/kushwho11146",
+  "text": "Hey Everyone,\n\nJust Built : https://t.co/7JrQUEKOpw \n\nAudit your git diff against YAML coding-standards packs using TypeSafe's Jev model, from a CLI or your AI agent's command/skill.\n\n1 step install: npx @kushwho/jev-codes\nEvals are in the repo♥️. Happy building! pic.twitter.com/rJ5NPTsRZt &mdash; Kushal Agarwal (@kushwho11146) September 19, 2026",
+  "links": [
+   "https://t.co/7JrQUEKOpw",
+   "https://t.co/rJ5NPTsRZt"
+  ],
+  "resolved": [
+   "https://github.com/kushwho/jev-codes"
+  ]
+ }
+}

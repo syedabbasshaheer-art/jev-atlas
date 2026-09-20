@@ -5,3 +5,7 @@ node_modules/
 
 # Cached gallery HTML. Re-creatable with `npm run scrape:fresh`.
 data/raw/
+
+# Regenerable sweep artefacts
+data/harvest.json
+data/corpus-additions.json

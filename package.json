@@ -17,7 +17,10 @@
     "build": "npm run data && npm run docs && npm run render",
     "rebuild": "npm run scrape:fresh && npm run build",
     "dev": "npm run build && node -e \"const{createServer}=require('node:http'),fs=require('node:fs');createServer((q,s)=>{s.writeHead(200,{'content-type':'text/html'});fs.createReadStream('public/index.html').pipe(s)}).listen(4321,()=>console.log('http://localhost:4321'))\"",
-    "docs": "node src/gen-docs.mjs"
+    "docs": "node src/gen-docs.mjs",
+    "harvest": "node src/harvest/run.mjs",
+    "harvest:enrich": "node src/harvest/run.mjs --enrich --limit 60",
+    "harvest:merge": "node src/harvest/run.mjs --merge"
   },
   "keywords": [
     "jev",
