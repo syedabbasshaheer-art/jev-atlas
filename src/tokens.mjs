@@ -33,8 +33,11 @@ function ratio(a, b) { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.
    Warm accent kept (assessment T007 purged cold blue/lavender), but the
    NEUTRALS are near-neutral rather than cream, which is what stops every
    surface merging into the one before it. */
-const HUE = { primary: 38, secondary: 150, tertiary: 82, error: 27, neutral: 60, neutralVar: 55 };
-const CHROMA = { primary: 0.14, secondary: 0.07, tertiary: 0.11, error: 0.16, neutral: 0.004, neutralVar: 0.012 };
+// T015: the neutral ramp carries real warmth. T007 found earth tones worth
+// +1.5 on cultural fit, and the contrast audit proves warmth costs nothing
+// here - every pair still passes, worst text 6.96:1.
+const HUE = { primary: 38, secondary: 150, tertiary: 82, error: 27, neutral: 62, neutralVar: 58 };
+const CHROMA = { primary: 0.14, secondary: 0.07, tertiary: 0.11, error: 0.16, neutral: 0.022, neutralVar: 0.0352 };
 const toneL = (t) => 0.06 + (t / 100) * 0.94;
 const ramp = (name) => (t) => oklchToHex(toneL(t), t <= 4 || t >= 99 ? 0 : CHROMA[name], HUE[name]);
 const P = ramp("primary"), S = ramp("secondary"), T = ramp("tertiary"), E = ramp("error"), N = ramp("neutral"), NV = ramp("neutralVar");
