@@ -129,3 +129,68 @@ node src/harvest/run.mjs --merge            # write corpus-additions.json
 **YouTube, Discord, Slack.** Not attempted. YouTube needs an API key. Discord and Slack are private by design and are not a scraping target.
 
 **Ranking.** 1,084 candidates is more than a person will review. The next real problem is not finding more, it is ordering what has been found, and that is a typed-classification job — which is what this catalogue is about in the first place.
+
+---
+
+## Audit: how jevable.com actually sources its projects
+
+The working assumption was that jevable scrapes X. It does not. Established black-box on 20 September 2026, because the site is not in its author's public repositories.
+
+### What the site tells you about itself
+
+| Probe | Finding |
+|---|---|
+| Response headers | `Server: railway-hikari` — a container on Railway, not a static host |
+| Scripts | `/board.js`, `/forms.js`. Hand-written, ~1.7 KB. No framework bundle |
+| `robots.txt` | `Disallow: /admin`, `Disallow: /api/` — there is an admin surface |
+| `forms.js` | `fetch('/api/submissions', {method:'POST', body:{url}})` — **one URL at a time** |
+| Submit dialog | "Send an X post for review. Approved projects join the collection." |
+| `board-data.sort` | `"curated"` |
+| `mediaVerifiedAt` | present on **359 of 359** rows, **200 distinct timestamps** over 10.3 hours |
+
+### The conclusion
+
+**jevable never solved X discovery, because it does not do discovery.** Humans submit one post URL at a time through a form. A moderator approves it behind `/admin`. A background worker re-verifies media, which is why 359 rows carry 200 different verification timestamps: `twimg.com` URLs expire, so something walks the table and refreshes them.
+
+The community does the finding. The site does curation plus enrichment.
+
+### How it enriches a submitted URL
+
+Its stored rows carry things oembed cannot return: profile avatars, video variants at multiple resolutions, poster frames. So a richer source was in use, and it is not the paid API.
+
+It is **`cdn.syndication.twimg.com/tweet-result`**, the backend behind embedded-tweet widgets. No key. It takes a post id and a token derived arithmetically from that id.
+
+Matching its output against jevable's stored row for the same post:
+
+| Field | Identical? |
+|---|---|
+| `avatar` | **yes, byte for byte** |
+| `postText` | **yes, byte for byte** |
+| video poster URL | yes |
+| video variants | 6 returned, 5 stored — the `.m3u8` playlist is filtered out |
+
+Byte-identical avatar and text is not a coincidence.
+
+### What it gives us
+
+`xSyndication()` in `sources.mjs` now uses the same endpoint, and it is strictly better than the oembed chain it replaces:
+
+| | oembed | syndication |
+|---|---|---|
+| Post text | yes | yes |
+| Author, handle | yes | yes |
+| Avatar | no | **yes** |
+| Media + variants | no | **yes** |
+| Outbound links | as `t.co`, needs a `HEAD` each | **already expanded** |
+| **Like count** | no | **yes** |
+| Auth | none | none |
+
+Batch of 45: **45 enriched, 0 failed, 100% via syndication.** It recovered `nosugarforkids.com`, `askjev.ai`, `jev.s1.dev`, `jevmaxxing.com`, `showrobotics.ai`, `jev-chess-master.vercel.app` and two `h3manth.com` pages — the live demos the gallery strips.
+
+The like count matters more than it looks. It is the first real ranking signal in the corpus, and ranking is the actual bottleneck now that a sweep returns over a thousand candidates. The top of that batch runs 10,652 · 8,838 · 7,328.
+
+### What this does not solve
+
+Syndication is still **enrichment**. Given an id it returns everything; it cannot answer "which posts mention Jev". Discovery on X remains the gap, and the options are unchanged: the paid API, a third-party scraper such as twscrape or Apify, or accepting jevable as the frontier — which is what it is, because jevable is a human queue rather than a crawler.
+
+**The useful correction: there is no scraping trick to copy, because the site everyone assumes is scraping is being fed by hand.**

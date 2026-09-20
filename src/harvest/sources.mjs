@@ -116,6 +116,43 @@ export async function xEnrich(url) {
   return { author: j.author_name || "", author_url: j.author_url || "", text, links };
 }
 
+/* ── X SYNDICATION. This is how jevable.com does it, established by matching
+      its stored rows against this endpoint byte for byte: the avatar URL, the
+      post text and the video poster are identical.
+      cdn.syndication.twimg.com is the backend for embedded-tweet widgets. It
+      takes a post id and a token derived from that id, needs no key, and
+      returns the whole object: text, author, avatar, media variants, mentions
+      and - the useful part - entities.urls[].expanded_url, which is the real
+      destination already resolved, so no t.co round trip is needed.
+      Strictly richer than oembed. Kept alongside it as a fallback. ── */
+export function syndToken(id) {
+  return ((Number(id) / 1e15) * Math.PI).toString(36).replace(/(0+|\.)/g, "");
+}
+export async function xSyndication(urlOrId) {
+  const id = String(urlOrId).match(/status\/(\d+)/)?.[1] || String(urlOrId);
+  if (!/^\d+$/.test(id)) return null;
+  const u = `https://cdn.syndication.twimg.com/tweet-result?id=${id}&lang=en&token=${syndToken(id)}`;
+  const res = await fetch(u, { headers: { "user-agent": "Mozilla/5.0" } });
+  if (!res.ok) return null;
+  const j = await res.json();
+  if (!j || !j.text) return null;
+  const media = (j.mediaDetails || []).map((m) => ({
+    type: m.type, poster: m.media_url_https,
+    sources: (m.video_info?.variants || []).filter((v) => v.content_type === "video/mp4").map((v) => v.url),
+  }));
+  return {
+    id, text: j.text,
+    author: j.user?.name || "", handle: j.user?.screen_name || "",
+    avatar: j.user?.profile_image_url_https || "",
+    date: (j.created_at || "").slice(0, 10),
+    likes: j.favorite_count || 0,
+    // already expanded: no shortener hop
+    links: (j.entities?.urls || []).map((x) => x.expanded_url).filter(Boolean),
+    mentions: (j.entities?.user_mentions || []).map((m) => m.screen_name),
+    media,
+  };
+}
+
 /* ── t.co resolution. The oembed html gives shortened links; one HEAD request
       each turns them into the real destination, which is usually the repo or
       the live demo. No auth, and the redirect is the whole response. ── */
@@ -129,6 +166,6 @@ export async function resolveShort(url) {
   } catch { return url; }
 }
 
-export const ENRICHERS = { xEnrich, resolveShort };
+export const ENRICHERS = { xSyndication, xEnrich, resolveShort };
 
 export const DISCOVERY = { github, hackernews, devto, npm, jevable };

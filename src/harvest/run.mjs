@@ -86,22 +86,33 @@ async function enrich(rows) {
   let ok = 0, fail = 0;
   for (const r of targets.slice(0, limit)) {
     try {
-      const e = await ENRICHERS.xEnrich(r.url);
-      if (e) {
-        e.resolved = [];
-        for (const l of (e.links || []).slice(0, 4)) {
-          const real = await ENRICHERS.resolveShort(l);
-          if (real) e.resolved.push(real);
-          await new Promise((s) => setTimeout(s, 250));
+      // syndication first: richer, and its urls are already expanded.
+      // oembed is the fallback for anything it will not serve.
+      let e = await ENRICHERS.xSyndication(r.url);
+      if (e) { e.via = "syndication"; }
+      else {
+        e = await ENRICHERS.xEnrich(r.url);
+        if (e) {
+          e.via = "oembed";
+          e.resolved = [];
+          for (const l of (e.links || []).slice(0, 4)) {
+            const real = await ENRICHERS.resolveShort(l);
+            if (real) e.resolved.push(real);
+            await new Promise((s) => setTimeout(s, 250));
+          }
         }
-        cache[r.url] = e; ok++;
-      } else fail++;
+      }
+      if (e) { cache[r.url] = e; ok++; } else fail++;
     } catch { fail++; }
-    await new Promise((s) => setTimeout(s, 900)); // polite; this is an unmetered public endpoint
+    await new Promise((s) => setTimeout(s, 600));
   }
   fs.writeFileSync(cacheFile, JSON.stringify(cache, null, 1));
-  const withLinks = Object.values(cache).filter((e) => e.links && e.links.length).length;
-  console.log(`  enriched ${ok}, failed ${fail}, cached ${Object.keys(cache).length} total, ${withLinks} carry outbound links`);
+  const vals = Object.values(cache);
+  const withLinks = vals.filter((e) => (e.links || []).length || (e.resolved || []).length).length;
+  const bySynd = vals.filter((e) => e.via === "syndication").length;
+  const withLikes = vals.filter((e) => typeof e.likes === "number").length;
+  console.log(`  enriched ${ok}, failed ${fail}, cached ${vals.length} total`);
+  console.log(`  via syndication ${bySynd}, carrying links ${withLinks}, with like counts ${withLikes}`);
   return cache;
 }
 
