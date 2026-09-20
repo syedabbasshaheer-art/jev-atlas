@@ -5,12 +5,24 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { LIGHT, DARK, audit, cssBlock } from "./tokens.mjs";
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1"));
 const DATA = path.join(HERE, "..", "data");
 const OUT = path.join(HERE, "..", "public");
 
 const tpl = fs.readFileSync(path.join(HERE, "template.html"), "utf8");
+
+// Colour tokens are generated and contrast-audited, never hand-typed.
+// A failing pair stops the build: an unreadable page is not a page.
+for (const [scheme, name] of [[LIGHT, "LIGHT"], [DARK, "DARK"]]) {
+  const a = audit(scheme, name);
+  if (a.fails.length) {
+    console.error(`RENDER FAILED: ${a.fails.length} contrast failure(s) in ${name}`);
+    for (const f of a.fails) console.error(`  ${f.pair}: ${f.r.toFixed(2)} < ${f.need}`);
+    process.exit(1);
+  }
+}
 const raw = fs.readFileSync(path.join(DATA, "site-data.json"), "utf8");
 
 // Escape the characters that could end the <script> block early or break a JS
@@ -22,8 +34,12 @@ const SEPS = new RegExp("[<>&" + String.fromCharCode(0x2028) + String.fromCharCo
 const safe = raw.replace(SEPS, (c) => ESC[c]);
 
 if (!tpl.includes("__DATA__")) { console.error("RENDER FAILED: template has no __DATA__ placeholder"); process.exit(1); }
-const html = tpl.replace("__DATA__", () => safe);
-if (html.includes("__DATA__")) { console.error("RENDER FAILED: placeholder survived"); process.exit(1); }
+let html = tpl
+  .replace("__TOKENS_LIGHT__", () => cssBlock(LIGHT, "  "))
+  .replace("__TOKENS_DARK__", () => cssBlock(DARK, "  "))
+  .replace("__TOKENS_DARK_2__", () => cssBlock(DARK, "  "))
+  .replace("__DATA__", () => safe);
+if (html.includes("__DATA__") || html.includes("__TOKENS_")) { console.error("RENDER FAILED: placeholder survived"); process.exit(1); }
 
 // Cheap structural guards. A JS syntax error or an unbalanced tag blanks the
 // page, and that is not something to discover after deploying.
