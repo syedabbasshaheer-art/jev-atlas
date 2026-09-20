@@ -1,0 +1,31 @@
+{
+  "name": "jev-atlas",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A catalogue of what people build with typed decision models, grouped by field and broken into the capabilities each project is assembled from.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scrape": "node src/scrape.mjs",
+    "scrape:fresh": "node src/scrape.mjs --fresh",
+    "classify": "node src/classify.mjs",
+    "data": "npm run classify && node src/build.mjs",
+    "render": "node src/render.mjs",
+    "build": "npm run data && npm run docs && npm run render",
+    "rebuild": "npm run scrape:fresh && npm run build",
+    "dev": "npm run build && node -e \"const{createServer}=require('node:http'),fs=require('node:fs');createServer((q,s)=>{s.writeHead(200,{'content-type':'text/html'});fs.createReadStream('public/index.html').pipe(s)}).listen(4321,()=>console.log('http://localhost:4321'))\"",
+    "docs": "node src/gen-docs.mjs"
+  },
+  "keywords": [
+    "jev",
+    "typesafe",
+    "system-one",
+    "classification",
+    "capabilities",
+    "catalogue",
+    "blueprints"
+  ]
+}

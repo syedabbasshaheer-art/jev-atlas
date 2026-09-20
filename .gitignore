@@ -1,0 +1,7 @@
+node_modules/
+.vercel/
+.DS_Store
+*.log
+
+# Cached gallery HTML. Re-creatable with `npm run scrape:fresh`.
+data/raw/
