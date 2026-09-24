@@ -30,24 +30,24 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 ## P0 — blocks launch
 
 ### Imagery
-1. `[ ]` Render the 356 thumbnails. Zero `<img>` in the file today. `VQA` `OWNER` — the single largest cause of the "web 1" verdict
-2. `[ ]` Image full-bleed at card top, first element painted `CARD` `REF`
-3. `[ ]` Fixed `aspect-ratio` box so the grid never reflows as images load `REF`
-4. `[ ]` Monogram placeholder for the 3 projects with no image. Never a broken-image icon `VQA`
-5. `[ ]` `loading="lazy"` on every thumbnail; 1,055 cards
-6. `[ ]` Thumbnails for GitHub rows via `opengraph.githubassets.com/1/<owner>/<repo>` — 638 rows currently have no image at all
-7. `[ ]` Decide artifact vs Vercel image strategy: the artifact CSP blocks cross-origin images, so the artifact needs inlined data URIs while Vercel can use files
+1. `[x]` Render the 356 thumbnails. Zero `<img>` in the file today. `VQA` `OWNER` — the single largest cause of the "web 1" verdict
+2. `[x]` Image full-bleed at card top, first element painted `CARD` `REF`
+3. `[x]` Fixed `aspect-ratio` box so the grid never reflows as images load `REF`
+4. `[x]` Monogram placeholder for the 3 projects with no image. Never a broken-image icon `VQA`
+5. `[x]` `loading="lazy"` on every thumbnail; 1,055 cards
+6. `[x]` Thumbnails for GitHub rows via `opengraph.githubassets.com/1/<owner>/<repo>` — 638 rows currently have no image at all
+7. `[x]` Decide artifact vs Vercel image strategy: the artifact CSP blocks cross-origin images, so the artifact needs inlined data URIs while Vercel can use files
 
 ### Cards are dead
-8. `[ ]` Every card opens a detail view. Discover, Build and Matrix all reach the same one `OWNER` `CARD`
-9. `[ ]` Build the shared detail overlay: `<dialog>`, scrim, Escape, focus trap, restore focus `CARD` `COMP`
-10. `[ ]` Guard the click so the external `<a>` still opens in a new tab without triggering the overlay `CARD`
-11. `[ ]` `tabindex="0"` and Enter/Space on every card — it is an interactive element now
+8. `[x]` Every card opens a detail view. Discover, Build and Matrix all reach the same one `OWNER` `CARD`
+9. `[x]` Build the shared detail overlay: `<dialog>`, scrim, Escape, focus trap, restore focus `CARD` `COMP`
+10. `[x]` Guard the click so the external `<a>` still opens in a new tab without triggering the overlay `CARD`
+11. `[x]` `tabindex="0"` and Enter/Space on every card — it is an interactive element now
 
 ### The chips say nothing
-12. `[ ]` Drop the capability chip row from Discover cards. "Typed classification & decision" appears on nearly every card and carries no information `OWNER`
-13. `[ ]` Description becomes the primary read on the card `OWNER` `CARD`
-14. `[ ]` Cap any remaining chips at 2–4 with a `+N` overflow `REF`
+12. `[x]` Drop the capability chip row from Discover cards. "Typed classification & decision" appears on nearly every card and carries no information `OWNER`
+13. `[x]` Description becomes the primary read on the card `OWNER` `CARD`
+14. `[x]` Cap any remaining chips at 2–4 with a `+N` overflow `REF`
 
 ### Contrast between a card and the things inside it
 15. `[ ]` Every nested level differs by a combination of fill, border, elevation and text colour, never one signal alone `OWNER` `CARD`
@@ -55,8 +55,8 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 17. `[ ]` Default Discover cards to real elevation `--e2`, not the flat `.card-out` border `VQA`
 
 ### Metrics that are made up
-18. `[ ]` Remove Effort entirely: rail facet, both sort options, the pip meter `OWNER` `IA`
-19. `[ ]` Remove Usefulness/impact entirely: sort option, pip meter, card scorebar `OWNER` `IA`
+18. `[x]` Remove Effort entirely: rail facet, both sort options, the pip meter `OWNER` `IA`
+19. `[x]` Remove Usefulness/impact entirely: sort option, pip meter, card scorebar `OWNER` `IA`
 20. `[x]` Stop displaying npm's popularity score as a star count. It was fabricated; 281 dropped
 21. `[ ]` Keep only objective metrics: GitHub stars, X likes, date, source, author `IA`
 22. `[ ]` Sort becomes: Most starred · Newest · A to Z
@@ -76,8 +76,8 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 32. `[ ]` Matrix cells become buttons that open the same detail view `CARD`
 
 ### Text
-33. `[ ]` Fix wrapping in blueprint cards: `overflow-wrap:break-word`, `word-break:normal`, `hyphens:auto` `OWNER` `CARD`
-34. `[ ]` `min-width:0` on flex and grid children — its absence is what causes mid-word overflow `CARD`
+33. `[x]` Fix wrapping in blueprint cards: `overflow-wrap:break-word`, `word-break:normal`, `hyphens:auto` `OWNER` `CARD`
+34. `[x]` `min-width:0` on flex and grid children — its absence is what causes mid-word overflow `CARD`
 35. `[ ]` `text-wrap:balance` on headings `T009`
 
 ---
@@ -103,10 +103,10 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 47. `[ ]` Category badge as a ribbon on the image rather than its own row, to save vertical space at 1,055 items `REF`
 
 ### Actions
-48. `[ ]` Circular filled FAB, 56–64px, bottom right `OWNER` `VQA`
-49. `[ ]` Wire `src/submit.js` in. It is 21KB with no entry point in the template `COMP`
-50. `[ ]` Submission dialog: native `<dialog>`, `required`, `pattern` validation `COMP`
-51. `[ ]` Copy-link-to-this-view affordance — core to an atlas `COMP`
+48. `[x]` Circular filled FAB, 56–64px, bottom right `OWNER` `VQA`
+49. `[x]` Wire `src/submit.js` in. It is 21KB with no entry point in the template `COMP`
+50. `[x]` Submission dialog: native `<dialog>`, `required`, `pattern` validation `COMP`
+51. `[x]` Copy-link-to-this-view affordance — core to an atlas `COMP`
 
 ### Deep links and sharing
 52. `[ ]` The hash carries only view, family and category. Search, capability, pattern and sort are lost on reload `COMP`
@@ -115,8 +115,8 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 55. `[ ]` Detail view carries its own hero image matching the card, for continuity `REF`
 
 ### Scale
-56. `[ ]` 1,055 cards render at once with no pagination or virtualisation `COMP`
-57. `[ ]` Windowing or a "load more" at ~60 cards
+56. `[x]` 1,055 cards render at once with no pagination or virtualisation `COMP`
+57. `[x]` Windowing or a "load more" at ~60 cards
 58. `[ ]` Measure first paint and interaction latency after images land
 
 ---

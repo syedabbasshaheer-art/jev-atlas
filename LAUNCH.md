@@ -38,11 +38,11 @@ The catalogue is only as good as its classification, and the classifier is curre
 
 ## 2. The page
 
-- [ ] **2.1** Finish wiring `src/submit.js` into the template
+- [x] **2.1** Submission dialog wired to the FAB
 - [ ] **2.2** Publish with `capabilities: {db, sample, user}`
 - [ ] **2.3** Add the Community view to the segmented control
 - [ ] **2.4** Check it degrades cleanly when `db` resolves `null` — a page opened outside claude.ai must still work
-- [ ] **2.5** Look at it once at phone width before publishing
+- [x] **2.5** Looked at it at phone width
 
 ---
 
@@ -56,7 +56,7 @@ The catalogue is only as good as its classification, and the classifier is curre
 
 ---
 
-## 4. Vercel
+## 4. Vercel — runbook in [DEPLOY.md](DEPLOY.md)
 
 - [!] **4.1** **You:** `npm i -g vercel`, or import the repo in the Vercel dashboard
 - [ ] **4.2** Deploy. `vercel.json` already declares `buildCommand: npm run build` and `outputDirectory: public`, so defaults should work
