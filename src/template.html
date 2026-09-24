@@ -230,6 +230,20 @@ body.pane-open .fab{right:calc(var(--pane) + var(--s6))}
   color:var(--inverse-on-surface);height:46px;display:flex;align-items:center;padding:0 var(--s5);
   border-radius:var(--r-f);font-size:var(--t-s);z-index:70;box-shadow:var(--e3);transition:transform .3s var(--ease)}
 .snack.on{transform:translate(-50%,0)}
+
+dialog#add{border:0;padding:0;border-radius:var(--r-xl);background:var(--surface-container-high);
+  color:var(--on-surface);box-shadow:var(--e4);width:min(560px,92vw);max-width:none}
+dialog#add::backdrop{background:color-mix(in srgb,#000 52%,transparent)}
+dialog#add form{padding:var(--s6)}
+dialog#add h2{font-family:var(--display);font-size:25px;font-weight:400;margin-bottom:var(--s2)}
+.addsub{font-size:var(--t-s);color:var(--on-surface-variant);margin-bottom:var(--s4)}
+#addurl{width:100%;padding:var(--s3) var(--s4);border:1px solid var(--outline);border-radius:var(--r-m);
+  background:var(--surface-container-lowest);color:var(--on-surface);font:inherit;font-size:var(--t-b);resize:vertical}
+#addurl:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 20%,transparent)}
+.addnote{font-size:var(--t-s);color:var(--on-surface-variant);min-height:20px;margin-top:var(--s3)}
+.addnote.bad{color:var(--error)}
+.addnote.good{color:var(--primary)}
+dialog#add menu{display:flex;gap:var(--s2);justify-content:flex-end;margin:var(--s5) 0 0;padding:0}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 
@@ -269,6 +283,19 @@ body.pane-open .fab{right:calc(var(--pane) + var(--s6))}
 <div class="cmdk" id="cmdk" hidden role="dialog" aria-modal="true" aria-label="Jump to">
   <div class="cmd"><input id="cmdq" placeholder="Jump to a project, field or capability" autocomplete="off"><div class="cmd-l" id="cmdl"></div></div>
 </div>
+
+<dialog id="add" aria-labelledby="addh">
+  <form method="dialog" id="addform">
+    <h2 id="addh">Add a project</h2>
+    <p class="addsub">Paste a link from X, GitHub, Reddit, YouTube, npm or anywhere else. Several at once is fine.</p>
+    <textarea id="addurl" rows="3" placeholder="https://github.com/someone/their-jev-thing" aria-label="Project links" required></textarea>
+    <p id="addnote" class="addnote"></p>
+    <menu>
+      <button type="button" class="btn btn-o" id="addcancel">Cancel</button>
+      <button type="submit" class="btn btn-f" id="addgo">Add</button>
+    </menu>
+  </form>
+</dialog>
 <div class="snack" id="snack" role="status" aria-live="polite"></div>
 
 <script id="atlas-data" type="application/json">__DATA__</script>
@@ -388,7 +415,8 @@ function card(e,wide){
         (e.author?" &middot; "+esc(e.author):"")+'</span>'+
         (e.stars?'<span class="metric">&#9733; '+e.stars+'</span>':'')+'</div></div></article>';
 }
-function renderFeed(){
+function renderFeed(keep){
+  if(!keep)shown=PAGE;
   var r=rows();
   var title=S.cat?catBy[S.cat].label:S.fam?famBy[S.fam].label:S.cap?CAPS[S.cap].label:"Everything";
   var h='<div class="fhead"><div><h1>'+esc(title)+'</h1>'+
@@ -402,9 +430,30 @@ function renderFeed(){
       '<button class="btn btn-f" id="reset2">Reset filters</button></div>';
     return;
   }
-  el("feed").innerHTML=h+'<div class="bento">'+r.map(function(e,i){
+  // Windowed. Rendering all 1,442 cards built ~1,400 DOM subtrees and ~1,300
+  // decoded images on the first frame, which is a long task on a phone for
+  // rows nobody has scrolled to yet.
+  shown=Math.min(shown,r.length);
+  var slice=r.slice(0,shown);
+  h+='<div class="bento">'+slice.map(function(e,i){
     return card(e,i%9===0&&!!TH[String(e.id)]);
   }).join("")+'</div>';
+  if(shown<r.length){
+    h+='<div style="display:flex;justify-content:center;padding:var(--s7) 0 0">'+
+       '<button class="btn btn-o" id="more">Show more &middot; '+(r.length-shown)+' left</button></div>';
+  }
+  el("feed").innerHTML=h;
+  armSentinel(r.length);
+}
+var PAGE=60, shown=PAGE, io_=null;
+function armSentinel(total){
+  if(io_){io_.disconnect();io_=null}
+  var btn=el("more");
+  if(!btn||!("IntersectionObserver" in window))return;
+  io_=new IntersectionObserver(function(es){
+    if(es.some(function(x){return x.isIntersecting})){shown+=PAGE;renderFeed()}
+  },{root:el("feed"),rootMargin:"600px"});
+  io_.observe(btn);
 }
 
 function blueprintFor(c){return D.blueprints.filter(function(b){return b.category===c})[0]}
@@ -496,6 +545,46 @@ function readHash(){
   });
 }
 
+
+/* ── Add a project ──────────────────────────────────────────────────────────
+   The page cannot fetch a URL: the artifact CSP blocks every cross-origin
+   request and no capability grants HTTP. So this does the part a browser can
+   honestly do — recognise the link, catch duplicates against the 1,442 already
+   here, and hand back something the pipeline can ingest. It never claims to
+   have fetched anything. */
+var SRCPAT=[
+  [/^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/([^/]+)\/status\/(\d+)/i,function(m){return"X post by @"+m[1]}],
+  [/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/?#]+)/i,function(m){return"GitHub repo "+m[1]+"/"+m[2]}],
+  [/^https?:\/\/(?:www\.|old\.)?reddit\.com\/r\/([^/]+)\//i,function(m){return"Reddit post in r/"+m[1]}],
+  [/^https?:\/\/(?:www\.)?(?:youtube\.com\/watch|youtu\.be\/)/i,function(){return"YouTube video"}],
+  [/^https?:\/\/(?:www\.)?npmjs\.com\/package\/(.+)/i,function(m){return"npm package "+m[1]}]
+];
+function describe(u){
+  for(var i=0;i<SRCPAT.length;i++){var m=u.match(SRCPAT[i][0]);if(m)return SRCPAT[i][1](m)}
+  try{return "Website "+new URL(u).hostname.replace(/^www\./,"")}catch(e){return null}
+}
+var canon=function(u){try{var v=new URL(u);return(v.hostname.replace(/^www\./,"")+v.pathname.replace(/\/+$/,"")).toLowerCase()}catch(e){return String(u).toLowerCase()}};
+var HAVE={};D.evidence.forEach(function(e){HAVE[canon(e.url)]=e.title});
+function checkAdd(){
+  var raw=el("addurl").value;
+  var urls=raw.split(/[\s,]+/).map(function(x){return x.trim()}).filter(function(x){return /^(https?:\/\/|[a-z0-9-]+\.[a-z]{2,}\/)/i.test(x)});
+  var note=el("addnote");
+  if(!urls.length){note.className="addnote";note.textContent="";return[]}
+  var fresh=[],dupe=[];
+  urls.forEach(function(u){
+    if(!/^https?:\/\//i.test(u))u="https://"+u;
+    (HAVE[canon(u)]?dupe:fresh).push(u);
+  });
+  if(!fresh.length){note.className="addnote bad";
+    note.textContent=dupe.length===1?"Already here: "+HAVE[canon(dupe[0])]:"All "+dupe.length+" are already in the atlas.";
+    return[]}
+  var d=describe(fresh[0]);
+  note.className="addnote good";
+  note.textContent=fresh.length===1?("Recognised: "+d+(dupe.length?"  ("+dupe.length+" duplicate skipped)":""))
+    :(fresh.length+" links ready"+(dupe.length?", "+dupe.length+" already here":""));
+  return fresh;
+}
+
 var items=[],sel=0;
 function buildCmd(){
   items=FAMS.map(function(f){return{t:f.label,k:"family",go:function(){S.fam=f.key;S.cat=null;render()}}})
@@ -531,13 +620,16 @@ document.addEventListener("click",function(ev){
     document.documentElement.setAttribute("data-theme",dk?"light":"dark");
     try{localStorage.setItem("theme",dk?"light":"dark")}catch(e){}return}
   if(t.id==="cmd"){cmdOpen();return}
-  if(t.id==="fab"){snack("Submissions open when the site is deployed");return}
+  if(t.id==="fab"){var dlg=el("add");el("addurl").value="";el("addnote").textContent="";
+    if(dlg.showModal)dlg.showModal();else snack("This browser cannot open the dialog");return}
+  if(t.id==="addcancel"){el("add").close();return}
   if(t.id==="paneclose"){S.sel=null;render();return}
   if(t.id==="copylink"){
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(location.href).then(function(){snack("Link copied")},function(){snack("Could not copy")});
     } else snack("Copy is not available here");
     return}
+  if(t.id==="more"){shown+=PAGE;renderFeed(true);return}
   if(t.id==="reset"||t.id==="reset2"){S.cat=S.fam=S.cap=S.src=S.kind=null;S.q="";el("q").value="";render();return}
   if(d.bpshow){snack("Build guides live in the blueprint view");return}
   if(d.fam){S.fam=(S.fam===d.fam&&!S.cat)?null:d.fam;S.cat=null;render();return}
@@ -570,6 +662,20 @@ el("pickCap").addEventListener("change",function(e){S.cap=e.target.value||null;r
 el("cmdq").addEventListener("input",function(){sel=0;cmdRender()});
 el("cmdk").addEventListener("click",function(e){if(e.target===el("cmdk"))cmdClose()});
 
+el("addurl").addEventListener("input",checkAdd);
+el("addform").addEventListener("submit",function(ev){
+  var fresh=checkAdd();
+  if(!fresh.length){ev.preventDefault();return}
+  // No backend yet. Rather than pretend, hand the list back so it can be
+  // pasted into `npm run harvest -- --merge`, which does the real fetching.
+  var payload=fresh.join(String.fromCharCode(10));
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(payload).then(function(){
+      snack(fresh.length+" link"+(fresh.length>1?"s":"")+" copied for the harvester")},
+      function(){snack("Could not copy")});
+  } else snack(fresh.length+" link(s) ready");
+  el("add").close();
+});
 try{var th=localStorage.getItem("theme");if(th)document.documentElement.setAttribute("data-theme",th)}catch(e){}
 readHash();buildCmd();render();
 })();

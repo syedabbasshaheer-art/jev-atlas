@@ -12,7 +12,7 @@ Two outputs, because the two targets have different rules:
 Run:  python src/thumbs.py            (all, skips what it already has)
       python src/thumbs.py --limit 5  (sample, for measuring)
 """
-import io, json, os, sys, time, urllib.request, urllib.error
+import io, json, os, re, sys, time, urllib.request, urllib.error
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -21,8 +21,9 @@ OUT_DIR = os.path.join(ROOT, "public", "thumbs")
 CORPUS = os.path.join(ROOT, "data", "corpus.json")
 MANIFEST = os.path.join(ROOT, "data", "thumbs.json")
 
-WIDTH = 440          # 2x a ~220px card slot, so it stays sharp on a retina screen
-QUALITY = 70
+# Sized against the 16 MB single-page ceiling, not against taste.
+WIDTH = 380
+QUALITY = 62
 UA = "jev-atlas/1.0 (+https://github.com/syedabbasshaheer-art/jev-atlas)"
 
 limit = None
@@ -32,12 +33,21 @@ if "--limit" in sys.argv:
 os.makedirs(OUT_DIR, exist_ok=True)
 posts = json.load(open(CORPUS, encoding="utf-8"))
 
+GH_REPO = re.compile(r"^https://github\.com/([^/]+)/([^/?#]+)/?$")
+
 def poster(p):
+    """Where a cover can come from, best first."""
     m = p.get("media") or []
     if m and m[0].get("poster"):
         return m[0]["poster"]
     if m and m[0].get("type") == "photo" and m[0].get("src"):
         return m[0]["src"]
+    # GitHub renders a social card for every repo: owner, name, description,
+    # language and stars on a branded background. Not a screenshot of the
+    # project, but real, specific to the repo, and far better than a monogram.
+    g = GH_REPO.match(str(p.get("url") or ""))
+    if g:
+        return "https://opengraph.githubassets.com/1/%s/%s" % (g.group(1), g.group(2))
     return None
 
 targets = [(str(p["id"]), poster(p)) for p in posts]
@@ -56,7 +66,7 @@ for pid, url in targets:
         total_bytes += os.path.getsize(dest)
         continue
     # twimg serves sized variants; ask for the small one rather than the original
-    src = url + ("&" if "?" in url else "?") + "format=jpg&name=small"
+    src = url if "opengraph.githubassets" in url else url + ("&" if "?" in url else "?") + "format=jpg&name=small"
     try:
         req = urllib.request.Request(src, headers={"User-Agent": UA})
         raw = urllib.request.urlopen(req, timeout=25).read()

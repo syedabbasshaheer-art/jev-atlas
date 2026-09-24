@@ -60,8 +60,34 @@ const closes = (html.match(/<\/script>/g) || []).length;
 if (opens !== closes) { console.error(`RENDER FAILED: ${opens} <script> vs ${closes} </script>`); process.exit(1); }
 
 fs.mkdirSync(OUT, { recursive: true });
-fs.writeFileSync(path.join(OUT, "index.html"), html);
+
+// Two outputs, because the two targets have opposite needs.
+//
+// Vercel serves files: a thumbnail referenced as thumbs/<id>.jpg is cached by
+// the browser, fetched only when it scrolls into view, and costs the HTML
+// nothing. That is strictly better on a real host.
+//
+// A published artifact cannot do that at all. Its CSP blocks every
+// cross-origin image, and there is no origin to serve a relative path from, so
+// the picture has to travel inside the page as a data URI or not exist.
+const thumbMap = JSON.parse(thumbs);
+// Reverse the map once. Scanning the key list per match would be 1,300 lookups
+// across 1,300 twelve-kilobyte strings, which is minutes of string compare.
+const byUri = new Map();
+for (const [id, uri] of Object.entries(thumbMap)) byUri.set(uri, id);
+let swapped = 0;
+const siteHtml = html.replace(/"(data:image\/jpeg;base64,[^"]+)"/g, (m, uri) => {
+  const id = byUri.get(uri);
+  if (!id) return m;
+  swapped++;
+  return `"thumbs/${id}.jpg"`;
+});
+fs.writeFileSync(path.join(OUT, "index.html"), siteHtml);
+fs.writeFileSync(path.join(OUT, "index.artifact.html"), html);
 
 const kb = (Buffer.byteLength(html) / 1024).toFixed(0);
-console.log(`RENDER OK  public/index.html  ${kb} KB`);
+const sk = (Buffer.byteLength(siteHtml) / 1024).toFixed(0);
+console.log(`RENDER OK  public/index.html ${sk} KB (file-backed, for Vercel)`);
+console.log(`           public/index.artifact.html ${kb} KB (inlined, for the artifact)`);
+console.log(`           ${swapped} image(s) swapped to files in the Vercel build`);
 if (kb > 15000) console.warn("  WARNING: approaching the 16 MB single-page ceiling.");
