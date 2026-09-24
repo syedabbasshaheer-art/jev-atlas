@@ -12,7 +12,7 @@ Two outputs, because the two targets have different rules:
 Run:  python src/thumbs.py            (all, skips what it already has)
       python src/thumbs.py --limit 5  (sample, for measuring)
 """
-import io, json, os, re, sys, time, urllib.request, urllib.error
+import hashlib, io, json, os, re, sys, time, urllib.request, urllib.error
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -25,6 +25,7 @@ MANIFEST = os.path.join(ROOT, "data", "thumbs.json")
 WIDTH = 380
 QUALITY = 62
 UA = "jev-atlas/1.0 (+https://github.com/syedabbasshaheer-art/jev-atlas)"
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
 
 limit = None
 if "--limit" in sys.argv:
@@ -34,6 +35,21 @@ os.makedirs(OUT_DIR, exist_ok=True)
 posts = json.load(open(CORPUS, encoding="utf-8"))
 
 GH_REPO = re.compile(r"^https://github\.com/([^/]+)/([^/?#]+)/?$")
+
+
+def safe_name(pid):
+    """A filename Windows will accept.
+
+    Only the 359 X posts have a bare numeric id. Everything else is prefixed by
+    its source -- "github:642065600", "awesome:https://github.com/x/y" -- and a
+    colon is illegal in a Windows filename, a forward slash is a directory
+    separator. Writing those verbatim produced stray "hackernews" and "npm"
+    entries and made os.path.exists lie, so the fetch skipped work it had never
+    done. Digits pass through; anything else becomes a short stable hash.
+    """
+    if pid.isdigit():
+        return pid
+    return hashlib.sha1(pid.encode("utf-8")).hexdigest()[:16]
 
 def poster(p):
     """Where a cover can come from, best first."""
@@ -60,7 +76,7 @@ got = skipped = failed = 0
 total_bytes = 0
 
 for pid, url in targets:
-    dest = os.path.join(OUT_DIR, pid + ".jpg")
+    dest = os.path.join(OUT_DIR, safe_name(pid) + ".jpg")
     if os.path.exists(dest):
         skipped += 1
         total_bytes += os.path.getsize(dest)
@@ -68,8 +84,12 @@ for pid, url in targets:
     # twimg serves sized variants; ask for the small one rather than the original
     src = url if "opengraph.githubassets" in url else url + ("&" if "?" in url else "?") + "format=jpg&name=small"
     try:
-        req = urllib.request.Request(src, headers={"User-Agent": UA})
-        raw = urllib.request.urlopen(req, timeout=25).read()
+        # GitHub's opengraph endpoint throttles hard on a non-browser agent:
+        # the same URL answers curl in ~150ms and stalled this script to roughly
+        # one image every fifteen minutes. twimg does not care either way.
+        agent = BROWSER_UA if "opengraph.githubassets" in src else UA
+        req = urllib.request.Request(src, headers={"User-Agent": agent, "Accept": "image/*,*/*"})
+        raw = urllib.request.urlopen(req, timeout=20).read()
         im = Image.open(io.BytesIO(raw))
         im = im.convert("RGB")
         if im.width > WIDTH:
@@ -89,7 +109,7 @@ if got + skipped:
 # manifest of data URIs for the artifact build
 man = {}
 for pid, _ in targets:
-    dest = os.path.join(OUT_DIR, pid + ".jpg")
+    dest = os.path.join(OUT_DIR, safe_name(pid) + ".jpg")
     if os.path.exists(dest):
         import base64
         man[pid] = "data:image/jpeg;base64," + base64.b64encode(open(dest, "rb").read()).decode()

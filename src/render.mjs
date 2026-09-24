@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { dirOf } from "./paths.mjs";
+import crypto from "node:crypto";
 import { LIGHT, DARK, audit, cssBlock } from "./tokens.mjs";
 
 const HERE = dirOf(import.meta.url);
@@ -50,8 +51,8 @@ let html = tpl
   .replace("__TOKENS_DARK__", () => cssBlock(DARK, "  "))
   .replace("__TOKENS_DARK_2__", () => cssBlock(DARK, "  "))
   .replace("__DATA__", () => safe)
-  .replace("__THUMBS__", () => thumbs);
-if (html.includes("__DATA__") || html.includes("__TOKENS_") || html.includes("__THUMBS__")) { console.error("RENDER FAILED: placeholder survived"); process.exit(1); }
+  ;
+if (html.includes("__DATA__") || html.includes("__TOKENS_")) { console.error("RENDER FAILED: data or token placeholder survived"); process.exit(1); }
 
 // Cheap structural guards. A JS syntax error or an unbalanced tag blanks the
 // page, and that is not something to discover after deploying.
@@ -71,23 +72,67 @@ fs.mkdirSync(OUT, { recursive: true });
 // cross-origin image, and there is no origin to serve a relative path from, so
 // the picture has to travel inside the page as a data URI or not exist.
 const thumbMap = JSON.parse(thumbs);
-// Reverse the map once. Scanning the key list per match would be 1,300 lookups
-// across 1,300 twelve-kilobyte strings, which is minutes of string compare.
-const byUri = new Map();
-for (const [id, uri] of Object.entries(thumbMap)) byUri.set(uri, id);
-let swapped = 0;
-const siteHtml = html.replace(/"(data:image\/jpeg;base64,[^"]+)"/g, (m, uri) => {
-  const id = byUri.get(uri);
-  if (!id) return m;
-  swapped++;
-  return `"thumbs/${id}.jpg"`;
-});
+const evidence = JSON.parse(raw).evidence;
+
+// The same rank the feed uses, so the images that survive a budget cut are the
+// ones a reader actually reaches before scrolling.
+const rank = (e) =>
+  Math.log10((e.stars || 0) + 1) * 19 +
+  (thumbMap[String(e.id)] ? 72 : 0) +
+  ((e.discovered_via || [])[0] === "awesome" ? 8 : 0) +
+  ((e.blurb || "").length > 60 ? 6 : 0);
+
+// A filename Windows accepts; must match safe_name() in thumbs.py exactly.
+const safeName = (id) =>
+  /^\d+$/.test(id) ? id : crypto.createHash("sha1").update(id, "utf8").digest("hex").slice(0, 16);
+
+// TWO BUILDS, because the targets have opposite constraints.
+//
+// Vercel serves files. Every one of the covers can be a thumbs/<name>.jpg that
+// the browser caches for a year and fetches only when it scrolls into view.
+//
+// A published artifact has no origin to serve a relative path from and its CSP
+// blocks cross-origin images, so a picture has to travel inside the page. All
+// 1,293 inlined come to roughly 19 MB of base64, over the 16 MB page ceiling,
+// so the artifact carries the highest-ranked ones until the budget is spent and
+// the rest fall back to their designed cover. The artifact is the preview; the
+// deployed site is the one that shows everything.
+const BUDGET = 11 * 1024 * 1024;
+const ranked = evidence
+  .filter((e) => thumbMap[String(e.id)])
+  .sort((a, b) => rank(b) - rank(a));
+const inlined = {};
+let used = 0;
+for (const e of ranked) {
+  const uri = thumbMap[String(e.id)];
+  if (used + uri.length > BUDGET) break;
+  inlined[String(e.id)] = uri;
+  used += uri.length;
+}
+
+const fileMap = {};
+for (const id of Object.keys(thumbMap)) fileMap[id] = `thumbs/${safeName(id)}.jpg`;
+
+const artifactHtml = html
+  .replace("__THUMBS__", () => JSON.stringify(inlined))
+  .replace("__THUMBFILES__", () => "{}");
+const siteHtml = html
+  .replace("__THUMBS__", () => "{}")
+  .replace("__THUMBFILES__", () => JSON.stringify(fileMap));
+
+for (const [name, out] of [["index.html", siteHtml], ["index.artifact.html", artifactHtml]]) {
+  if (out.includes("__THUMBS__") || out.includes("__THUMBFILES__")) {
+    console.error(`RENDER FAILED: ${name} still holds a thumbnail placeholder`);
+    process.exit(1);
+  }
+}
 fs.writeFileSync(path.join(OUT, "index.html"), siteHtml);
-fs.writeFileSync(path.join(OUT, "index.artifact.html"), html);
+fs.writeFileSync(path.join(OUT, "index.artifact.html"), artifactHtml);
 
 const kb = (Buffer.byteLength(html) / 1024).toFixed(0);
 const sk = (Buffer.byteLength(siteHtml) / 1024).toFixed(0);
+const ak = (Buffer.byteLength(artifactHtml) / 1024 / 1024).toFixed(2);
 console.log(`RENDER OK  public/index.html ${sk} KB (file-backed, for Vercel)`);
-console.log(`           public/index.artifact.html ${kb} KB (inlined, for the artifact)`);
-console.log(`           ${swapped} image(s) swapped to files in the Vercel build`);
+console.log(`           public/index.artifact.html ${ak} MB (${Object.keys(inlined).length} of ${Object.keys(thumbMap).length} inlined, rest fall back)`);
+console.log(`           ${Object.keys(fileMap).length} image(s) referenced as files in the Vercel build`);
 if (kb > 15000) console.warn("  WARNING: approaching the 16 MB single-page ceiling.");
