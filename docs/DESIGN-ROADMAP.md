@@ -50,35 +50,35 @@ Consistency scored 8. The system is disciplined; it is pointed at the wrong goal
 14. `[x]` Cap any remaining chips at 2–4 with a `+N` overflow `REF`
 
 ### Contrast between a card and the things inside it
-15. `[ ]` Every nested level differs by a combination of fill, border, elevation and text colour, never one signal alone `OWNER` `CARD`
-16. `[ ]` Card `--surface-container-low`; meta strip `--surface-container-high`; chip a container role `CARD`
-17. `[ ]` Default Discover cards to real elevation `--e2`, not the flat `.card-out` border `VQA`
+15. `[x]` Every nested level differs by a combination of fill, border, elevation and text colour, never one signal alone `OWNER` `CARD`
+16. `[x]` Card `--surface-container-low`; meta strip `--surface-container-high`; chip a container role `CARD`
+17. `[x]` Default Discover cards to real elevation `--e2`, not the flat `.card-out` border `VQA`
 
 ### Metrics that are made up
 18. `[x]` Remove Effort entirely: rail facet, both sort options, the pip meter `OWNER` `IA`
 19. `[x]` Remove Usefulness/impact entirely: sort option, pip meter, card scorebar `OWNER` `IA`
 20. `[x]` Stop displaying npm's popularity score as a star count. It was fabricated; 281 dropped
-21. `[ ]` Keep only objective metrics: GitHub stars, X likes, date, source, author `IA`
-22. `[ ]` Sort becomes: Most starred · Newest · A to Z
+21. `[x]` Keep only objective metrics: GitHub stars, X likes, date, source, author `IA`
+22. `[x]` Sort becomes: Most starred · Newest · A to Z
 
 ### Navigation confusion
-23. `[ ]` Merge Family and Field into one tree. Family is the parent row, fields nest under it. Not two filter groups `OWNER` `IA`
-24. `[ ]` Delete the dynamic "Field in <Family>" re-titling — the parent row already says it `IA`
-25. `[ ]` Keep Build shape and Capability separate but fix the copy: *"A build shape is the pipeline; a capability is one job inside it"* `IA`
-26. `[ ]` Rename "Capability used" to "Capabilities in this build" `IA`
-27. `[ ]` New capability definition for the UI: *"one job a build needs done, independent of which vendor does it"* `IA`
-28. `[ ]` Default view becomes Discover, not Build `OWNER`
+23. `[x]` Merge Family and Field into one tree. Family is the parent row, fields nest under it. Not two filter groups `OWNER` `IA`
+24. `[x]` Delete the dynamic "Field in <Family>" re-titling — the parent row already says it `IA`
+25. `[~]` Keep Build shape and Capability separate but fix the copy: *"A build shape is the pipeline; a capability is one job inside it"* `IA`
+26. `[~]` Rename "Capability used" to "Capabilities in this build" `IA`
+27. `[~]` New capability definition for the UI: *"one job a build needs done, independent of which vendor does it"* `IA`
+28. `[x]` Default view becomes Discover, not Build `OWNER`
 
 ### Matrix unreadable
-29. `[ ]` Transpose it: capabilities become rows with horizontal labels, the 6 families become columns `OWNER` `IA`
-30. `[ ]` Delete every `writing-mode` and `rotate` rule `OWNER`
-31. `[ ]` Sticky row labels on horizontal scroll `IA`
-32. `[ ]` Matrix cells become buttons that open the same detail view `CARD`
+29. `[-]` Transpose it: capabilities become rows with horizontal labels, the 6 families become columns `OWNER` `IA`  **Superseded:** Matrix view removed in the three-pane rebuild
+30. `[-]` Delete every `writing-mode` and `rotate` rule `OWNER`  **Superseded:** Matrix view removed; no writing-mode rule remains
+31. `[-]` Sticky row labels on horizontal scroll `IA`  **Superseded:** Matrix view removed
+32. `[-]` Matrix cells become buttons that open the same detail view `CARD`  **Superseded:** Matrix view removed; every card already opens the reading pane
 
 ### Text
 33. `[x]` Fix wrapping in blueprint cards: `overflow-wrap:break-word`, `word-break:normal`, `hyphens:auto` `OWNER` `CARD`
 34. `[x]` `min-width:0` on flex and grid children — its absence is what causes mid-word overflow `CARD`
-35. `[ ]` `text-wrap:balance` on headings `T009`
+35. `[x]` `text-wrap:balance` on headings `T009`
 
 ---
 
