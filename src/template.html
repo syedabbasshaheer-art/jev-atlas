@@ -129,8 +129,12 @@ body.pane-open .shell{grid-template-columns:var(--rail) minmax(0,1fr) var(--pane
 .sorter button{padding:6px 14px;border-radius:var(--r-f);font-size:var(--t-s);font-weight:500;color:var(--on-surface-variant);transition:all .16s var(--ease)}
 .sorter button[aria-pressed="true"]{background:var(--surface-container-lowest);color:var(--on-surface);box-shadow:var(--e1)}
 
-.bento{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:var(--s5);align-items:start}
-@media (min-width:1500px){.bento{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}}
+/* 268px was a list density wearing an image-led layout. A cover is the primary
+   read here, so the tile is sized for the cover and the gap is wide enough that
+   two cards never read as one block. */
+.bento{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--s6);align-items:start}
+@media (min-width:1500px){.bento{grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}}
+@media (max-width:420px){.bento{grid-template-columns:minmax(0,1fr);gap:var(--s5)}}
 .card{background:var(--surface-container-lowest);border:1px solid var(--outline-variant);border-radius:var(--r-l);
   overflow:hidden;box-shadow:var(--e1);cursor:pointer;display:flex;flex-direction:column;min-width:0;
   transition:box-shadow .24s var(--ease),transform .24s var(--ease),border-color .24s var(--ease)}
@@ -161,8 +165,26 @@ body.pane-open .shell{grid-template-columns:var(--rail) minmax(0,1fr) var(--pane
 .cfoot{display:flex;align-items:center;gap:var(--s2);margin-top:auto;padding-top:var(--s3);
   border-top:1px solid var(--outline-variant);font-size:var(--t-l);color:var(--on-surface-variant);min-width:0}
 .who{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.who.dim{opacity:.55;font-style:italic}
 .metric{margin-left:auto;flex:none;font-family:var(--mono)}
 .catdot{width:7px;height:7px;border-radius:2px;background:var(--fc);flex:none}
+/* Attribution. No avatar exists in the data, so initials on a hue derived from
+   the name - stable per person, never invented. */
+.avi{flex:none;width:22px;height:22px;border-radius:var(--r-f);display:grid;place-items:center;
+  font-size:9.5px;font-weight:700;letter-spacing:.02em;
+  background:oklch(.86 .055 var(--ah));color:oklch(.34 .07 var(--ah))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .avi{background:oklch(.36 .055 var(--ah));color:oklch(.9 .05 var(--ah))}}
+:root[data-theme="dark"] .avi{background:oklch(.36 .055 var(--ah));color:oklch(.9 .05 var(--ah))}
+/* The category rides the image so it costs no vertical space. */
+.ribbon{position:absolute;left:0;bottom:var(--s3);max-width:82%;
+  padding:3px var(--s3) 3px var(--s3);border-radius:0 var(--r-xs) var(--r-xs) 0;
+  font-size:var(--t-l);font-weight:600;letter-spacing:.02em;
+  background:color-mix(in srgb,var(--fc) 88%,black 12%);color:#fff;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* A facet that would return nothing says so before it is clicked, rather than
+   after. Still clickable - the zero is information, not a disabled control. */
+.fld[data-zero="1"],.opt[data-zero="1"],.fam-h[data-zero="1"]{opacity:.42}
+.fld[data-zero="1"] .fld-c,.opt[data-zero="1"] .opt-n{text-decoration:line-through}
 
 /* ───────── right reading pane ───────── */
 .pane{border-left:1px solid var(--outline-variant);background:var(--surface-container-low);
@@ -267,6 +289,9 @@ dialog#add menu{display:flex;gap:var(--s2);justify-content:flex-end;margin:var(-
     <select class="pick" id="pickCap" aria-label="Capability"></select>
   </div>
   <div class="acts">
+    <button class="ico" id="copyview" aria-label="Copy a link to this view" title="Copy a link to this view">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 1 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 1 0 7 7l1-1"/></svg>
+    </button>
     <button class="ico" id="theme" aria-label="Switch theme">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
     </button>
@@ -349,9 +374,78 @@ function pass(e){
   if(S.cap&&(e.capabilities||[]).indexOf(S.cap)<0)return false;
   if(S.src&&srcOf(e)!==S.src)return false;
   if(S.kind&&(e.kind||e.format)!==S.kind)return false;
-  if(S.q){var h=(e.title+" "+(e.author||"")+" "+(e.handle||"")+" "+(e.blurb||"")+" "+((catBy[e.category]||{}).label||"")).toLowerCase();
-    if(h.indexOf(S.q.toLowerCase())<0)return false}
+  if(S.q&&qscore(e)<=0)return false;
   return true;
+}
+
+/* ── Search that survives a typo ─────────────────────────────────────────────
+   It was indexOf, so "langchian" found nothing and the page looked empty when
+   the catalogue was fine. Nobody retypes; they conclude it is not here.
+
+   Every query token has to match somewhere, but a token matches three ways, in
+   descending confidence: the field starts with it, the field contains it, or
+   some word in the field is within a small edit distance of it. Distance is
+   bounded by token length - one edit for a short word, two for a long one -
+   because at three edits "catan" also matches "cargo" and precision dies.
+
+   The returned number is the relevance score, so the same pass that filters
+   also ranks. No library: a subsequence fallback would match far too much, and
+   this is 40 lines against 12KB of Fuse. */
+var FIELDW=[["title",10],["author",4],["handle",4],["blurb",2],["catlabel",3]];
+function lev(a,b,max){
+  if(a===b)return 0;
+  if(Math.abs(a.length-b.length)>max)return max+1;
+  var prev=[],cur=[],i,j;
+  for(j=0;j<=b.length;j++)prev[j]=j;
+  for(i=1;i<=a.length;i++){
+    cur[0]=i;var best=i;
+    for(j=1;j<=b.length;j++){
+      cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a.charAt(i-1)===b.charAt(j-1)?0:1));
+      if(cur[j]<best)best=cur[j];
+    }
+    if(best>max)return max+1;
+    prev=cur.slice();
+  }
+  return prev[b.length];
+}
+var _qcache={},_qkey="";
+function qfields(e){
+  return {title:(e.title||"").toLowerCase(),author:(e.author||"").toLowerCase(),
+    handle:(e.handle||"").toLowerCase(),blurb:(e.blurb||"").toLowerCase(),
+    catlabel:((catBy[e.category]||{}).label||"").toLowerCase()};
+}
+function qscore(e){
+  var q=S.q.trim().toLowerCase();
+  if(!q)return 1;
+  if(_qkey!==q){_qcache={};_qkey=q}
+  var ck=String(e.id);
+  if(_qcache[ck]!==undefined)return _qcache[ck];
+  var toks=q.split(/\s+/).filter(Boolean),f=qfields(e),total=0,k,t,i;
+  for(k=0;k<toks.length;k++){
+    t=toks[k];
+    var best=0;
+    for(i=0;i<FIELDW.length;i++){
+      var name=FIELDW[i][0],w=FIELDW[i][1],hay=f[name];
+      if(!hay)continue;
+      var at=hay.indexOf(t),got=0;
+      if(at===0)got=w*3;
+      else if(at>0)got=hay.charAt(at-1)===" "?w*2.4:w*1.6;
+      else if(t.length>=4){
+        // Only now pay for edit distance, and only against words worth comparing.
+        var max=t.length<=5?1:2,words=hay.split(/[^a-z0-9]+/),d;
+        for(var wi=0;wi<words.length;wi++){
+          if(!words[wi]||Math.abs(words[wi].length-t.length)>max)continue;
+          d=lev(t,words[wi],max);
+          if(d<=max){got=Math.max(got,w*(1-d*0.35));break}
+        }
+      }
+      if(got>best)best=got;
+    }
+    if(!best){_qcache[ck]=0;return 0}   // every token must land somewhere
+    total+=best;
+  }
+  _qcache[ck]=total;
+  return total;
 }
 function score(e){
   var s=Math.log10((e.stars||0)+1)*19;      // standing, heavily compressed
@@ -363,6 +457,9 @@ function score(e){
 function rows(){
   var r=D.evidence.filter(pass);
   r.sort(function(a,b){
+    // Relevance only exists while there is a query to be relevant to. Sorting a
+    // text search by star count answers a question nobody asked.
+    if(S.sort==="rel"&&S.q)return qscore(b)-qscore(a)||score(b)-score(a);
     if(S.sort==="new")return String(b.date||"").localeCompare(String(a.date||""));
     if(S.sort==="az")return a.title.localeCompare(b.title);
     // "Top" is a blend, not a raw star count. Sorting on stars alone put every
@@ -375,8 +472,26 @@ function rows(){
 }
 var countIf=function(fn){var n=0;D.evidence.forEach(function(e){if(fn(e))n++});return n};
 
+/* Counts have to mean "how many would I get if I clicked this", which is a
+   count within every OTHER active filter, not a count of the whole catalogue.
+   A static 82 next to a facet that would actually return 3 is a lie the reader
+   only discovers by clicking it. Drop the axis being counted, keep the rest. */
+function countIn(axes,fn){
+  if(typeof axes==="string")axes=[axes];
+  var save={};axes.forEach(function(a){save[a]=S[a];S[a]=null});
+  var n=0;
+  for(var i=0;i<D.evidence.length;i++){var e=D.evidence[i];if(fn(e)&&pass(e))n++}
+  axes.forEach(function(a){S[a]=save[a]});
+  return n;
+}
+
 function renderRail(){
-  var maxc=Math.max.apply(null,CATS.map(function(c){return c.evidence_count}));
+  // A family count has to ignore the selected field too, or picking one field
+  // collapses every family row to 0 and the tree looks broken.
+  var fieldN={},famN={};
+  CATS.forEach(function(c){fieldN[c.key]=countIn("cat",function(e){return e.category===c.key})});
+  FAMS.forEach(function(f){famN[f.key]=countIn(["fam","cat"],function(e){return famOf[e.category]===f.key})});
+  var maxc=Math.max(1,Math.max.apply(null,CATS.map(function(c){return fieldN[c.key]})));
   var any=S.cat||S.fam||S.cap||S.src||S.kind||S.q;
   var h='<div class="rgrp"><div class="rgrp-h"><span class="ov">Field</span>'+
     '<button class="reset" id="reset"'+(any?"":" hidden")+'>Reset</button></div>';
@@ -384,25 +499,31 @@ function renderRail(){
     var kids=CATS.filter(function(c){return famOf[c.key]===f.key});
     var open=S.fam===f.key||kids.some(function(c){return c.key===S.cat});
     h+='<div class="fam" style="--fc:'+famColor(f.key)+'">'+
-      '<button class="fam-h" data-fam="'+f.key+'" aria-pressed="'+(S.fam===f.key&&!S.cat)+'">'+
-        '<span class="fam-dot"></span>'+esc(f.label)+'<span class="fam-n">'+f.evidence_count+'</span></button>'+
+      '<button class="fam-h" data-fam="'+f.key+'" aria-pressed="'+(S.fam===f.key&&!S.cat)+'"'+
+        (famN[f.key]?"":' data-zero="1"')+'>'+
+        '<span class="fam-dot"></span>'+esc(f.label)+'<span class="fam-n">'+famN[f.key]+'</span></button>'+
       (open?'<div class="fields">'+kids.map(function(c){
-        return '<button class="fld" data-cat="'+c.key+'" aria-pressed="'+(S.cat===c.key)+'">'+
-          '<span class="fld-n">'+esc(c.label)+'</span><span class="fld-c">'+c.evidence_count+'</span>'+
-          '<span class="fld-bar"><i style="width:'+Math.max(4,c.evidence_count/maxc*100).toFixed(0)+'%"></i></span></button>';
+        var n=fieldN[c.key];
+        return '<button class="fld" data-cat="'+c.key+'" aria-pressed="'+(S.cat===c.key)+'"'+
+          (n?"":' data-zero="1"')+'>'+
+          '<span class="fld-n">'+esc(c.label)+'</span><span class="fld-c">'+n+'</span>'+
+          '<span class="fld-bar"><i style="width:'+Math.max(4,n/maxc*100).toFixed(0)+'%"></i></span></button>';
       }).join("")+'</div>':'')+'</div>';
   });
   h+='</div><div class="rgrp"><div class="rgrp-h"><span class="ov">Source</span></div>';
   Object.keys(SRC).forEach(function(k){
-    var n=countIf(function(e){return srcOf(e)===k});
-    if(!n)return;
-    h+='<button class="opt" data-src="'+k+'" aria-pressed="'+(S.src===k)+'">'+esc(SRC[k])+'<span class="opt-n">'+n+'</span></button>';
+    if(!countIf(function(e){return srcOf(e)===k}))return;   // source absent from the catalogue entirely
+    var n=countIn("src",function(e){return srcOf(e)===k});
+    h+='<button class="opt" data-src="'+k+'" aria-pressed="'+(S.src===k)+'"'+(n?"":' data-zero="1"')+'>'+
+      esc(SRC[k])+'<span class="opt-n">'+n+'</span></button>';
   });
   h+='</div>';
   var kinds={};D.evidence.forEach(function(e){var k=e.kind||e.format;if(k)kinds[k]=(kinds[k]||0)+1});
   h+='<div class="rgrp"><div class="rgrp-h"><span class="ov">Type</span></div>';
   Object.keys(kinds).sort(function(a,b){return kinds[b]-kinds[a]}).slice(0,6).forEach(function(k){
-    h+='<button class="opt" data-kind="'+k+'" aria-pressed="'+(S.kind===k)+'">'+esc(k)+'<span class="opt-n">'+kinds[k]+'</span></button>';
+    var n=countIn("kind",function(e){return (e.kind||e.format)===k});
+    h+='<button class="opt" data-kind="'+k+'" aria-pressed="'+(S.kind===k)+'"'+(n?"":' data-zero="1"')+'>'+
+      esc(k)+'<span class="opt-n">'+n+'</span></button>';
   });
   el("rail").innerHTML=h+'</div>';
 }
@@ -410,36 +531,74 @@ function renderRail(){
 function cover(e){
   var t=thumb(String(e.id));
   var badge='<span class="srcbadge">'+esc(SRC[srcOf(e)]||srcOf(e))+'</span>';
+  // The category rides on the image as a ribbon rather than taking its own row.
+  // At 1,442 items a badge row costs most of a card per screen.
+  var cat=catBy[e.category]||{label:""};
+  var ribbon=cat.label?'<span class="ribbon">'+esc(cat.label)+'</span>':"";
   // github, npm and the curated lists all resolve to a GitHub social card
   var og=["github","awesome","npm"].indexOf(srcOf(e))>-1?' data-og="1"':'';
-  if(t)return '<div class="cover"'+og+'><img src="'+t+'" alt="" loading="lazy" decoding="async">'+badge+'</div>';
+  if(t)return '<div class="cover"'+og+'><img src="'+t+'" alt="" loading="lazy" decoding="async">'+ribbon+badge+'</div>';
   var letter=(e.title||"?").trim().charAt(0).toUpperCase();
-  return '<div class="cover"><div class="gen"><span>'+esc(letter)+'</span></div>'+badge+'</div>';
+  return '<div class="cover"><div class="gen"><span>'+esc(letter)+'</span></div>'+ribbon+badge+'</div>';
 }
+/* No row in this catalogue carries an avatar - the field does not exist in the
+   data, so the roadmap's "the data exists and is never rendered" was wrong.
+   Initials on a colour derived from the name is the honest version: it
+   identifies the author consistently without inventing a face. */
+function initials(n){
+  var p=String(n||"").trim().split(/\s+/).filter(Boolean);
+  if(!p.length)return "?";
+  return (p[0].charAt(0)+(p.length>1?p[p.length-1].charAt(0):"")).toUpperCase();
+}
+function aviHue(n){var h=0,s=String(n||"");for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%360;return h}
 function card(e,wide){
-  var cat=catBy[e.category]||{label:""};
+  var who=e.author||e.handle||"";
   return '<article class="card'+(wide?" wide":"")+'" data-id="'+esc(e.id)+'" tabindex="0" role="button" '+
     'aria-label="'+esc(e.title)+'" style="--fc:'+famColor(famOf[e.category])+'" data-sel="'+(S.sel===String(e.id)?1:0)+'">'+
     cover(e)+
     '<div class="cbody"><h3 class="ctitle">'+esc(e.title)+'</h3>'+
       '<p class="cdesc">'+esc(e.blurb||"")+'</p>'+
-      '<div class="cfoot"><span class="catdot"></span><span class="who">'+esc(cat.label)+
-        (e.author?" &middot; "+esc(e.author):"")+'</span>'+
+      '<div class="cfoot">'+
+        (who?'<span class="avi" style="--ah:'+aviHue(who)+'" aria-hidden="true">'+esc(initials(who))+'</span>'+
+             '<span class="who">'+esc(who)+'</span>'
+            :'<span class="who dim">Unattributed</span>')+
         (e.stars?'<span class="metric">&#9733; '+e.stars+'</span>':'')+'</div></div></article>';
 }
 function renderFeed(keep){
   if(!keep)shown=PAGE;
   var r=rows();
-  var title=S.cat?catBy[S.cat].label:S.fam?famBy[S.fam].label:S.cap?CAPS[S.cap].label:"Everything";
-  var h='<div class="fhead"><div><h1>'+esc(title)+'</h1>'+
-    '<div class="sub">'+r.length+' of '+D.evidence.length+' projects, gathered from six sources</div></div>'+
-    '<div class="sorter">'+["top","new","az"].map(function(k){
-      return '<button data-sort="'+k+'" aria-pressed="'+(S.sort===k)+'">'+{top:"Top",new:"Newest",az:"A–Z"}[k]+'</button>'}).join("")+
+  var title=S.q?'Results for “'+esc(S.q)+'”':S.cat?catBy[S.cat].label:S.fam?famBy[S.fam].label:S.cap?CAPS[S.cap].label:"Everything";
+  var sorts=S.q?["rel","top","new","az"]:["top","new","az"];
+  var SL={rel:"Best match",top:"Top",new:"Newest",az:"A–Z"};
+  var h='<div class="fhead"><div><h1>'+title+'</h1>'+
+    '<div class="sub" id="rescount" aria-live="polite">'+r.length+' of '+D.evidence.length+
+      ' projects, gathered from six sources</div></div>'+
+    '<div class="sorter" role="group" aria-label="Sort">'+sorts.map(function(k){
+      return '<button data-sort="'+k+'" aria-pressed="'+(S.sort===k)+'">'+SL[k]+'</button>'}).join("")+
     '</div></div>';
   if(!r.length){
-    el("feed").innerHTML=h+'<div class="empty"><h3>Nothing matches</h3>'+
-      '<p>No project clears every filter at once. Clear one on the left, or search for something broader.</p>'+
-      '<button class="btn btn-f" id="reset2">Reset filters</button></div>';
+    // Never a blank screen. Work out which single filter is doing the damage by
+    // dropping each one in turn, and offer to drop the worst offender by name.
+    // "Nothing matches" tells the reader what happened; it does not tell them
+    // what to do, and they cannot see which of five filters is at fault.
+    var axes=[["q","the search “"+esc(S.q)+"”"],["cat","the field filter"],["fam","the family filter"],
+              ["cap","the capability filter"],["src","the source filter"],["kind","the type filter"]];
+    var best=null;
+    axes.forEach(function(a){
+      if(!S[a[0]])return;
+      var save=S[a[0]];S[a[0]]=null;
+      var n=D.evidence.filter(pass).length;
+      S[a[0]]=save;
+      if(n>0&&(!best||n>best.n))best={key:a[0],label:a[1],n:n};
+    });
+    el("feed").innerHTML=h+'<div class="empty"><h3>No project clears every filter at once</h3>'+
+      (best
+        ? '<p>Drop <b>'+best.label+'</b> and '+best.n+' project'+(best.n===1?"":"s")+' come back.</p>'+
+          '<button class="btn btn-f" data-drop="'+best.key+'">Drop '+best.label+'</button> '+
+          '<button class="btn btn-o" id="reset2">Clear everything</button>'
+        : '<p>Nothing here matches, with or without the filters. Try a broader word.</p>'+
+          '<button class="btn btn-f" id="reset2">Clear everything</button>')+
+      '</div>';
     return;
   }
   // Windowed. Rendering all 1,442 cards built ~1,400 DOM subtrees and ~1,300
@@ -644,7 +803,19 @@ document.addEventListener("click",function(ev){
     } else snack("Copy is not available here");
     return}
   if(t.id==="more"){shown+=PAGE;renderFeed(true);return}
-  if(t.id==="reset"||t.id==="reset2"){S.cat=S.fam=S.cap=S.src=S.kind=null;S.q="";el("q").value="";render();return}
+  if(t.id==="reset"||t.id==="reset2"){S.cat=S.fam=S.cap=S.src=S.kind=null;S.q="";el("q").value="";
+    if(S.sort==="rel")S.sort="top";render();return}
+  if(d.drop){
+    S[d.drop]=d.drop==="q"?"":null;
+    if(d.drop==="q"){el("q").value="";if(S.sort==="rel")S.sort="top"}
+    if(d.drop==="fam")S.cat=null;
+    render();return}
+  if(t.id==="copyview"){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(location.href).then(
+        function(){snack("Link to this view copied")},function(){snack("Could not copy")});
+    } else snack("Copy is not available here");
+    return}
   if(d.bpshow){snack("Build guides live in the blueprint view");return}
   if(d.fam){S.fam=(S.fam===d.fam&&!S.cat)?null:d.fam;S.cat=null;render();return}
   if(d.cat){S.cat=S.cat===d.cat?null:d.cat;if(S.cat)S.fam=famOf[S.cat];render();return}
@@ -660,6 +831,18 @@ document.addEventListener("keydown",function(e){
   if(e.key==="/"&&!pal&&!/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)){e.preventDefault();cmdOpen();return}
   if(pal){
     if(e.key==="Escape"){cmdClose();return}
+    // Tab used to walk straight out of the palette and into the page behind it,
+    // which leaves a keyboard user focused on something they cannot see.
+    if(e.key==="Tab"){
+      var f=el("cmdk").querySelectorAll('input,button,[href],[tabindex]:not([tabindex="-1"])');
+      if(f.length){
+        var first=f[0],last=f[f.length-1];
+        if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+        else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+        else if(!el("cmdk").contains(document.activeElement)){e.preventDefault();first.focus()}
+      }
+      return;
+    }
     if(e.key==="ArrowDown"){e.preventDefault();sel++;cmdRender();return}
     if(e.key==="ArrowUp"){e.preventDefault();sel--;cmdRender();return}
     if(e.key==="Enter"){e.preventDefault();var it=(el("cmdl")._l||[])[sel];cmdClose();if(it)it.go();return}
@@ -670,7 +853,17 @@ document.addEventListener("keydown",function(e){
   if((e.key==="Enter"||e.key===" ")&&af&&af.dataset&&af.dataset.id){e.preventDefault();openCard(af.dataset.id)}
 });
 el("scrim").addEventListener("click",function(){el("rail").classList.remove("open");el("scrim").hidden=true});
-el("q").addEventListener("input",function(e){S.q=e.target.value;renderFeed();renderRail();writeHash()});
+/* Typing switches the sort to relevance, and clearing hands back whatever the
+   reader had chosen before. Leaving it on "Top" during a search ranks by star
+   count, which answers a different question than the one just typed. */
+var sortBeforeQuery=null;
+el("q").addEventListener("input",function(e){
+  var had=!!S.q;
+  S.q=e.target.value;
+  if(S.q&&!had){sortBeforeQuery=S.sort;S.sort="rel"}
+  else if(!S.q&&had){S.sort=sortBeforeQuery||"top";sortBeforeQuery=null}
+  renderFeed();renderRail();writeHash();
+});
 el("pickFam").addEventListener("change",function(e){S.fam=e.target.value||null;S.cat=null;render()});
 el("pickCap").addEventListener("change",function(e){S.cap=e.target.value||null;render()});
 el("cmdq").addEventListener("input",function(){sel=0;cmdRender()});

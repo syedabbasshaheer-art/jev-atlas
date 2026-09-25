@@ -20,7 +20,9 @@
     "docs": "node src/gen-docs.mjs",
     "harvest": "node src/harvest/run.mjs",
     "harvest:enrich": "node src/harvest/run.mjs --enrich --limit 60",
-    "harvest:merge": "node src/harvest/run.mjs --merge"
+    "harvest:merge": "node src/harvest/run.mjs --merge",
+    "smoke": "node scripts/smoke.mjs",
+    "qa": "npm run build && npm run smoke"
   },
   "keywords": [
     "jev",

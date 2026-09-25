@@ -1,0 +1,1448 @@
+[
+  {
+    "id": "2100653998378516518",
+    "title": "Jev Search",
+    "url": "https://x.com/fatwang2ai/status/2100653998378516518",
+    "source": "x-native"
+  },
+  {
+    "id": "2101013714673480147",
+    "title": "Cambium Jev integration",
+    "url": "https://x.com/SteveKeider/status/2101013714673480147",
+    "source": "x-native"
+  },
+  {
+    "id": "2101013116125594026",
+    "title": "Mappity",
+    "url": "https://x.com/francip/status/2101013116125594026",
+    "source": "x-native"
+  },
+  {
+    "id": "github:1377564775",
+    "title": "jev",
+    "url": "https://github.com/robfrase/jev",
+    "source": "github"
+  },
+  {
+    "id": "github:1377890878",
+    "title": "system-one-bench",
+    "url": "https://github.com/reachjalil/system-one-bench",
+    "source": "github"
+  },
+  {
+    "id": "github:1378230561",
+    "title": "jev-claude-controller",
+    "url": "https://github.com/snesmaeili/jev-claude-controller",
+    "source": "github"
+  },
+  {
+    "id": "github:1375832220",
+    "title": "jev-lab",
+    "url": "https://github.com/SadiqOnGithub/jev-lab",
+    "source": "github"
+  },
+  {
+    "id": "github:1377951263",
+    "title": "jev-dify-tool-plugin",
+    "url": "https://github.com/Bechi29/jev-dify-tool-plugin",
+    "source": "github"
+  },
+  {
+    "id": "github:1374912875",
+    "title": "jev-plays-doom",
+    "url": "https://github.com/tirukovelamanoj/jev-plays-doom",
+    "source": "github"
+  },
+  {
+    "id": "github:1376650575",
+    "title": "jev-mcp",
+    "url": "https://github.com/codaaiteam/jev-mcp",
+    "source": "github"
+  },
+  {
+    "id": "github:1377472668",
+    "title": "openrouter-jev-mcp",
+    "url": "https://github.com/ctmx/openrouter-jev-mcp",
+    "source": "github"
+  },
+  {
+    "id": "github:1376421022",
+    "title": "jev-plays",
+    "url": "https://github.com/thumay9700/jev-plays",
+    "source": "github"
+  },
+  {
+    "id": "hackernews:49768633",
+    "title": "TypeSafe's Jev Can't See. I Made It Guess What I Drew Anyway",
+    "url": "https://mikulskibartosz.name/typesafe-jev-guess-what-i-drew",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49745212",
+    "title": "Typesafe's Jev is the fish at the poker table",
+    "url": "https://backnotprop.com/blog/jev-poker",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49774157",
+    "title": "A deep dive into Jev, TypeSafe's System One model",
+    "url": "https://flaviocopes.com/jev",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49752426",
+    "title": "An early-access test of TypeSafe's Jev: calibrated judgments for half a cent",
+    "url": "https://lindfors.no/blog/a-first-look-at-typesafes-jev",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49724424",
+    "title": "TypeSafe Jev vs. Mistral Small and Gemini Flash-Lite for Local Event Validation",
+    "url": "https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49769916",
+    "title": "Show HN: Jev, Fly Me to the Moon",
+    "url": "https://fly.rahmanyoonus.com",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49753667",
+    "title": "Show HN: Explore 2D semantic space with the Jev model",
+    "url": "https://semanticspace.dev",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49747584",
+    "title": "Jev is about to change the AI economy",
+    "url": "https://thefinancialengineer.substack.com/p/typesafes-jev-is-about-to-change",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49765748",
+    "title": "How to classify, route, and score with Jev and AI SDK",
+    "url": "https://vercel.com/kb/guide/typesafe-jev-and-ai-sdk",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49761730",
+    "title": "TypeSafe AI's Jev Is Not an LLM \u2013 and That May Be the Point",
+    "url": "https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49734345",
+    "title": "Typesafe.ai Jev Open Source Alternative Qwen-2.5-1B-RLCD",
+    "url": "https://huggingface.co/spaces/drinkmoonshine/parallel-constrained-decoding",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49717558",
+    "title": "Introducing System One Models and Jev",
+    "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49729945",
+    "title": "The first (public) System One Model; Jev gives AI the properties of code",
+    "url": "https://typesafe.ai",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49771931",
+    "title": "Using system-one models inside high-throughput data pipelines",
+    "url": "https://www.southbridge.ai/blog/jev-entity-resolution",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49770066",
+    "title": "I Built a System One Model on a RTX 3070",
+    "url": "https://twitter.com/lafalcemateo/status/2101414901365248059",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49760138",
+    "title": "What is a System One model and why we need it?",
+    "url": "https://stackness.dev/blog/what-is-a-system-one-model-and-where-does-it-go-in-your-stack",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49758885",
+    "title": "Cua S1- A family of System One models",
+    "url": "https://twitter.com/trycua/status/2101014004927729737",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49755005",
+    "title": "Two techniques for working with System One models",
+    "url": "https://www.seangoedecke.com/two-techniques-for-working-with-system-one-models",
+    "source": "hackernews"
+  },
+  {
+    "id": "hackernews:49718261",
+    "title": "Typesafe.ai's System One Model",
+    "url": "https://docs.typesafe.ai/concepts/system-one",
+    "source": "hackernews"
+  },
+  {
+    "id": "devto:4698208",
+    "title": "Open-Source Jev Alternatives: Run Typed, Calibrated LLM Decisions Locally",
+    "url": "https://dev.to/rupesh_poojary_ce8e5e7994/open-source-jev-alternatives-run-typed-calibrated-llm-decisions-locally-4dfb",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4694743",
+    "title": "Your AI judge says 98% confident. Does it mean it?",
+    "url": "https://dev.to/kunko_ai_labs/your-ai-judge-says-98-confident-does-it-mean-it-10lj",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4698531",
+    "title": "Some Decision-Making Methods for System One Models Like Jev",
+    "url": "https://dev.to/lbobylev/decision-making-methods-for-system-one-models-like-jev-35pe",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4692094",
+    "title": "I found the model Flash Onyx 3 was missing. It doesn't generate a single word.",
+    "url": "https://dev.to/natuworkguy/i-found-the-model-flash-onyx-3-was-missing-it-doesnt-generate-a-single-word-i75",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4694079",
+    "title": "Human, agents, code, judge: adding Jev without replacing peer review",
+    "url": "https://dev.to/dimonb19a/human-agents-code-judge-adding-jev-without-replacing-peer-review-51lb",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4686212",
+    "title": "Jev and the Classification Problem Hiding in Your LLM Bill",
+    "url": "https://dev.to/devopsdaily/jev-and-the-classification-problem-hiding-in-your-llm-bill-191j",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4687173",
+    "title": "Five Things Developers Are Actually Building With JEV (And Why It Matters)",
+    "url": "https://dev.to/mini2809/five-things-developers-are-actually-building-with-jev-and-why-it-matters-52je",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4685254",
+    "title": "TypeSafe AI Jev: An AI model that doesn't generate text \u2013 and is 200x faster",
+    "url": "https://dev.to/saaro_net/typesafe-ai-jev-an-ai-model-that-doesnt-generate-text-and-is-200x-faster-1ggo",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4694915",
+    "title": "I Put Jev Behind a TLA+ Spec and Ran 1,680 Chaos-Tested Pharmacy Decisions. Zero Wrong Verdicts.",
+    "url": "https://dev.to/copyleftdev/i-put-jev-behind-a-tla-spec-and-ran-1680-chaos-tested-pharmacy-decisions-zero-wrong-verdicts-1ij8",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4678319",
+    "title": "Jev: one judgment call, or twelve dimension scores? I measured both on three classification tasks",
+    "url": "https://dev.to/ikkun1222/jev-one-judgment-call-or-twelve-dimension-scores-i-measured-both-on-three-classification-tasks-31fd",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4667420",
+    "title": "Testing TypeSafe Jev, Mistral and Gemini for local event validation",
+    "url": "https://dev.to/jonreed/testing-typesafe-jev-mistral-and-gemini-for-local-event-validation-5697",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4695263",
+    "title": "Valid Schema, Wrong Content: Using Jev to Guard a Google ADK Agent",
+    "url": "https://dev.to/gde/valid-schema-wrong-content-using-jev-to-guard-a-google-adk-agent-57o6",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4687707",
+    "title": "Routing OpenCode Tasks with Jev",
+    "url": "https://dev.to/lbobylev/routing-opencode-tasks-with-jev-2c4n",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4694646",
+    "title": "Where TypeSafe Jev actually fits \u2014 scenarios, limits, and upside",
+    "url": "https://dev.to/zacfire/where-typesafe-jev-actually-fits-scenarios-limits-and-upside-58p4",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4695132",
+    "title": "Jev vs Fable 5.1 vs GPT-6 Astra: Which Model for Which Job",
+    "url": "https://dev.to/tran_tienvan_e45fc26d655/jev-vs-fable-51-vs-gpt-6-astra-which-model-for-which-job-3dcc",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4687464",
+    "title": "TypeSafe Jev vs \u201cjust use JSON schema on an LLM\u201d",
+    "url": "https://dev.to/zacfire/typesafe-jev-vs-just-use-json-schema-on-an-llm-9jf",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4687380",
+    "title": "What TypeSafe Jev actually is (System One) \u2014 and how I\u2019d put it on a personal tier-list poster",
+    "url": "https://dev.to/zacfire/what-typesafe-jev-actually-is-system-one-and-how-id-put-it-on-a-personal-tier-list-poster-1ic1",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4687390",
+    "title": "Jev for browser use vs Claude Computer Use \u2014 different jobs",
+    "url": "https://dev.to/zacfire/jev-for-browser-use-vs-claude-computer-use-different-jobs-jnj",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4682479",
+    "title": "Exploring Jev: A Hands-On Look at TypeSafe AI\u2019s New Decision Model",
+    "url": "https://dev.to/aihubmix/exploring-jev-a-hands-on-look-at-typesafe-ais-new-decision-model-ofa",
+    "source": "devto"
+  },
+  {
+    "id": "devto:4669574",
+    "title": "In-Depth Analysis: System One Models & Jev and The\u2026",
+    "url": "https://dev.to/norviktech/in-depth-analysis-system-one-models-jev-and-the-2gjm",
+    "source": "devto"
+  },
+  {
+    "id": "npm:pi-jev-guard",
+    "title": "pi-jev-guard",
+    "url": "https://www.npmjs.com/package/pi-jev-guard",
+    "source": "npm"
+  },
+  {
+    "id": "awesome:https://github.com/vercel-labs/fx",
+    "title": "fx",
+    "url": "https://github.com/vercel-labs/fx",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://blink.review",
+    "title": "Blink",
+    "url": "https://blink.review",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://git.allen-software.com/allenh1/dsh-auto-mode",
+    "title": "dsh-auto-mode",
+    "url": "https://git.allen-software.com/allenh1/dsh-auto-mode",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/",
+    "title": "Jev judge call vs dimension scores",
+    "url": "https://agentjournal.dev/blog/llm-judge-vs-feature-extraction",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/GoSailGlobal/status/2100877682972258619",
+    "title": "Jev reranking is not a free win",
+    "url": "https://x.com/GoSailGlobal/status/2100877682972258619",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/ekzhang1/status/2100651678110515383",
+    "title": "Jev-compatible public API",
+    "url": "https://x.com/ekzhang1/status/2100651678110515383",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/zhengxuyu/litjev",
+    "title": "LitJev",
+    "url": "https://github.com/zhengxuyu/litjev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://huggingface.co/cua-ai/cua-s1-forms",
+    "title": "CUA-S1-FORMS",
+    "url": "https://huggingface.co/cua-ai/cua-s1-forms",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/vercel/eve",
+    "title": "eve",
+    "url": "https://github.com/vercel/eve",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/alterhq/typesafe-sdk-swift",
+    "title": "TypeSafe AI Swift SDK",
+    "url": "https://github.com/alterhq/typesafe-sdk-swift",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://pypi.org/project/jevclient/",
+    "title": "jevclient",
+    "url": "https://pypi.org/project/jevclient",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/typesafe-ai/skills",
+    "title": "typesafe-ai/skills",
+    "url": "https://github.com/typesafe-ai/skills",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/smithersai/smithers",
+    "title": "Smithers",
+    "url": "https://github.com/smithersai/smithers",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/dakdevs/decide-mcp",
+    "title": "decide-mcp",
+    "url": "https://github.com/dakdevs/decide-mcp",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/vercel-labs/ai-python",
+    "title": "ai-python",
+    "url": "https://github.com/vercel-labs/ai-python",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/cline/plugins",
+    "title": "Cline plugins",
+    "url": "https://github.com/cline/plugins",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/yusukebe/hono-jev-router",
+    "title": "hono-jev-router",
+    "url": "https://github.com/yusukebe/hono-jev-router",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://jev-ai.pro",
+    "title": "Jev AI",
+    "url": "https://jev-ai.pro",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/mgaitan/sqlite-jev",
+    "title": "sqlite-jev",
+    "url": "https://github.com/mgaitan/sqlite-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/innocentdiaz/s1_ruby",
+    "title": "s1_ruby",
+    "url": "https://github.com/innocentdiaz/s1_ruby",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/kxzk/typesafe-jev-drone-demo",
+    "title": "typesafe-jev-drone-demo",
+    "url": "https://github.com/kxzk/typesafe-jev-drone-demo",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/unicodeveloper/jevocks",
+    "title": "Jevinik",
+    "url": "https://github.com/unicodeveloper/jevocks",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/johnhughes3/LegalForecastBench",
+    "title": "LegalForecast-MTD",
+    "url": "https://github.com/johnhughes3/LegalForecastBench",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/brainstormity/Jev-Moderation-Bot",
+    "title": "Jev Moderation Bot",
+    "url": "https://github.com/brainstormity/Jev-Moderation-Bot",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/bitnovus/jev-spam-eval",
+    "title": "jev-spam-eval",
+    "url": "https://github.com/bitnovus/jev-spam-eval",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://news.ycombinator.com/item?id=49717558",
+    "title": "Introducing System One Models and Jev (Hacker News)",
+    "url": "https://news.ycombinator.com/item?id=49717558",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/ephraimduncan/status/2100454070536351824",
+    "title": "Model router built with Jev",
+    "url": "https://x.com/ephraimduncan/status/2100454070536351824",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/justALEXWORTEGA/status/2100341039986798930",
+    "title": "MLP on Qwen 4B mimicking Jev",
+    "url": "https://x.com/justALEXWORTEGA/status/2100341039986798930",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/wmoto_ai/status/2100454049359577516",
+    "title": "Running a local Typesafe Jev",
+    "url": "https://x.com/wmoto_ai/status/2100454049359577516",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/isNickMa/status/2100566407524344225",
+    "title": "Jev as an AI agent safety monitor",
+    "url": "https://x.com/isNickMa/status/2100566407524344225",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/Kostastsale/status/2100362415187833048",
+    "title": "Rethinking security engineering with Jev",
+    "url": "https://x.com/Kostastsale/status/2100362415187833048",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/malekoo/status/2100439840575684910",
+    "title": "First Jev use case in a Mac app",
+    "url": "https://x.com/malekoo/status/2100439840575684910",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/dotey/status/2100109937237987823",
+    "title": "Jev \u4e2d\u6587\u89e3\u8bfb",
+    "url": "https://x.com/dotey/status/2100109937237987823",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/singularity/comments/1whop6b/typesafe_ai_releases_ai_model_called_jev_rather/",
+    "title": "TypeSafe AI releases Jev (r/singularity)",
+    "url": "https://reddit.com/r/singularity/comments/1whop6b/typesafe_ai_releases_ai_model_called_jev_rather",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/PiCodingAgent/comments/1whsav6/anyone_else_testing_out_typesafe_ais_new_system/",
+    "title": "Testing Jev for Pi extensions (r/PiCodingAgent)",
+    "url": "https://reddit.com/r/PiCodingAgent/comments/1whsav6/anyone_else_testing_out_typesafe_ais_new_system",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/accelerate/comments/1whk9oy/new_typesafe_ai_jev_model_playing_minecraft_wip/",
+    "title": "Jev \"playing\" Minecraft (r/accelerate)",
+    "url": "https://reddit.com/r/accelerate/comments/1whk9oy/new_typesafe_ai_jev_model_playing_minecraft_wip",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/OpenRouter/status/2100744709589316009",
+    "title": "Jev on OpenRouter",
+    "url": "https://x.com/OpenRouter/status/2100744709589316009",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/CloudflareDev/status/2100688880798159254",
+    "title": "Jev on Cloudflare AI Gateway",
+    "url": "https://x.com/CloudflareDev/status/2100688880798159254",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/altryne/status/2100739055923425589",
+    "title": "Reviewing unnecessary tool calls with Jev",
+    "url": "https://x.com/altryne/status/2100739055923425589",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/GoSailGlobal/status/2100859307671855113",
+    "title": "19 open-source Jev projects",
+    "url": "https://x.com/GoSailGlobal/status/2100859307671855113",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/0xLogicrw/status/2100478725393686556",
+    "title": "Awesome Jev by 0xLogicrw",
+    "url": "https://x.com/0xLogicrw/status/2100478725393686556",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/studio_yebisu/status/2100686990090047569",
+    "title": "Jev repository roundup (Japanese)",
+    "url": "https://x.com/studio_yebisu/status/2100686990090047569",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/isaac_flath/status/2100623016644223175",
+    "title": "Six things I'll still use Jev for",
+    "url": "https://x.com/isaac_flath/status/2100623016644223175",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/mvanhorn/status/2100761338918363550",
+    "title": "WTF is Jev, ELI5",
+    "url": "https://x.com/mvanhorn/status/2100761338918363550",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/AI_Agents/comments/1wjpgbx/has_anyone_tried_jev_as_a_relevance/",
+    "title": "Has anyone tried Jev as a relevance filter for RAG?",
+    "url": "https://reddit.com/r/AI_Agents/comments/1wjpgbx/has_anyone_tried_jev_as_a_relevance",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/DevinAI/comments/1wjtmwi/can_we_have_jev_in_devin/",
+    "title": "Can we have Jev in Devin?",
+    "url": "https://reddit.com/r/DevinAI/comments/1wjtmwi/can_we_have_jev_in_devin",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/moritzkremb/status/2100895894287839255",
+    "title": "All the coolest Jev projects on X",
+    "url": "https://x.com/moritzkremb/status/2100895894287839255",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/moritzkremb/status/2100715237267660873",
+    "title": "Full Jev tutorial",
+    "url": "https://x.com/moritzkremb/status/2100715237267660873",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/mvanhorn/status/2100788572316139655",
+    "title": "WTF is Jev, and the 9 things people are building with it",
+    "url": "https://x.com/mvanhorn/status/2100788572316139655",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/NathanFlurry/status/2100036101809619314",
+    "title": "Jev is a really smart switch statement",
+    "url": "https://x.com/NathanFlurry/status/2100036101809619314",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/cocktailpeanut/status/2100277062309179521",
+    "title": "Arbitrary classification as a type-safe primitive",
+    "url": "https://x.com/cocktailpeanut/status/2100277062309179521",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/anderslie/status/2100388704644919662",
+    "title": "It is the inference technique, not the training",
+    "url": "https://x.com/anderslie/status/2100388704644919662",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/iwashi86/status/2100713337436930288",
+    "title": "Jev's Architecture Unmasked",
+    "url": "https://x.com/iwashi86/status/2100713337436930288",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/LayerX_tech/status/2100887864594895154",
+    "title": "An internal Jev study session with 50+ engineers",
+    "url": "https://x.com/LayerX_tech/status/2100887864594895154",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/0xBOYD/status/2100619702003208701",
+    "title": "X is all over it, Reddit is not",
+    "url": "https://x.com/0xBOYD/status/2100619702003208701",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/xiaomovps/status/2100923960493818177",
+    "title": "Five open Jev replicas worth trying",
+    "url": "https://x.com/xiaomovps/status/2100923960493818177",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/hamiltonulmer/status/2100370557405667768",
+    "title": "A DuckDB extension for row classification",
+    "url": "https://x.com/hamiltonulmer/status/2100370557405667768",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/0xidanlevin/status/2100937437325205568",
+    "title": "Jev broke our WebMCP benchmark",
+    "url": "https://x.com/0xidanlevin/status/2100937437325205568",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/jiayuan_jy/status/2100876273061102006",
+    "title": "Chinese notes after a day with Jev",
+    "url": "https://x.com/jiayuan_jy/status/2100876273061102006",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/trycua/status/2101014004927729737",
+    "title": "Introducing CUA-S1",
+    "url": "https://x.com/trycua/status/2101014004927729737",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://reddit.com/r/LLMDevs/comments/1wko2e5/i_reviewed_287_opensource_jev_projects_here_are/",
+    "title": "I reviewed 287 open-source Jev projects",
+    "url": "https://reddit.com/r/LLMDevs/comments/1wko2e5/i_reviewed_287_opensource_jev_projects_here_are",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://boringtoolskit.com/blog/seo-audit-cost-2026/",
+    "title": "BTK audit studies",
+    "url": "https://boringtoolskit.com/blog/seo-audit-cost-2026",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://awesomejev.com/",
+    "title": "Awesome Jev directory",
+    "url": "https://awesomejev.com",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://docs.typesafe.ai/introduction",
+    "title": "Introduction",
+    "url": "https://docs.typesafe.ai/introduction",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://console.typesafe.ai/",
+    "title": "TypeSafe console",
+    "url": "https://console.typesafe.ai",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://vercel.com/ai-gateway/models/jev",
+    "title": "Vercel AI Gateway",
+    "url": "https://vercel.com/ai-gateway/models/jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://developers.cloudflare.com/ai/models/typesafe/jev/",
+    "title": "Cloudflare Workers AI",
+    "url": "https://developers.cloudflare.com/ai/models/typesafe/jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://docs.typesafe.ai/agent-skill",
+    "title": "TypeSafe agent skill",
+    "url": "https://docs.typesafe.ai/agent-skill",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/replynodes/jev-web-analyzer",
+    "title": "Jev Web Analyzer",
+    "url": "https://github.com/replynodes/jev-web-analyzer",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/gamesonrblx/Jevbridge",
+    "title": "Jevbridge",
+    "url": "https://github.com/gamesonrblx/Jevbridge",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/AbdelStark/jev-benchmarks",
+    "title": "jev-benchmarks",
+    "url": "https://github.com/AbdelStark/jev-benchmarks",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/shinpr/jev-reranker",
+    "title": "Jev Reranker (Rust CLI)",
+    "url": "https://github.com/shinpr/jev-reranker",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/YehuiTang0316/jev-nlgrep",
+    "title": "nlgrep",
+    "url": "https://github.com/YehuiTang0316/jev-nlgrep",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/keltokhy/jselect",
+    "title": "jselect",
+    "url": "https://github.com/keltokhy/jselect",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://yappy.biz/jev/",
+    "title": "Yappy",
+    "url": "https://yappy.biz/jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/keltokhy/jlink",
+    "title": "jlink",
+    "url": "https://github.com/keltokhy/jlink",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.langchain.com/blog/jev-agent-evals-langsmith",
+    "title": "Can Jev Be a Better Agent Evaluator?",
+    "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/zwliJay/jev-forge",
+    "title": "JevForge",
+    "url": "https://github.com/zwliJay/jev-forge",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.elvex.com/blog/early-experimentation-using-jev-to-rethink-harness-ux",
+    "title": "Early experimentation using Jev to rethink harness UX",
+    "url": "https://www.elvex.com/blog/early-experimentation-using-jev-to-rethink-harness-ux",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.langchain.com/blog/building-a-harness-with-jev",
+    "title": "Building a Harness with Jev",
+    "url": "https://www.langchain.com/blog/building-a-harness-with-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/spoonnotfound/soupbase",
+    "title": "Soupbase",
+    "url": "https://github.com/spoonnotfound/soupbase",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/ethanplusai/jev-chat-for-twitch",
+    "title": "Jev Chat for Twitch",
+    "url": "https://github.com/ethanplusai/jev-chat-for-twitch",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/heystefan_/status/2101369117496521042",
+    "title": "When a designer gets access to Jev",
+    "url": "https://x.com/heystefan_/status/2101369117496521042",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://madewithjev.com",
+    "title": "Made with Jev",
+    "url": "https://madewithjev.com",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/bojie_li/status/2100688989006475580",
+    "title": "Jev is just a classifier, and that is fine",
+    "url": "https://x.com/bojie_li/status/2100688989006475580",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/dongxi_nlp/status/2100813094951748074",
+    "title": "LangChain is already using Jev inside its harness",
+    "url": "https://x.com/dongxi_nlp/status/2100813094951748074",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://docs.typesafe.ai/model-jaggedness/jev-1.13",
+    "title": "Jev 1.13 jaggedness",
+    "url": "https://docs.typesafe.ai/model-jaggedness/jev-1.13",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.netlify.com/changelog/typesafe-jev-ai-gateway/",
+    "title": "Netlify AI Gateway",
+    "url": "https://www.netlify.com/changelog/typesafe-jev-ai-gateway",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://openrouter.ai/typesafe/jev-1.13",
+    "title": "OpenRouter",
+    "url": "https://openrouter.ai/typesafe/jev-1.13",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway",
+    "title": "Vercel AI Gateway",
+    "url": "https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/ax-llm/ax",
+    "title": "Ax",
+    "url": "https://github.com/ax-llm/ax",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/Effect-TS/effect",
+    "title": "Effect",
+    "url": "https://github.com/Effect-TS/effect",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/pydantic/pydantic-ai",
+    "title": "Pydantic AI",
+    "url": "https://github.com/pydantic/pydantic-ai",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/can1357/jegrep",
+    "title": "jegrep",
+    "url": "https://github.com/can1357/jegrep",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/zhirschtritt/typesafe-go",
+    "title": "typesafe-go",
+    "url": "https://github.com/zhirschtritt/typesafe-go",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/jomatsu/zod-jev",
+    "title": "zod-jev",
+    "url": "https://github.com/jomatsu/zod-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/kierandotai/jev-scout",
+    "title": "jev-scout",
+    "url": "https://github.com/kierandotai/jev-scout",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/lakeday-org/perch",
+    "title": "perch",
+    "url": "https://github.com/lakeday-org/perch",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/awlevin/typesafe-computer-use",
+    "title": "typesafe-computer-use",
+    "url": "https://github.com/awlevin/typesafe-computer-use",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/n3ndor/n8n-nodes-typesafe-jev",
+    "title": "n8n-nodes-typesafe-jev",
+    "url": "https://github.com/n3ndor/n8n-nodes-typesafe-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/koala73/worldmonitor",
+    "title": "World Monitor",
+    "url": "https://github.com/koala73/worldmonitor",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/amycardoso/jev-palette",
+    "title": "jev-palette",
+    "url": "https://github.com/amycardoso/jev-palette",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/kierandotai/jev-scout/blob/main/docs/accuracy/2026-09-19-jev-golden-set-study.md",
+    "title": "jev-scout golden-set study",
+    "url": "https://github.com/kierandotai/jev-scout/blob/main/docs/accuracy/2026-09-19-jev-golden-set-study.md",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://openrouter.ai/docs/cookbook/building-agents/gate-tool-calls-with-jev",
+    "title": "Gating agent tool calls",
+    "url": "https://openrouter.ai/docs/cookbook/building-agents/gate-tool-calls-with-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://openrouter.ai/docs/cookbook/evaluate-and-optimize/jev-verified-cascade",
+    "title": "Verified cascade",
+    "url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/jev-verified-cascade",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/OmniJev/awesome-jev",
+    "title": "OmniJev/awesome-jev",
+    "url": "https://github.com/OmniJev/awesome-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/typesafeai",
+    "title": "@typesafeai on X",
+    "url": "https://x.com/typesafeai",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/atharvamhaske/typesafe-sdk-go",
+    "title": "typesafe-sdk-go (atharvamhaske)",
+    "url": "https://github.com/atharvamhaske/typesafe-sdk-go",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/joshmn/typesafe-sdk",
+    "title": "typesafe-sdk (joshmn)",
+    "url": "https://github.com/joshmn/typesafe-sdk",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/cole-gillespie/typesafe-go",
+    "title": "typesafe-go (cole-gillespie)",
+    "url": "https://github.com/cole-gillespie/typesafe-go",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/yairshy/decido",
+    "title": "decido",
+    "url": "https://github.com/yairshy/decido",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/guillemus/jev-go",
+    "title": "jev-go (guillemus)",
+    "url": "https://github.com/guillemus/jev-go",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/hfiguera/typesafe_ai",
+    "title": "typesafe_ai (hfiguera)",
+    "url": "https://github.com/hfiguera/typesafe_ai",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/valksor/typesafe-sdk-go",
+    "title": "typesafe-sdk-go",
+    "url": "https://github.com/valksor/typesafe-sdk-go",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/GenieRobot/typesafe-ai-rails",
+    "title": "typesafe-ai-rails",
+    "url": "https://github.com/GenieRobot/typesafe-ai-rails",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/agentgateway/agentgateway/tree/main/examples/llm-guardrail-jev",
+    "title": "agentgateway Jev guardrail example",
+    "url": "https://github.com/agentgateway/agentgateway/tree/main/examples/llm-guardrail-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/SoundBlaster/Jev4Mellea",
+    "title": "Jev4Mellea",
+    "url": "https://github.com/SoundBlaster/Jev4Mellea",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/BorisLeMeec/jev",
+    "title": "jev (BorisLeMeec)",
+    "url": "https://github.com/BorisLeMeec/jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/Devin-AXIS/jev-dsh-decision",
+    "title": "jev-dsh-decision",
+    "url": "https://github.com/Devin-AXIS/jev-dsh-decision",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/arunav25/jev-mcp",
+    "title": "jev-mcp (arunav25)",
+    "url": "https://github.com/arunav25/jev-mcp",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/jvsteiner/jevex",
+    "title": "jevex",
+    "url": "https://github.com/jvsteiner/jevex",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/omkarghugarkar007/actiongate-jev",
+    "title": "actiongate-jev",
+    "url": "https://github.com/omkarghugarkar007/actiongate-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/greenyamao/Antigravity-mcp-semantic-search-with-TypeSafeAi",
+    "title": "Antigravity-mcp-semantic-search-with-TypeSafeAi",
+    "url": "https://github.com/greenyamao/Antigravity-mcp-semantic-search-with-TypeSafeAi",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/DanielKillenberger/jev-predict-skill",
+    "title": "jev-predict-skill",
+    "url": "https://github.com/DanielKillenberger/jev-predict-skill",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/getexcited/stepwarden",
+    "title": "stepwarden",
+    "url": "https://github.com/getexcited/stepwarden",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/moezubair/check-risk",
+    "title": "check-risk",
+    "url": "https://github.com/moezubair/check-risk",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/kerpopule/hermes-jev-skills",
+    "title": "hermes-jev-skills",
+    "url": "https://github.com/kerpopule/hermes-jev-skills",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/ufec/jev-block-android-ad",
+    "title": "jev-block-android-ad",
+    "url": "https://github.com/ufec/jev-block-android-ad",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/mstf-svndk/jev-windows-voice",
+    "title": "jev-windows-voice",
+    "url": "https://github.com/mstf-svndk/jev-windows-voice",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/krw82/jev-playwright-mcp",
+    "title": "jev-playwright-mcp",
+    "url": "https://github.com/krw82/jev-playwright-mcp",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/brudarko/jev-mac-voice",
+    "title": "jev-mac-voice",
+    "url": "https://github.com/brudarko/jev-mac-voice",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/awun8191/jev-resume-analyzer",
+    "title": "jev-resume-analyzer",
+    "url": "https://github.com/awun8191/jev-resume-analyzer",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/brandonbryant12/transcript-scorecard",
+    "title": "transcript-scorecard",
+    "url": "https://github.com/brandonbryant12/transcript-scorecard",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/shivam2003-dev/typesafe-triage-guard",
+    "title": "typesafe-triage-guard",
+    "url": "https://github.com/shivam2003-dev/typesafe-triage-guard",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/jammaru/jev-lab",
+    "title": "hundred",
+    "url": "https://github.com/jammaru/jev-lab",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://jev-pacman.ephraimduncan.com",
+    "title": "Jev Pac-Man",
+    "url": "https://jev-pacman.ephraimduncan.com",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://jev-omega.vercel.app",
+    "title": "Jev Tetris",
+    "url": "https://jev-omega.vercel.app",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/mizchi/jev-gomoku",
+    "title": "jev-gomoku",
+    "url": "https://github.com/mizchi/jev-gomoku",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/Hardel-DW/jev.mods",
+    "title": "jev.mods",
+    "url": "https://github.com/Hardel-DW/jev.mods",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/opaielsheikh/ps2-ai-agent",
+    "title": "ps2-ai-agent",
+    "url": "https://github.com/opaielsheikh/ps2-ai-agent",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/BunsDev/river-oaks",
+    "title": "river-oaks",
+    "url": "https://github.com/BunsDev/river-oaks",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/tpaulshippy/shady-town",
+    "title": "shady-town",
+    "url": "https://github.com/tpaulshippy/shady-town",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://crowdcheck-ai.vercel.app/",
+    "title": "Crowdcheck",
+    "url": "https://crowdcheck-ai.vercel.app",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://jev-demo.vercel.app",
+    "title": "Jev mood demo",
+    "url": "https://jev-demo.vercel.app",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://jev-room.moe136231.chatgpt.site",
+    "title": "Jev Room",
+    "url": "https://jev-room.moe136231.chatgpt.site",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/cardotrejos/jev-user-jury",
+    "title": "jev-user-jury",
+    "url": "https://github.com/cardotrejos/jev-user-jury",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/iamMrDuncan/status/2100467548298899918",
+    "title": "post",
+    "url": "https://x.com/iamMrDuncan/status/2100467548298899918",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/sgoedecke/system-one",
+    "title": "system-one",
+    "url": "https://github.com/sgoedecke/system-one",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/utk2103/jev-studio",
+    "title": "jev-studio",
+    "url": "https://github.com/utk2103/jev-studio",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/grishahq/decisionbridge",
+    "title": "decisionbridge",
+    "url": "https://github.com/grishahq/decisionbridge",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/kesku/jev-freeform",
+    "title": "jev-freeform",
+    "url": "https://github.com/kesku/jev-freeform",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/shibadogcap/kyotsu-ai-bench",
+    "title": "kyotsu-ai-bench",
+    "url": "https://github.com/shibadogcap/kyotsu-ai-bench",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/i2cjak/RISC-jeV",
+    "title": "RISC-jeV",
+    "url": "https://github.com/i2cjak/RISC-jeV",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/Gaurav-Gosain/jev-headline-bench",
+    "title": "jev-headline-bench",
+    "url": "https://github.com/Gaurav-Gosain/jev-headline-bench",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/codeitlikemiley/system-one-adapter-rust",
+    "title": "system-one-adapter-rust",
+    "url": "https://github.com/codeitlikemiley/system-one-adapter-rust",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/uezochan/status/2100608556823388486",
+    "title": "AIAvatarKit turn-end gate",
+    "url": "https://x.com/uezochan/status/2100608556823388486",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.latent.space/p/ainews-jev-a-system-one-model-that",
+    "title": "AINews: Jev, a System One Model that only decides",
+    "url": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/Maoku/status/2100611986358927627",
+    "title": "ConsoleChaosRacing driven by Jev",
+    "url": "https://x.com/Maoku/status/2100611986358927627",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/jagenaujagenau/status/2100622352333574460",
+    "title": "Ground Truth news-framing extension",
+    "url": "https://x.com/jagenaujagenau/status/2100622352333574460",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/marcelpociot/status/2100520134481735729",
+    "title": "Hide posts on X with natural language",
+    "url": "https://x.com/marcelpociot/status/2100520134481735729",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/VacekvVita/status/2100609341145465325",
+    "title": "Jev gomoku harness",
+    "url": "https://x.com/VacekvVita/status/2100609341145465325",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/dwhitedesign/status/2100368024649769384",
+    "title": "Jev in 34 seconds",
+    "url": "https://x.com/dwhitedesign/status/2100368024649769384",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/nielsmouthaan/status/2100543809465577665",
+    "title": "Jev in a Grammarly-style Mac app",
+    "url": "https://x.com/nielsmouthaan/status/2100543809465577665",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://zenn.dev/mizchi/articles/jev-plays-gomoku",
+    "title": "jev \u540c\u58eb\u306b\u4e94\u76ee\u4e26\u3079\u3067\u5bfe\u6226\u3055\u305b\u305f",
+    "url": "https://zenn.dev/mizchi/articles/jev-plays-gomoku",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/thekitze/status/2100616530275029139",
+    "title": "jev-rabbit PR review bot",
+    "url": "https://x.com/thekitze/status/2100616530275029139",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.theneuron.ai/explainer-articles/typesafe-jev-system-one-models-explained/",
+    "title": "Jev: System One models explained",
+    "url": "https://www.theneuron.ai/explainer-articles/typesafe-jev-system-one-models-explained",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.datacamp.com/blog/system-one-models-jev",
+    "title": "Jev: System One models explained (DataCamp)",
+    "url": "https://www.datacamp.com/blog/system-one-models-jev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://anthonymaio.substack.com/p/jev-the-language-model-that-wont",
+    "title": "Jev: The Language Model That Will Not Talk",
+    "url": "https://anthonymaio.substack.com/p/jev-the-language-model-that-wont",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/stablebun/status/2100614911898390589",
+    "title": "Kalshi prediction-market bot",
+    "url": "https://x.com/stablebun/status/2100614911898390589",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds",
+    "title": "Mini-Vibe Check: Jev judged everything I have written in 0.7 seconds",
+    "url": "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/nidhisinghattri/status/2100617830890885415",
+    "title": "Model router CLI",
+    "url": "https://x.com/nidhisinghattri/status/2100617830890885415",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/thdxr/status/2100288951978164647",
+    "title": "OpenCode browser use powered by Jev",
+    "url": "https://x.com/thdxr/status/2100288951978164647",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/thekitze/status/2100556122570792999",
+    "title": "skillbox + Jev skill routing",
+    "url": "https://x.com/thekitze/status/2100556122570792999",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/juanmacias/status/2100463494629925048",
+    "title": "Spanish AEPD corpus test",
+    "url": "https://x.com/juanmacias/status/2100463494629925048",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/literallydenis/status/2100622868878868603",
+    "title": "StarCraft Brood War WASM MCP demo",
+    "url": "https://x.com/literallydenis/status/2100622868878868603",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/ifahimreza/status/2100616988746023102",
+    "title": "Support ticket classifier",
+    "url": "https://x.com/ifahimreza/status/2100616988746023102",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/Jon_iy/status/2100397782322364792",
+    "title": "Tabletop MMORPG action mapper",
+    "url": "https://x.com/Jon_iy/status/2100397782322364792",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711",
+    "title": "TypeSafe AI debuts model for machines that plays Doom",
+    "url": "https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://www.developersdigest.tech/blog/typesafe-jev-system-one-models-release-guide-2026",
+    "title": "TypeSafe Jev: the first decision-only model class",
+    "url": "https://www.developersdigest.tech/blog/typesafe-jev-system-one-models-release-guide-2026",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://zenn.dev/nwn/articles/824026c76116e0",
+    "title": "TypeSafe\u306eJev\u3092\u6b63\u3057\u304f\u9a5a\u304f",
+    "url": "https://zenn.dev/nwn/articles/824026c76116e0",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/rauchg/status/2100307962262872105",
+    "title": "Vercel fx: Jev as a command safety reviewer",
+    "url": "https://x.com/rauchg/status/2100307962262872105",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/kmad/status/2100339921714323624",
+    "title": "ViZDoom Jev agent",
+    "url": "https://x.com/kmad/status/2100339921714323624",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://mohammedshehu.com/jev-typesafe-ai/",
+    "title": "What is Jev?",
+    "url": "https://mohammedshehu.com/jev-typesafe-ai",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://x.com/mark1nhu/status/2100620075090792490",
+    "title": "Wiki-link clicker demo",
+    "url": "https://x.com/mark1nhu/status/2100620075090792490",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/Fox-Islam/typesafe-sdk-php",
+    "title": "TypeSafe SDK for PHP",
+    "url": "https://github.com/Fox-Islam/typesafe-sdk-php",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/ljedrz/nachalnik/blob/master/kamchatka/examples/jev_assisted_compaction.rs",
+    "title": "Jev-assisted compaction",
+    "url": "https://github.com/ljedrz/nachalnik/blob/master/kamchatka/examples/jev_assisted_compaction.rs",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/ljedrz/nachalnik/blob/master/kamchatka",
+    "title": "Jev-assisted shell",
+    "url": "https://github.com/ljedrz/nachalnik/blob/master/kamchatka",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://github.com/TheoLeeCJ/openjev",
+    "title": "OpenJev",
+    "url": "https://github.com/TheoLeeCJ/openjev",
+    "source": "awesome"
+  },
+  {
+    "id": "awesome:https://typesafeai.app/",
+    "title": "typesafeai.app",
+    "url": "https://typesafeai.app",
+    "source": "awesome"
+  }
+]

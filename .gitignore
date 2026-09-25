@@ -10,3 +10,6 @@ data/raw/
 data/harvest.json
 data/corpus-additions.json
 data/corpus.backup.json
+
+.vercel
+.env*

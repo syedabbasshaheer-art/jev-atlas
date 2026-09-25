@@ -12,8 +12,8 @@ Two outputs, because the two targets have different rules:
 Run:  python src/thumbs.py            (all, skips what it already has)
       python src/thumbs.py --limit 5  (sample, for measuring)
 """
-import hashlib, io, json, os, re, sys, time, urllib.request, urllib.error
-from PIL import Image
+import colorsys, hashlib, io, json, os, re, sys, time, urllib.request, urllib.error
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -26,6 +26,14 @@ WIDTH = 380
 QUALITY = 62
 UA = "jev-atlas/1.0 (+https://github.com/syedabbasshaheer-art/jev-atlas)"
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+
+# Real covers are whatever aspect ratio the source gave them; the GitHub
+# opengraph card (1200x600, i.e. 2:1) is the single largest recovered group,
+# so a generated monogram uses that same 2:1 frame rather than inventing a
+# fourth aspect ratio for the grid to deal with.
+MONO_W = WIDTH
+MONO_H = WIDTH // 2
+FONT_PATH = r"C:\Windows\Fonts\arialbd.ttf"
 
 limit = None
 if "--limit" in sys.argv:
@@ -65,6 +73,52 @@ def poster(p):
     if g:
         return "https://opengraph.githubassets.com/1/%s/%s" % (g.group(1), g.group(2))
     return None
+
+
+WORD_RE = re.compile(r"[A-Za-z0-9]+")
+
+
+def initials(title):
+    """Up to 2 letters from the project title. '?' if there's nothing to take."""
+    words = WORD_RE.findall(title or "")
+    if not words:
+        return "?"
+    if len(words) == 1:
+        return words[0][:2].upper()
+    return (words[0][0] + words[1][0]).upper()
+
+
+def mono_color(pid):
+    """A background deterministic from the id, so re-runs never flicker.
+
+    Hash -> hue; fixed sat/lightness tuned for a light title-caps text on top.
+    """
+    h = int(hashlib.sha1(pid.encode("utf-8")).hexdigest()[:8], 16)
+    hue = (h % 360) / 360.0
+    r, g, b = colorsys.hls_to_rgb(hue, 0.40, 0.45)
+    return (round(r * 255), round(g * 255), round(b * 255))
+
+
+def make_monogram(pid, title):
+    """A designed fallback cover: initials on a deterministic tint, honest
+    about being a placeholder rather than pretending to be a screenshot."""
+    bg = mono_color(pid)
+    im = Image.new("RGB", (MONO_W, MONO_H), bg)
+    draw = ImageDraw.Draw(im)
+    text = initials(title)
+    size = round(MONO_H * 0.62)
+    try:
+        font = ImageFont.truetype(FONT_PATH, size)
+    except OSError:
+        font = ImageFont.load_default()
+    box = draw.textbbox((0, 0), text, font=font)
+    w, h = box[2] - box[0], box[3] - box[1]
+    draw.text(
+        ((MONO_W - w) / 2 - box[0], (MONO_H - h) / 2 - box[1]),
+        text, font=font, fill=(255, 255, 255, 235),
+    )
+    return im
+
 
 targets = [(str(p["id"]), poster(p)) for p in posts]
 targets = [(i, u) for i, u in targets if u]
@@ -106,12 +160,30 @@ print(f"\nfetched {got}, already had {skipped}, failed {failed}")
 if got + skipped:
     print(f"total {total_bytes/1024/1024:.2f} MB, average {total_bytes/(got+skipped)/1024:.1f} KB")
 
-# manifest of data URIs for the artifact build
+# Designed fallback: whatever still has no cover after the real fetch above
+# -- no poster URL at all, or a fetch that failed -- gets a generated
+# monogram instead of a broken-image icon. Skipped under --limit so a
+# sampling run stays small and predictable.
+mono = 0
+if not limit:
+    for p in posts:
+        pid = str(p["id"])
+        dest = os.path.join(OUT_DIR, safe_name(pid) + ".jpg")
+        if os.path.exists(dest):
+            continue
+        im = make_monogram(pid, p.get("title", ""))
+        im.save(dest, "JPEG", quality=QUALITY, optimize=True, progressive=True)
+        mono += 1
+    print(f"monogrammed {mono} (no fetchable image)")
+
+# manifest of data URIs for the artifact build -- every post that now has a
+# file on disk, not just the ones with a fetchable poster URL.
+import base64
 man = {}
-for pid, _ in targets:
+for p in posts:
+    pid = str(p["id"])
     dest = os.path.join(OUT_DIR, safe_name(pid) + ".jpg")
     if os.path.exists(dest):
-        import base64
         man[pid] = "data:image/jpeg;base64," + base64.b64encode(open(dest, "rb").read()).decode()
 json.dump(man, open(MANIFEST, "w", encoding="utf-8"))
 size = os.path.getsize(MANIFEST) / 1024 / 1024

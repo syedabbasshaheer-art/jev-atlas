@@ -1,0 +1,143 @@
+name: Daily harvest
+
+# Git is the database (D11). This workflow harvests, gates, merges, builds,
+# commits and pushes; Vercel's own Git integration deploys the push. No
+# runtime write, no storage credential, no function.
+
+on:
+  schedule:
+    - cron: "15 6 * * *" # daily, ~06:15 UTC — adjust freely, timing isn't load-bearing
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: harvest-cron
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # built-in, repo-scoped, expires with the job — never a PAT (card 4.6)
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # No package-lock.json exists in this repo and package.json declares no
+      # dependencies at all, so `npm ci` (which requires a lockfile) cannot
+      # run here — using `npm install` instead. Flagged for a human to
+      # confirm; see the run's final report.
+      - name: Install Node deps
+        run: npm install --no-audit --no-fund
+
+      # thumbs.py's only third-party import is Pillow (PIL); no requirements
+      # file exists in the repo to pin a version against.
+      - name: Install Python deps
+        run: pip install --no-cache-dir Pillow
+
+      - name: Ensure alert labels exist
+        run: |
+          gh label create harvest-failure --color d73a4a --description "Daily harvest workflow run failed" --force
+          gh label create harvest-alert --color fbca04 --description "Harvest added nothing for 3+ runs running" --force
+
+      # Sweep every source, relevance-filter (relevance.mjs, already inside
+      # run.mjs), dedupe against the corpus, and — because --merge is passed —
+      # write any genuinely new rows to data/corpus-additions.json without
+      # touching data/corpus.json. Never throws on a single source failing;
+      # each adapter's own try/catch is reported in the console log.
+      - name: Harvest (sweep + relevance filter)
+        id: harvest
+        run: npm run harvest:merge
+
+      # Card 4.8: the hard QA gate (src/harvest/qa.mjs's hardQA) runs here,
+      # inside the cron, before anything reaches the corpus — not after.
+      - name: QA gate
+        id: qa_gate
+        run: node .github/scripts/qa-gate.mjs
+
+      # Card 4.4 (dedup, belt-and-braces on top of run.mjs's own check) and
+      # card 4.5 (added_at, stamped once, never overwritten). This is the
+      # only step that writes data/corpus.json.
+      - name: Merge gated additions into the corpus
+        id: merge
+        run: node .github/scripts/merge-additions.mjs
+
+      # Card 4.7 / W8: track consecutive zero-add runs so a silently dead
+      # harvester doesn't just look like a quiet week.
+      - name: Update the zero-add streak counter
+        id: streak
+        run: node .github/scripts/streak.mjs "${{ steps.merge.outputs.added_count }}"
+
+      # Fetches poster images for any new corpus rows; skips ones already on
+      # disk, so this is fast on a normal (small-diff) day.
+      - name: Fetch thumbnails
+        run: python src/thumbs.py
+
+      # classify -> data -> docs -> render. Reads only data/corpus.json.
+      - name: Build the site
+        run: npm run build
+
+      # A green build is not a working page - nothing has run the JavaScript
+      # yet. This loads the built file in the runner's Chrome and reads the DOM
+      # back. It skips itself cleanly if no Chrome is present.
+      - name: Smoke-test the built page
+        run: npm run smoke
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Named paths, never -A. An unattended job that stages whatever it
+          # finds will one day commit a stray artefact, a downloaded file or a
+          # half-written cache, and nobody is watching when it does.
+          git add data/corpus.json data/thumbs.json data/site-data.json \
+                  data/qa-rejects.json data/no-cover.json \
+                  .github/state/streak.json \
+                  public/ docs/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit (this is what a no-op manual dispatch should do)."
+          else
+            git commit -m "chore: daily harvest ($(date -u +%F)) — ${{ steps.merge.outputs.added_count }} new row(s)"
+            git push
+          fi
+
+      - name: Alert on a stale harvester (3+ runs with nothing new)
+        if: steps.streak.outputs.should_alert == 'true'
+        run: |
+          OPEN=$(gh issue list --label harvest-alert --state open --json number --jq 'length')
+          if [ "$OPEN" = "0" ]; then
+            gh issue create \
+              --title "Harvest cron added nothing for ${{ steps.streak.outputs.consecutive_zero }} runs running" \
+              --label harvest-alert \
+              --body "Zero new rows for ${{ steps.streak.outputs.consecutive_zero }} consecutive runs. Either the field is genuinely quiet or a source/gate has drifted (see LAUNCH.md card 4.7 and watch item W9 — a source changing its markup or API). Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "An open harvest-alert issue already exists — not duplicating."
+          fi
+
+      - name: Open an issue if this run failed
+        if: failure()
+        run: |
+          OPEN=$(gh issue list --label harvest-failure --state open --json number --jq 'length')
+          if [ "$OPEN" = "0" ]; then
+            gh issue create \
+              --title "Harvest cron failed — run ${{ github.run_id }}" \
+              --label harvest-failure \
+              --body "The daily harvest workflow failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "An open harvest-failure issue already exists — not duplicating."
+          fi
