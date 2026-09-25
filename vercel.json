@@ -5,19 +5,8 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "_note": "Order matters. Vercel applies every matching rule in order and the LAST one to set a key wins, so the catch-all must come FIRST and the specific paths after it. With the catch-all last, /thumbs/ was served must-revalidate instead of immutable - caught by fetching a thumbnail from the deployed host, not by reading this file.",
   "headers": [
-    {
-      "source": "/thumbs/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/og.png",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
-      ]
-    },
     {
       "source": "/(.*)",
       "headers": [
@@ -30,6 +19,14 @@
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
         { "key": "X-DNS-Prefetch-Control", "value": "off" }
       ]
+    },
+    {
+      "source": "/og.png",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    },
+    {
+      "source": "/thumbs/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]
 }
