@@ -168,7 +168,13 @@ button{cursor:pointer;border:0;background:none;text-align:left}
 .brand b{font-family:var(--display);font-size:25px;font-weight:400;letter-spacing:-.01em}
 .brand i{font-family:var(--mono);font-style:normal;font-size:var(--t-l);color:var(--on-surface-variant)}
 @media (max-width:980px){.brand i{display:none}}
-.search{flex:1 1 300px;max-width:440px;position:relative}
+/* min-width:0 on both, or the flex item refuses to shrink past the input's
+   intrinsic width. That is what made the whole document 400-odd px wide on a
+   390px phone: the top bar could not fit, so the body grew, and every card
+   below inherited the overflow and got clipped at the right edge. A flex child
+   holding an input needs this; the default min-width:auto does not shrink. */
+.search{flex:1 1 300px;max-width:440px;position:relative;min-width:0}
+.search input{min-width:0}
 .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--on-surface-variant);pointer-events:none}
 .search input{width:100%;height:42px;padding:0 var(--s4) 0 42px;border:1px solid var(--outline-variant);
   border-radius:var(--r-f);background:var(--surface-container-low);font-size:var(--t-b);transition:all .18s var(--ease)}
@@ -188,6 +194,24 @@ button{cursor:pointer;border:0;background:none;text-align:left}
 .ico:hover{background:var(--surface-container-high);color:var(--on-surface)}
 .railbtn{display:none}
 @media (max-width:1080px){.railbtn{display:grid}}
+/* Phone. The bar carries brand, search, a rail toggle and three icons, which
+   is more than 390px holds - so the basis drops, the gaps tighten, and
+   copy-link steps aside. It is the least useful of the three on a phone, where
+   the share sheet already does that job. */
+@media (max-width:560px){
+  .top{gap:var(--s2);padding:0 var(--s3)}
+  .search{flex:1 1 120px}
+  .search input{height:44px}
+  .brand b{font-size:21px}
+  #copyview{display:none}
+  /* 44px, not 42, and not the 38 this first shrank to. A thumb is a blunter
+     pointer than a cursor and the rail is a drawer on a phone, so its rows are
+     tap targets too. Measured, not assumed - scripts/responsive.mjs. */
+  .ico{width:44px;height:44px}
+  .fld,.opt,.fam-h{min-height:44px}
+  .sorter button{min-height:44px;padding-left:var(--s4);padding-right:var(--s4)}
+  .btn{height:44px}
+}
 
 /* ───────── shell ───────── */
 .shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);height:calc(100% - var(--top))}
@@ -236,7 +260,13 @@ body.pane-open .shell{grid-template-columns:var(--rail) minmax(0,1fr) var(--pane
 .fhead{display:flex;align-items:flex-end;gap:var(--s4);margin-bottom:var(--s6);flex-wrap:wrap}
 .fhead h1{font-family:var(--display);font-size:var(--t-d);line-height:var(--t-d-lh);font-weight:400;letter-spacing:-.015em}
 .fhead .sub{color:var(--on-surface-variant);font-size:var(--t-s);margin-top:3px}
-.sorter{margin-left:auto;display:flex;gap:2px;background:var(--surface-container);padding:3px;border-radius:var(--r-f)}
+.sorter{margin-left:auto;display:flex;gap:2px;background:var(--surface-container);padding:3px;border-radius:var(--r-f);max-width:100%}
+/* Four sort options do not fit beside a heading on a phone. Let the group
+   scroll on its own rather than widening the page behind it. */
+@media (max-width:560px){
+  .sorter{margin-left:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sorter button{white-space:nowrap}
+}
 .sorter button{padding:6px 14px;border-radius:var(--r-f);font-size:var(--t-s);font-weight:500;color:var(--on-surface-variant);transition:all .16s var(--ease)}
 .sorter button[aria-pressed="true"]{background:var(--surface-container-lowest);color:var(--on-surface);box-shadow:var(--e1)}
 
@@ -325,6 +355,10 @@ body.pane-open .pane{display:block}
 .btn-f:hover{box-shadow:var(--e2);transform:translateY(-1px)}
 .btn-o{border:1px solid var(--outline);color:var(--on-surface)}
 .btn-o:hover{background:var(--surface-container-high)}
+/* Placed AFTER .btn on purpose. An identical-specificity rule inside a media
+   query still loses to a later one outside it, which is why putting this up
+   beside the top bar changed nothing and the audit kept flagging it. */
+@media (max-width:560px){.btn{height:44px}}
 .sec{margin-bottom:var(--s5)}
 .sec .ov{display:block;margin-bottom:var(--s3)}
 .steps{list-style:none;margin:0;padding:0}

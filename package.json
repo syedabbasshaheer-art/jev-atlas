@@ -22,7 +22,8 @@
     "harvest:enrich": "node src/harvest/run.mjs --enrich --limit 60",
     "harvest:merge": "node src/harvest/run.mjs --merge",
     "smoke": "node scripts/smoke.mjs",
-    "qa": "npm run build && npm run smoke"
+    "qa": "npm run build && npm run smoke && npm run responsive",
+    "responsive": "node scripts/responsive.mjs"
   },
   "keywords": [
     "jev",
