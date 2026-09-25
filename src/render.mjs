@@ -120,19 +120,91 @@ const siteHtml = html
   .replace("__THUMBS__", () => "{}")
   .replace("__THUMBFILES__", () => JSON.stringify(fileMap));
 
+// ---------------------------------------------------------------------------
+// The invisibility switch, and the document shell the site (not the artifact)
+// needs. Deploying and launching are different events: until PUBLIC_INDEXABLE
+// is truthy, every crawler is told no in both places that matter - the meta tag
+// and robots.txt. Card 1.35 flips it, deliberately, as its own commit.
+//
+// The artifact build gets none of this: its host supplies the document shell
+// and there is nothing to index.
+const INDEXABLE = /^(1|true|yes|on)$/i.test(process.env.PUBLIC_INDEXABLE || "");
+const SITE_URL = (process.env.PUBLIC_SITE_URL || "https://jev-atlas.vercel.app").replace(/\/+$/, "");
+const ROBOTS = INDEXABLE ? "index,follow" : "noindex,nofollow";
+
+const TITLE = "Jev Atlas";
+const DESC = `${evidence.length} shipped projects, classified by what they are for and built from - `
+  + "so you can find the ones that already solved a piece of your problem.";
+
+const head = [
+  '<meta charset="utf-8">',
+  '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">',
+  `<meta name="robots" content="${ROBOTS}">`,
+  `<meta name="description" content="${DESC}">`,
+  `<link rel="canonical" href="${SITE_URL}/">`,
+  `<meta property="og:type" content="website">`,
+  `<meta property="og:site_name" content="${TITLE}">`,
+  `<meta property="og:title" content="${TITLE}">`,
+  `<meta property="og:description" content="${DESC}">`,
+  `<meta property="og:url" content="${SITE_URL}/">`,
+  `<meta property="og:image" content="${SITE_URL}/og.png">`,
+  `<meta property="og:image:width" content="1200">`,
+  `<meta property="og:image:height" content="630">`,
+  `<meta name="twitter:card" content="summary_large_image">`,
+  `<meta name="twitter:title" content="${TITLE}">`,
+  `<meta name="twitter:description" content="${DESC}">`,
+  `<meta name="twitter:image" content="${SITE_URL}/og.png">`,
+  `<meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme:light)">`,
+  `<meta name="theme-color" content="#12100d" media="(prefers-color-scheme:dark)">`,
+].join(String.fromCharCode(10));
+
+const shellHtml = `<!doctype html>
+<html lang="en">
+<head>
+${head}
+</head>
+<body>
+${siteHtml}
+</body>
+</html>
+`;
+
+fs.writeFileSync(
+  path.join(OUT, "robots.txt"),
+  INDEXABLE
+    ? `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`
+    : `User-agent: *
+Disallow: /
+`
+);
+fs.writeFileSync(
+  path.join(OUT, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+`
+  + `  <url><loc>${SITE_URL}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+</urlset>
+`
+);
+
 for (const [name, out] of [["index.html", siteHtml], ["index.artifact.html", artifactHtml]]) {
   if (out.includes("__THUMBS__") || out.includes("__THUMBFILES__")) {
     console.error(`RENDER FAILED: ${name} still holds a thumbnail placeholder`);
     process.exit(1);
   }
 }
-fs.writeFileSync(path.join(OUT, "index.html"), siteHtml);
+fs.writeFileSync(path.join(OUT, "index.html"), shellHtml);
 fs.writeFileSync(path.join(OUT, "index.artifact.html"), artifactHtml);
 
 const kb = (Buffer.byteLength(html) / 1024).toFixed(0);
-const sk = (Buffer.byteLength(siteHtml) / 1024).toFixed(0);
+const sk = (Buffer.byteLength(shellHtml) / 1024).toFixed(0);
 const ak = (Buffer.byteLength(artifactHtml) / 1024 / 1024).toFixed(2);
 console.log(`RENDER OK  public/index.html ${sk} KB (file-backed, for Vercel)`);
+console.log(`           robots: ${ROBOTS} - ${INDEXABLE ? "VISIBLE to crawlers" : "INVISIBLE (PUBLIC_INDEXABLE is off)"}`);
 console.log(`           public/index.artifact.html ${ak} MB (${Object.keys(inlined).length} of ${Object.keys(thumbMap).length} inlined, rest fall back)`);
 console.log(`           ${Object.keys(fileMap).length} image(s) referenced as files in the Vercel build`);
 if (kb > 15000) console.warn("  WARNING: approaching the 16 MB single-page ceiling.");

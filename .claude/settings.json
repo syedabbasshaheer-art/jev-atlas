@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "VERCEL_PLUGIN_TELEMETRY": "off"
+  },
+  "permissions": {
+    "deny": [
+      "mcp__plugin_vercel_vercel__buy_pro",
+      "mcp__plugin_vercel_vercel__buy_credits",
+      "mcp__plugin_vercel_vercel__buy_credits_endpoint",
+      "mcp__plugin_vercel_vercel__buy_domain",
+      "mcp__plugin_vercel_vercel__buy_domains",
+      "mcp__plugin_vercel_vercel__buy_single_domain",
+      "mcp__plugin_vercel_vercel__buy_addon",
+      "mcp__plugin_vercel_vercel__create_or_transfer_domain",
+      "mcp__plugin_vercel_vercel__pause_project",
+      "mcp__plugin_vercel_vercel__unpause_project",
+      "mcp__plugin_vercel_vercel__create_deployment",
+      "mcp__plugin_vercel_vercel__cancel_deployment",
+      "mcp__plugin_vercel_vercel__update_project_protection_bypass",
+      "mcp__plugin_vercel_vercel__patch_url_protection_bypass",
+      "mcp__plugin_vercel_vercel__get_bypass_ip",
+      "mcp__plugin_vercel_vercel__request_promote",
+      "mcp__plugin_vercel_vercel__start_rolling_release",
+      "mcp__plugin_vercel_vercel__complete_rolling_release",
+      "mcp__plugin_vercel_vercel__approve_rolling_release_stage",
+      "Bash(vercel --prod:*)",
+      "Bash(vercel deploy:*)",
+      "Bash(vercel curl:*)",
+      "Bash(vercel httpstat:*)",
+      "Bash(vercel env pull:*)",
+      "Bash(vercel env rm:*)",
+      "Bash(vercel domains buy:*)",
+      "Bash(vercel remove:*)",
+      "Bash(vercel rollback:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)"
+    ]
+  }
+}
