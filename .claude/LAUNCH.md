@@ -190,7 +190,7 @@ None of the four are true today.
 | 2.17 | DONE | agent | code | S | - | 2.15 | Category as a ribbon on the image rather than its own row — at 1,442 items a badge row costs a full card of vertical space per screen | The badge sits on the image and the card is shorter |
 | 2.18 | DOING | agent | code | S | - | 2.1 | Accessibility pass: focus trap in the command palette (Tab currently escapes to the page behind), `aria-live` on the result count, `role="tablist"` on the segmented control, a visible focus ring everywhere | A full keyboard pass reaches every action, and a screen reader hears the count change |
 | 2.19 | BACKLOG | agent | code | S | - | 2.9 | The command palette gains recent and frequent items — it cold-starts empty every time — and groups by kind instead of one flat list | Opening it with no query shows something useful |
-| 2.20 | BACKLOG | agent | verify | S | - | 2.15 | **Mobile at 390px**, treated as the primary surface and not a shrunk desktop: the rail becomes a bottom sheet, the reading pane goes full-screen, the grid is one column | A real handset check plus the headless sweep, both clean |
+| 2.20 | DONE | agent | verify | S | - | 2.15 | **Mobile at 390px**, treated as the primary surface and not a shrunk desktop: the rail becomes a bottom sheet, the reading pane goes full-screen, the grid is one column | A real handset check plus the headless sweep, both clean |
 | 2.21 | BACKLOG | agent | verify | S | - | 2.8, 2.15 | **Measure, do not assert.** First contentful paint, interaction latency on a filter click, and layout shift after the images land | Three numbers recorded in the repo, with the date and the machine |
 | 2.22 | DONE | agent | verify | S | - | 2.1 | **A test that actually runs the page.** `npm run smoke` loads the built file in real Chrome with `--dump-dom` and reads the DOM back: 14 cases across render, windowing, covers, filtering, exact search, typo search, the empty state, relevance and a deep link. A green build only proves the file was written and its script tags balance | 14 of 14 pass locally **and** against the live host. No dependency; skips itself where there is no Chrome |
 | 2.23 | DONE | agent | verify | S | - | 2.8 | **Bulk-upload verification from the outside** (LAW 4). `scripts/verify-images.mjs` walks `public/thumbs` on disk, samples at random, fetches each from the deployed host, and fails on a 404, an empty body, or a file served much smaller than the one on disk | 60 of 60 sampled served correctly from the live host. It is what caught the `/thumbs/` cache bug |
@@ -300,9 +300,10 @@ swallowed Marketing into Finance once, and only a count comparison caught it.
 | Rows in the catalogue | 1,442 — jevable 359, GitHub 638, awesome-lists 387, Hacker News 24, dev.to 20, npm 14 |
 | Covers | **1,442 of 1,442** (was 1,201). 92 recovered GitHub social cards, 149 deterministic monograms, 0 fabricated |
 | Smoke suite | 14 of 14, locally and against the live host |
+| Responsive | 8 of 8 widths clean, 320–1920px, measured over CDP — no sideways scroll, no tap target under 44px on touch, no text under 11.5px |
 | Image verification | 60 of 60 sampled, fetched from the host, `Cache-Control: immutable` confirmed |
 | Daily cron | Registered and active on GitHub Actions. Has not yet run on schedule |
-| Cards | 81 · **42 done** · 3 in progress · 3 blocked · 33 backlog |
+| Cards | 85 · **43 done** · 3 in progress · 3 blocked · 36 backlog |
 | Needs you | 17 |
 
 ### What the live run actually found
