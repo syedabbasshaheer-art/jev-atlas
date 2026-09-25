@@ -696,6 +696,16 @@ function initials(n){
   return (p[0].charAt(0)+(p.length>1?p[p.length-1].charAt(0):"")).toUpperCase();
 }
 function aviHue(n){var h=0,s=String(n||"");for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%360;return h}
+/* 11807 is a number to parse; 11.8k is a number to read. GitHub, npm and every
+   other place these counts come from round them, and the precision was never
+   real anyway - it was true on the day it was scraped. */
+function compact(n){
+  n=Number(n)||0;
+  if(n<1000)return String(n);
+  if(n<10000)return (n/1000).toFixed(1).replace(/\.0$/,"")+"k";
+  if(n<1000000)return Math.round(n/1000)+"k";
+  return (n/1000000).toFixed(1).replace(/\.0$/,"")+"M";
+}
 function card(e,wide){
   var who=e.author||e.handle||"";
   return '<article class="card'+(wide?" wide":"")+'" data-id="'+esc(e.id)+'" tabindex="0" role="button" '+
@@ -707,7 +717,7 @@ function card(e,wide){
         (who?'<span class="avi" style="--ah:'+aviHue(who)+'" aria-hidden="true">'+esc(initials(who))+'</span>'+
              '<span class="who">'+esc(who)+'</span>'
             :'<span class="who dim">Unattributed</span>')+
-        (e.stars?'<span class="metric">&#9733; '+e.stars+'</span>':'')+'</div></div></article>';
+        (e.stars?'<span class="metric" title="'+e.stars+' stars">&#9733; '+compact(e.stars)+'</span>':'')+'</div></div></article>';
 }
 function renderFeed(keep){
   if(!keep)shown=PAGE;
@@ -799,7 +809,7 @@ function renderPane(){
       '<dt>Family</dt><dd>'+esc(fam.label)+'</dd>'+
       (e.author?'<dt>By</dt><dd>'+esc(e.author)+'</dd>':'')+
       '<dt>Source</dt><dd>'+esc(SRC[srcOf(e)]||srcOf(e))+'</dd>'+
-      (e.stars?'<dt>Stars</dt><dd class="mono">'+e.stars+'</dd>':'')+
+      (e.stars?'<dt>Stars</dt><dd class="mono">'+Number(e.stars).toLocaleString('en')+'</dd>':'')+
       (e.date?'<dt>Seen</dt><dd class="mono">'+esc(e.date)+'</dd>':'')+
       '<dt>Shape</dt><dd>'+esc((PATS[e.pattern]||{}).label||e.pattern||"")+'</dd></dl>';
   if(bp){
