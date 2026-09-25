@@ -93,5 +93,1426 @@
   "title": "Your LLM vendor can change its mind overnight. Here's how we started catching it.",
   "url": "https://dev.to/akshay_kanthed_26a9f5ef10/your-llm-vendor-can-change-its-mind-overnight-heres-how-we-started-catching-it-14d0",
   "reason": "Jev appears only in tags, not in the title or description"
+ },
+ {
+  "id": "github:80163148",
+  "url": "https://github.com/tinystruct/tinystruct",
+  "title": "tinystruct",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.864Z"
+ },
+ {
+  "id": "github:1379783258",
+  "url": "https://github.com/Futureppo/typesafe_register",
+  "title": "typesafe_register",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1381896871",
+  "url": "https://github.com/Nisaka520/JevIntent",
+  "title": "JevIntent",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1272673683",
+  "url": "https://github.com/pinecone-io/cultivar",
+  "title": "cultivar",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1366501036",
+  "url": "https://github.com/wundercorp/loki",
+  "title": "loki",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1378013456",
+  "url": "https://github.com/collapseindex/jev-ultralightspeed",
+  "title": "jev-ultralightspeed",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1382014743",
+  "url": "https://github.com/Nisaka520/JevBystander",
+  "title": "JevBystander",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.865Z"
+ },
+ {
+  "id": "github:1350319634",
+  "url": "https://github.com/ziqi-jin/agent-to-trust",
+  "title": "agent-to-trust",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.866Z"
+ },
+ {
+  "id": "github:1331128786",
+  "url": "https://github.com/imMamdouhaboammar/get-fable",
+  "title": "get-fable",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.866Z"
+ },
+ {
+  "id": "github:1384117285",
+  "url": "https://github.com/psyb0t/decidealot",
+  "title": "decidealot",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.866Z"
+ },
+ {
+  "id": "github:1378477219",
+  "url": "https://github.com/zjunlp/JevLoop",
+  "title": "JevLoop",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.866Z"
+ },
+ {
+  "id": "github:1374569409",
+  "url": "https://github.com/komorra/Eugeniusz",
+  "title": "Eugeniusz",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.866Z"
+ },
+ {
+  "id": "github:1381081495",
+  "url": "https://github.com/pewriebontal/typesafe-sdk-cpp",
+  "title": "typesafe-sdk-cpp",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "github:1377574973",
+  "url": "https://github.com/Solido/jev_dart",
+  "title": "jev_dart",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "github:1379113593",
+  "url": "https://github.com/obetomuniz/auto-mode-for-paseo",
+  "title": "auto-mode-for-paseo",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "hackernews:49740121",
+  "url": "https://theframenews.org/en/typesafe-jev-faster-cheaper-llm-alternative/",
+  "title": "AI Startup launches a faster and cheaper alternative to LLMs for AI automation",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "hackernews:49800187",
+  "url": "https://github.com/anchorshell/relay",
+  "title": "Show HN: Relay – a self-hosted LLM gateway with smart routing and request pacing",
+  "reason": "never names jev / typesafe-ai / system-one",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "hackernews:49791563",
+  "url": "https://sameernanda.com/system-one-models-jev/",
+  "title": "When semantic judgment becomes cheap enough to put everywhere",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.867Z"
+ },
+ {
+  "id": "devto:4716496",
+  "url": "https://dev.to/mahankenway/this-ai-model-doesnt-want-to-talk-to-you-od0",
+  "title": "THIS AI MODEL DOESN'T WANT TO TALK TO YOU",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4697166",
+  "url": "https://dev.to/tdual/i-let-an-llm-judge-inside-pythons-if-statements-then-ran-ansibles-own-tests-on-it-43fo",
+  "title": "I let an LLM judge inside Python's if statements, then ran Ansible's own tests on it",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4699166",
+  "url": "https://dev.to/dmj_jones_8ec54a3564709a8/your-certificate-inventory-is-exact-your-tickets-are-not-41gj",
+  "title": "Your certificate inventory is exact. Your tickets are not.",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4697723",
+  "url": "https://dev.to/gopinarayanasw3/my-ai-agent-has-100-tools-why-should-i-send-all-100-to-the-llm-c08",
+  "title": "My AI Agent Has 100 Tools. Why Should I Send All 100 to the LLM?",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4735880",
+  "url": "https://dev.to/scriptmaster78/decision-gated-machine-payments-stop-letting-your-agent-pay-on-vibes-2n86",
+  "title": "Decision-Gated Machine Payments: Stop Letting Your Agent Pay on Vibes",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4720662",
+  "url": "https://dev.to/akashpriyadarshii/i-built-a-rust-cli-that-filters-datasets-using-typed-ai-decisions-instead-of-llm-judges-34nc",
+  "title": "I built a Rust CLI that filters datasets using typed AI decisions instead of LLM judges",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "devto:4720739",
+  "url": "https://dev.to/akashpriyadarshii/i-got-tired-of-paying-for-seo-dashboards-so-i-built-a-free-rust-cli-instead-3ihc",
+  "title": "I got tired of paying for SEO dashboards, so I built a free Rust CLI instead",
+  "reason": "Jev appears only in tags, not in the title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://docs.typesafe.ai/primitives",
+  "url": "https://docs.typesafe.ai/primitives",
+  "title": "Primitives",
+  "reason": "never names jev / typesafe-ai / system-one",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://jev.s1.dev",
+  "url": "https://jev.s1.dev",
+  "title": "live demo",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/GeekLinkDev/jev-subtitle-translator/blob/main/src/jev_subtitle_translator/openrouter.py",
+  "url": "https://github.com/GeekLinkDev/jev-subtitle-translator/blob/main/src/jev_subtitle_translator/openrouter.py",
+  "title": "Jev request",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/GeekLinkDev/jev-subtitle-translator/blob/main/src/jev_subtitle_translator/qc.py",
+  "url": "https://github.com/GeekLinkDev/jev-subtitle-translator/blob/main/src/jev_subtitle_translator/qc.py",
+  "title": "review policy",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/sutro-sh/jev-align/blob/main/src/jev_align/jev.py",
+  "url": "https://github.com/sutro-sh/jev-align/blob/main/src/jev_align/jev.py",
+  "title": "Jev adapter",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/sutro-sh/jev-align/blob/main/src/jev_align/session.py",
+  "url": "https://github.com/sutro-sh/jev-align/blob/main/src/jev_align/session.py",
+  "title": "learning loop",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/socai-io/jev-social/blob/main/src/classifier.js",
+  "url": "https://github.com/socai-io/jev-social/blob/main/src/classifier.js",
+  "title": "Classifier",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/socai-io/jev-social/blob/main/src/actions.js",
+  "url": "https://github.com/socai-io/jev-social/blob/main/src/actions.js",
+  "title": "action loop",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/prasanthj/duckdb-jev/blob/main/src/jev_extension.cpp",
+  "url": "https://github.com/prasanthj/duckdb-jev/blob/main/src/jev_extension.cpp",
+  "title": "Native implementation",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/replynodes/jev-web-analyzer/blob/main/app/api/analyze/route.ts",
+  "url": "https://github.com/replynodes/jev-web-analyzer/blob/main/app/api/analyze/route.ts",
+  "title": "Integration",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/replynodes/jev-web-analyzer/blob/main/lib/founder-questions.ts",
+  "url": "https://github.com/replynodes/jev-web-analyzer/blob/main/lib/founder-questions.ts",
+  "title": "questions",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/shinpr/jev-reranker/blob/149ed84e4d3cce66bb3cc997a105d6a252983834/src/http.rs#L224-L240",
+  "url": "https://github.com/shinpr/jev-reranker/blob/149ed84e4d3cce66bb3cc997a105d6a252983834/src/http.rs#L224-L240",
+  "title": "Jev questions",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/shinpr/jev-reranker/blob/149ed84e4d3cce66bb3cc997a105d6a252983834/src/ranking.rs#L30-L101",
+  "url": "https://github.com/shinpr/jev-reranker/blob/149ed84e4d3cce66bb3cc997a105d6a252983834/src/ranking.rs#L30-L101",
+  "title": "selection logic",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/YehuiTang0316/jev-nlgrep/blob/ceec0d92be8577abd36729d1d4ddae36710e23b4/src/search.ts",
+  "url": "https://github.com/YehuiTang0316/jev-nlgrep/blob/ceec0d92be8577abd36729d1d4ddae36710e23b4/src/search.ts",
+  "title": "search policy",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/kylemclaren/jevpdf/blob/main/src/lib/jev.ts",
+  "url": "https://github.com/kylemclaren/jevpdf/blob/main/src/lib/jev.ts",
+  "title": "Jev requests",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/kylemclaren/jevpdf/blob/main/src/lib/jev-config.ts",
+  "url": "https://github.com/kylemclaren/jevpdf/blob/main/src/lib/jev-config.ts",
+  "title": "question and thresholds",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/spoonnotfound/soupbase/blob/4e071a5a500f7db2a8ec4f5a3f99aa02a4c784aa/src/server/model.ts",
+  "url": "https://github.com/spoonnotfound/soupbase/blob/4e071a5a500f7db2a8ec4f5a3f99aa02a4c784aa/src/server/model.ts",
+  "title": "Jev integration",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/miniLV/Jev-Auto-Router/blob/master/src/verification.ts",
+  "url": "https://github.com/miniLV/Jev-Auto-Router/blob/master/src/verification.ts",
+  "title": "verification",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/miniLV/Jev-Auto-Router/blob/master/README.en.md",
+  "url": "https://github.com/miniLV/Jev-Auto-Router/blob/master/README.en.md",
+  "title": "prototype status",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/doeixd/discern/blob/main/examples/headline.ts#L82-L86",
+  "url": "https://github.com/doeixd/discern/blob/main/examples/headline.ts#L82-L86",
+  "title": "Jev provider wiring",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/davertor/jev-slop-guard",
+  "url": "https://github.com/davertor/jev-slop-guard",
+  "title": "jev-slop-guard",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/davertor/jev-slop-guard/blob/1f2ee47f13329dafb05fbecb75f67942de7d8d39/lib/jev.ts",
+  "url": "https://github.com/davertor/jev-slop-guard/blob/1f2ee47f13329dafb05fbecb75f67942de7d8d39/lib/jev.ts",
+  "title": "Jev question",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/davertor/jev-slop-guard/blob/1f2ee47f13329dafb05fbecb75f67942de7d8d39/lib/verdict.ts",
+  "url": "https://github.com/davertor/jev-slop-guard/blob/1f2ee47f13329dafb05fbecb75f67942de7d8d39/lib/verdict.ts",
+  "title": "threshold policy",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.868Z"
+ },
+ {
+  "id": "awesome:https://github.com/Arpit-Khandelwal/jev-linkedin-slop-filter/blob/main/server/jev.js",
+  "url": "https://github.com/Arpit-Khandelwal/jev-linkedin-slop-filter/blob/main/server/jev.js",
+  "title": "Questions and thresholds",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Arpit-Khandelwal/jev-linkedin-slop-filter/blob/main/test/samples.json",
+  "url": "https://github.com/Arpit-Khandelwal/jev-linkedin-slop-filter/blob/main/test/samples.json",
+  "title": "14-post labelled set",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/milvus-io/bootcamp/blob/master/bootcamp/RAG/search_with_jev/rerank_search_results.ipynb",
+  "url": "https://github.com/milvus-io/bootcamp/blob/master/bootcamp/RAG/search_with_jev/rerank_search_results.ipynb",
+  "title": "Reranking notebook",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/sliday/jev-chess",
+  "url": "https://github.com/sliday/jev-chess",
+  "title": "Repository",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Thneoly/r2r-jev",
+  "url": "https://github.com/Thneoly/r2r-jev",
+  "title": "r2r-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Thneoly/r2r-jev/blob/ce080c72d0f9d7a3fb348573d5991782f6cb6b3d/src/r2r.rs",
+  "url": "https://github.com/Thneoly/r2r-jev/blob/ce080c72d0f9d7a3fb348573d5991782f6cb6b3d/src/r2r.rs",
+  "title": "governance kernel",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Thneoly/r2r-jev/blob/ce080c72d0f9d7a3fb348573d5991782f6cb6b3d/experiments/stateless-vs-stateful/README.md",
+  "url": "https://github.com/Thneoly/r2r-jev/blob/ce080c72d0f9d7a3fb348573d5991782f6cb6b3d/experiments/stateless-vs-stateful/README.md",
+  "title": "experiment",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Dearest/plotveil/blob/main/proxy/src/index.ts",
+  "url": "https://github.com/Dearest/plotveil/blob/main/proxy/src/index.ts",
+  "title": "Jev call",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Dearest/plotveil/blob/main/docs/qa/jev-v2-evaluation.json",
+  "url": "https://github.com/Dearest/plotveil/blob/main/docs/qa/jev-v2-evaluation.json",
+  "title": "10-sample regression set",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/romeromarcelo/jev-retrieval/blob/main/src/jev/questions.rs",
+  "url": "https://github.com/romeromarcelo/jev-retrieval/blob/main/src/jev/questions.rs",
+  "title": "Typed questions",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/romeromarcelo/jev-retrieval/blob/main/src/rerank.rs",
+  "url": "https://github.com/romeromarcelo/jev-retrieval/blob/main/src/rerank.rs",
+  "title": "rerank",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/romeromarcelo/jev-retrieval/blob/main/src/jev/client.rs",
+  "url": "https://github.com/romeromarcelo/jev-retrieval/blob/main/src/jev/client.rs",
+  "title": "API client",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/egma-ai/jev-code-reviewer",
+  "url": "https://github.com/egma-ai/jev-code-reviewer",
+  "title": "Jev-Code-Reviewer",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/DuvInc/jev-table-import-mapper",
+  "url": "https://github.com/DuvInc/jev-table-import-mapper",
+  "title": "jev-table-import-mapper",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/mingleiw/jev-oncall",
+  "url": "https://github.com/mingleiw/jev-oncall",
+  "title": "jev-oncall",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/klauswg/jev-suite/tree/master/jev-rental",
+  "url": "https://github.com/klauswg/jev-suite/tree/master/jev-rental",
+  "title": "jev-rental",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/pjmenon45/Jev-IOT",
+  "url": "https://github.com/pjmenon45/Jev-IOT",
+  "title": "Jev-IOT",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/klauswg/jev-suite/tree/master/jev-proof",
+  "url": "https://github.com/klauswg/jev-suite/tree/master/jev-proof",
+  "title": "jev-proof",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/klauswg/jev-suite/tree/master/jev-fidelity",
+  "url": "https://github.com/klauswg/jev-suite/tree/master/jev-fidelity",
+  "title": "jev-fidelity",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/igloomatics/jev-ai-detector",
+  "url": "https://github.com/igloomatics/jev-ai-detector",
+  "title": "jev-ai-detector",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/nanami-0713/jev-resume-screening",
+  "url": "https://github.com/nanami-0713/jev-resume-screening",
+  "title": "jev-resume-screening",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/zilliztech/memsearch/blob/main/evaluation/reranking-evaluation.md",
+  "url": "https://github.com/zilliztech/memsearch/blob/main/evaluation/reranking-evaluation.md",
+  "title": "MemSearch Jev reranking",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/mcgalleg/grokbot-jev-jobs",
+  "url": "https://github.com/mcgalleg/grokbot-jev-jobs",
+  "title": "grokbot-jev-jobs",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/ZihuaEvan/GUI_JEV",
+  "url": "https://github.com/ZihuaEvan/GUI_JEV",
+  "title": "GUI JEV Harness",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Waxmell114514/jev-compaction",
+  "url": "https://github.com/Waxmell114514/jev-compaction",
+  "title": "jev-compaction",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/jiangxiluning/Visual-Jev",
+  "url": "https://github.com/jiangxiluning/Visual-Jev",
+  "title": "Visual-JEV",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/zilliztech/deep-searcher/blob/master/evaluation/jev_stopping/README.md",
+  "url": "https://github.com/zilliztech/deep-searcher/blob/master/evaluation/jev_stopping/README.md",
+  "title": "DeepSearcher stopping-policy experiment",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Sac-Y/Jev-cu",
+  "url": "https://github.com/Sac-Y/Jev-cu",
+  "title": "Jev-cu",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/lexmount/jev-browser-bridge",
+  "url": "https://github.com/lexmount/jev-browser-bridge",
+  "title": "jev-browser-bridge",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/marcosmartinez/jev-acento",
+  "url": "https://github.com/marcosmartinez/jev-acento",
+  "title": "jev-acento",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/KantaHayashiAI/jev-does-not-play-dice",
+  "url": "https://github.com/KantaHayashiAI/jev-does-not-play-dice",
+  "title": "GitHub",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/redhatpanda/jev-regress-bench",
+  "url": "https://github.com/redhatpanda/jev-regress-bench",
+  "title": "jev-regress-bench",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/stperic/jev-medhallu-benchmark",
+  "url": "https://github.com/stperic/jev-medhallu-benchmark",
+  "title": "jev-medhallu-benchmark",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/pc418/jev-calculator",
+  "url": "https://github.com/pc418/jev-calculator",
+  "title": "Jev calculator",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/stillmarcus24/jev-verify",
+  "url": "https://github.com/stillmarcus24/jev-verify",
+  "title": "jev-verify",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/Ztrura/Jev-MedQA",
+  "url": "https://github.com/Ztrura/Jev-MedQA",
+  "title": "Jev-MedQA",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://jevai.tools/",
+  "url": "https://jevai.tools/",
+  "title": "Jev AI Tools",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/ARCJ137442/jev-switch",
+  "url": "https://github.com/ARCJ137442/jev-switch",
+  "title": "jev-switch",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/HomayoonAlimohammadi/jev-sdk-go",
+  "url": "https://github.com/HomayoonAlimohammadi/jev-sdk-go",
+  "title": "jev-sdk-go",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/saibimajdi/typesafeai-dotnet-sdk",
+  "url": "https://github.com/saibimajdi/typesafeai-dotnet-sdk",
+  "title": "typesafeai-dotnet-sdk",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/vbcherepanov/jev-symfony-bundle",
+  "url": "https://github.com/vbcherepanov/jev-symfony-bundle",
+  "title": "jev-symfony-bundle",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/hectorlcastro09/jev-torneo-animales",
+  "url": "https://github.com/hectorlcastro09/jev-torneo-animales",
+  "title": "jev-torneo-animales",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/sc2musa/Jev_Star",
+  "url": "https://github.com/sc2musa/Jev_Star",
+  "title": "JEV-Star",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/manhua-man/jev-pilot-reflex",
+  "url": "https://github.com/manhua-man/jev-pilot-reflex",
+  "title": "jev-pilot-reflex",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/BhavinM/jev-policy-engine",
+  "url": "https://github.com/BhavinM/jev-policy-engine",
+  "title": "Jev Policy Engine",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/jiawei686/jev-screen-mcp",
+  "url": "https://github.com/jiawei686/jev-screen-mcp",
+  "title": "jev-screen-mcp",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://benchmarkheaven.com/jev-models",
+  "url": "https://benchmarkheaven.com/jev-models",
+  "title": "JevBench",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/hellogumbo/awesome-jev/issues/new?template=submit-project.yml",
+  "url": "https://github.com/hellogumbo/awesome-jev/issues/new?template=submit-project.yml",
+  "title": "file an issue",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://saibimajdi.github.io/typesafeai-dotnet-sdk/",
+  "url": "https://saibimajdi.github.io/typesafeai-dotnet-sdk/",
+  "title": "site",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.869Z"
+ },
+ {
+  "id": "awesome:https://github.com/kyledickey/jev-go",
+  "url": "https://github.com/kyledickey/jev-go",
+  "title": "jev-go (kyledickey)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/JoacoMarc/jev-harness-router",
+  "url": "https://github.com/JoacoMarc/jev-harness-router",
+  "title": "jev-harness-router",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/s1-rs",
+  "url": "https://github.com/AbdelStark/s1-rs",
+  "title": "s1-rs",
+  "reason": "never names jev / typesafe-ai / system-one",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/DonaldMurillo/system-one-playground",
+  "url": "https://github.com/DonaldMurillo/system-one-playground",
+  "title": "system-one-playground",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/tryAGI/TypeSafeAI",
+  "url": "https://github.com/tryAGI/TypeSafeAI",
+  "title": "TypeSafeAI",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/TypeSafeAI/typesafe-ui",
+  "url": "https://github.com/TypeSafeAI/typesafe-ui",
+  "title": "typesafe-ui",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/vibe-with-me-tools/n8n-nodes-jev",
+  "url": "https://github.com/vibe-with-me-tools/n8n-nodes-jev",
+  "title": "n8n-nodes-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/khmuhtadin/n8n-nodes-jev-classification",
+  "url": "https://github.com/khmuhtadin/n8n-nodes-jev-classification",
+  "title": "n8n-nodes-jev-classification",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://x.com/typesafeai/status/2100376436272173088",
+  "url": "https://x.com/typesafeai/status/2100376436272173088",
+  "title": "post",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/TrainLCD/Functions/pull/33",
+  "url": "https://github.com/TrainLCD/Functions/pull/33",
+  "title": "TrainLCD Jev rerank",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/bojansandhaus/jev-decisions",
+  "url": "https://github.com/bojansandhaus/jev-decisions",
+  "title": "jev-decisions",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/typakon4/jev-layer",
+  "url": "https://github.com/typakon4/jev-layer",
+  "title": "jev-layer",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/MartinesEmanuel/athena-jev",
+  "url": "https://github.com/MartinesEmanuel/athena-jev",
+  "title": "athena-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/wellkilo/codex-jev-preflight",
+  "url": "https://github.com/wellkilo/codex-jev-preflight",
+  "title": "codex-jev-preflight",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Koushik890/jev-firewall",
+  "url": "https://github.com/Koushik890/jev-firewall",
+  "title": "jev-firewall",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/nexibeo/jev-organize",
+  "url": "https://github.com/nexibeo/jev-organize",
+  "title": "jev-organize",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jev-chat/jev-chat-jarvis-mac",
+  "url": "https://github.com/jev-chat/jev-chat-jarvis-mac",
+  "title": "jev-chat-jarvis-mac",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jiawei686/jev-ultrafast-mcp",
+  "url": "https://github.com/jiawei686/jev-ultrafast-mcp",
+  "title": "jev-ultrafast-mcp",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/littlewindy123/jev-weekend-shopping-chrome",
+  "url": "https://github.com/littlewindy123/jev-weekend-shopping-chrome",
+  "title": "jev-weekend-shopping-chrome",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/brnyxx/jev-ra",
+  "url": "https://github.com/brnyxx/jev-ra",
+  "title": "jev-ra",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/ZJU-REAL/CUA-JEV",
+  "url": "https://github.com/ZJU-REAL/CUA-JEV",
+  "title": "CUA-JEV",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/takumi-golf/jev-fill-pdf",
+  "url": "https://github.com/takumi-golf/jev-fill-pdf",
+  "title": "jev-fill-pdf",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jeffyuysw/jev-xianhui",
+  "url": "https://github.com/jeffyuysw/jev-xianhui",
+  "title": "jev-xianhui",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jeffyuysw/jev-xianhui-windows",
+  "url": "https://github.com/jeffyuysw/jev-xianhui-windows",
+  "title": "jev-xianhui-windows",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Hiwoniu/Jev-Case",
+  "url": "https://github.com/Hiwoniu/Jev-Case",
+  "title": "Jev-Case",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/karminski/Jev-Quantum",
+  "url": "https://github.com/karminski/Jev-Quantum",
+  "title": "Jev-Quantum",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/shengjidaguai-china/goutoujunshi-jev-chat",
+  "url": "https://github.com/shengjidaguai-china/goutoujunshi-jev-chat",
+  "title": "goutoujunshi-jev-chat",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2",
+  "url": "https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2",
+  "title": "RSI-Jev-Slay-the-Spire-2",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/zhengge6/haogan",
+  "url": "https://github.com/zhengge6/haogan",
+  "title": "haogan",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/zhengge6/jev-crush",
+  "url": "https://github.com/zhengge6/jev-crush",
+  "title": "jev-crush",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://jevclassifier.vercel.app",
+  "url": "https://jevclassifier.vercel.app",
+  "title": "Jev Classifier",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Dimweaker/jev-libero",
+  "url": "https://github.com/Dimweaker/jev-libero",
+  "title": "jev-libero",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/trungdq88/jev-tetris",
+  "url": "https://github.com/trungdq88/jev-tetris",
+  "title": "jev-tetris (trungdq88)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/XieChengYuan/jev-gomoku",
+  "url": "https://github.com/XieChengYuan/jev-gomoku",
+  "title": "jev-gomoku (XieChengYuan)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Icohen007/jev-play-ping-pong",
+  "url": "https://github.com/Icohen007/jev-play-ping-pong",
+  "title": "jev-play-ping-pong",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/joshlarsen/jev-t-rex-runner",
+  "url": "https://github.com/joshlarsen/jev-t-rex-runner",
+  "title": "jev-t-rex-runner",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://chess-jev.loomens.com",
+  "url": "https://chess-jev.loomens.com",
+  "title": "chess-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://jev-arcade.vercel.app/duel",
+  "url": "https://jev-arcade.vercel.app/duel",
+  "title": "Jev Arcade",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://jevboardgames.everpaper.app/",
+  "url": "https://jevboardgames.everpaper.app/",
+  "title": "Jev board games",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/TypeSafeAI/typesafe-playground",
+  "url": "https://github.com/TypeSafeAI/typesafe-playground",
+  "title": "typesafe-ai-playground (BunsDev)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/joevidev/ui-generator-instinct-jev",
+  "url": "https://github.com/joevidev/ui-generator-instinct-jev",
+  "title": "Instinct",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/liaoyuhua/jev-trip",
+  "url": "https://github.com/liaoyuhua/jev-trip",
+  "title": "jev-trip",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/carlaiau/read-with-jev",
+  "url": "https://github.com/carlaiau/read-with-jev",
+  "title": "read-with-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/phureewat29/jev-got",
+  "url": "https://github.com/phureewat29/jev-got",
+  "title": "got-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/abhishekmamdapure/jev-information-extraction",
+  "url": "https://github.com/abhishekmamdapure/jev-information-extraction",
+  "title": "jev-information-extraction",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/coo-quack/jev-pii-checker",
+  "url": "https://github.com/coo-quack/jev-pii-checker",
+  "title": "jev-pii-checker",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/TanayPadar/gpt-vs-jev",
+  "url": "https://github.com/TanayPadar/gpt-vs-jev",
+  "title": "gpt-vs-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/NorbertBodziony/guard-jev",
+  "url": "https://github.com/NorbertBodziony/guard-jev",
+  "title": "guard-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/X0EF/jev_projects",
+  "url": "https://github.com/X0EF/jev_projects",
+  "title": "jev_projects",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/PenglongHuang/jev-demo",
+  "url": "https://github.com/PenglongHuang/jev-demo",
+  "title": "jev-demo",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/microchipgnu/jev-hooks",
+  "url": "https://github.com/microchipgnu/jev-hooks",
+  "title": "jev-hooks",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Nolane-x/JEV-language",
+  "url": "https://github.com/Nolane-x/JEV-language",
+  "title": "JEV-language",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/JacobLinCool/jev-paper-judge",
+  "url": "https://github.com/JacobLinCool/jev-paper-judge",
+  "title": "jev-paper-judge",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/tubone24/jev-practice-speed",
+  "url": "https://github.com/tubone24/jev-practice-speed",
+  "title": "jev-practice-speed",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/narulaskaran/jev-data-questions",
+  "url": "https://github.com/narulaskaran/jev-data-questions",
+  "title": "Jev Gamecast",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/WeSecureYou/Jev-test",
+  "url": "https://github.com/WeSecureYou/Jev-test",
+  "title": "Job Risk Analyzer",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/RenaGao/jev-dataops",
+  "url": "https://github.com/RenaGao/jev-dataops",
+  "title": "jev-dataops",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/goodrahstar/jev-column-race",
+  "url": "https://github.com/goodrahstar/jev-column-race",
+  "title": "jev-column-race",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/rorshopping/jev-on-a-laptop",
+  "url": "https://github.com/rorshopping/jev-on-a-laptop",
+  "title": "jev-on-a-laptop",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/kinde-starter-kits/jev-agent-authorization",
+  "url": "https://github.com/kinde-starter-kits/jev-agent-authorization",
+  "title": "jev-agent-authorization",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/goya4140/jev-reward-model-evaluation",
+  "url": "https://github.com/goya4140/jev-reward-model-evaluation",
+  "title": "jev-reward-model-evaluation",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/GPT-AGI/OpenJev",
+  "url": "https://github.com/GPT-AGI/OpenJev",
+  "title": "OpenJev (GPT-AGI)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Cairn-ink/cairn-jev-lab",
+  "url": "https://github.com/Cairn-ink/cairn-jev-lab",
+  "title": "cairn-jev-lab",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/etweisberg/jev-ui",
+  "url": "https://github.com/etweisberg/jev-ui",
+  "title": "jev-ui",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/mahmut-gundogdu/bes-kelime-jev",
+  "url": "https://github.com/mahmut-gundogdu/bes-kelime-jev",
+  "title": "bes-kelime-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/bl888m/jev-bot",
+  "url": "https://github.com/bl888m/jev-bot",
+  "title": "jev-bot (bl888m)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/carlaiau/can-jev-play",
+  "url": "https://github.com/carlaiau/can-jev-play",
+  "title": "can-jev-play",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/themsquared/jev-benchmark",
+  "url": "https://github.com/themsquared/jev-benchmark",
+  "title": "jev-benchmark (themsquared)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/apixly-ai/jev-filter",
+  "url": "https://github.com/apixly-ai/jev-filter",
+  "title": "jev-filter",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/SupratimSircar05/jev-zig-cli",
+  "url": "https://github.com/SupratimSircar05/jev-zig-cli",
+  "title": "jev-zig-cli",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jev-skills/openjev-multimodal",
+  "url": "https://github.com/jev-skills/openjev-multimodal",
+  "title": "openjev-multimodal",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/denser-org/rerank-bench-jev",
+  "url": "https://github.com/denser-org/rerank-bench-jev",
+  "title": "rerank-bench-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/mmornati/system-one-router",
+  "url": "https://github.com/mmornati/system-one-router",
+  "title": "system-one-router",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Robertzu43/system-one-security-triage",
+  "url": "https://github.com/Robertzu43/system-one-security-triage",
+  "title": "system-one-security-triage",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/PPRAMANIK62/yc-jev-bench",
+  "url": "https://github.com/PPRAMANIK62/yc-jev-bench",
+  "title": "yc-jev-bench",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/lab-dados/jev-anotacao-sentencas",
+  "url": "https://github.com/lab-dados/jev-anotacao-sentencas",
+  "title": "jev-anotacao-sentencas",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/myokoym/misereru-slide-jev",
+  "url": "https://github.com/myokoym/misereru-slide-jev",
+  "title": "misereru-slide-jev",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/BeatAPI/awesome-jev",
+  "url": "https://github.com/BeatAPI/awesome-jev",
+  "title": "awesome-jev (BeatAPI)",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://ziplyne.agency/blog/ai-that-doesnt-talk-typesafe-jev-guide",
+  "url": "https://ziplyne.agency/blog/ai-that-doesnt-talk-typesafe-jev-guide",
+  "title": "AI that does not talk",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://dev.to/gabrielanhaia/he-says-he-co-invented-chatgpt-his-new-ai-jev-wont-write-a-word-e3c",
+  "url": "https://dev.to/gabrielanhaia/he-says-he-co-invented-chatgpt-his-new-ai-jev-wont-write-a-word-e3c",
+  "title": "He says he co-invented ChatGPT. His new AI will not write a word",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://warmersun.com/jev/",
+  "url": "https://warmersun.com/jev/",
+  "title": "Typed decisions, not chat",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevals-com/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevals-com/",
+  "title": "Jevals.com",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md",
+  "title": "Use with a coding agent",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md",
+  "title": "Suggest a resource",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/releases",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/releases",
+  "title": "Follow updates",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml",
+  "title": "report a stale entry",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://docs.typesafe.ai/concepts/how-to-build-with-system-one",
+  "url": "https://docs.typesafe.ai/concepts/how-to-build-with-system-one",
+  "title": "How to build with TypeSafe",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://openrouter.ai/labs/jev/compile",
+  "url": "https://openrouter.ai/labs/jev/compile",
+  "title": "OpenRouter",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question",
+  "title": "live site",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/jujumilk3/jev-calibration-audit/blob/main/FINDINGS.md",
+  "url": "https://github.com/jujumilk3/jev-calibration-audit/blob/main/FINDINGS.md",
+  "title": "KoBBQ audit",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/nikkoxgonzales/jev-certify/blob/main/results/REPORT.md",
+  "url": "https://github.com/nikkoxgonzales/jev-certify/blob/main/results/REPORT.md",
+  "title": "jev-certify's CLINC150 study",
+  "reason": "nothing to show a reader: no description and a bare title",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/yodablocks/jev-orderby-bench/blob/main/README.md",
+  "url": "https://github.com/yodablocks/jev-orderby-bench/blob/main/README.md",
+  "title": "ordering study",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/ghubnab99/jev-enterprise-decision-fabric/blob/main/docs/evaluations/agent-action-gate-v1.md",
+  "url": "https://github.com/ghubnab99/jev-enterprise-decision-fabric/blob/main/docs/evaluations/agent-action-gate-v1.md",
+  "title": "111-case action-gate study",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/client-libraries-and-integrations/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/client-libraries-and-integrations/",
+  "title": "Client libraries and integrations",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/agent-and-developer-tooling/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/agent-and-developer-tooling/",
+  "title": "Agent and developer tooling",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/browser-agents/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/browser-agents/",
+  "title": "Browser agents",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/applications-and-workflows/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/applications-and-workflows/",
+  "title": "Applications and workflows",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/games-and-robotics/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/games-and-robotics/",
+  "title": "Games and robotics",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/evaluations-and-independent-research/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/evaluations-and-independent-research/",
+  "title": "Evaluations and independent research",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://abdelstark.github.io/awesome-typesafe-jev/categories/showcases-and-field-notes/",
+  "url": "https://abdelstark.github.io/awesome-typesafe-jev/categories/showcases-and-field-notes/",
+  "title": "Showcases and field notes",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.870Z"
+ },
+ {
+  "id": "awesome:https://github.com/Nyarlathoteppppp/pi-jev-context/tree/main/docs/experiments",
+  "url": "https://github.com/Nyarlathoteppppp/pi-jev-context/tree/main/docs/experiments",
+  "title": "experiment reports",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
+ },
+ {
+  "id": "awesome:https://github.com/Nyarlathoteppppp/pi-jev-context/blob/main/docs/FINDINGS.md",
+  "url": "https://github.com/Nyarlathoteppppp/pi-jev-context/blob/main/docs/FINDINGS.md",
+  "title": "findings log",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
+ },
+ {
+  "id": "awesome:https://www.jev-trade.com/",
+  "url": "https://www.jev-trade.com/",
+  "title": "Live demo",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
+ },
+ {
+  "id": "awesome:https://github.com/shentonyan/love-arena-v2",
+  "url": "https://github.com/shentonyan/love-arena-v2",
+  "title": "Love-Language Arena",
+  "reason": "never names jev / typesafe-ai / system-one",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/labels/good%20first%20issue",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/labels/good%20first%20issue",
+  "title": "good first issue",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
+ },
+ {
+  "id": "awesome:https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md",
+  "url": "https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md",
+  "title": "README.md on GitHub",
+  "reason": "no Jev reference in title or description",
+  "checkedAt": "2026-09-25T11:51:41.871Z"
  }
 ]
