@@ -2,20 +2,20 @@
 
 # The 10 build patterns
 
-The 2026 shipped projects in this catalogue collapse into ten shapes. Scoring 3,000 snacks, sorting 63,000 emails and ranking 11 million videos are the same program with a different data source.
+The 2078 shipped projects in this catalogue collapse into ten shapes. Scoring 3,000 snacks, sorting 63,000 emails and ranking 11 million videos are the same program with a different data source.
 
 Recognising which shape a new idea is saves rediscovering an architecture that already has a dozen worked examples.
 
 | Pattern | Projects | Difficulty | One line |
 |---|---:|:---:|---|
-| [Bulk Scorer](#batch-scorer) | 952 | ●●○○○ | N items in, a typed judgment on each, ranked or filtered out. |
-| [Pipeline Quality Gate](#ci-gate) | 199 | ●○○○○ | An artifact meets N typed checks and passes or fails with a reason. |
-| [Real-time Control Loop](#control-loop) | 185 | ●●●○○ | Game or physical state in, next move out, at frame rate. |
-| [Router / Gate](#router-gate) | 181 | ●○○○○ | Middleware that picks a branch, or blocks a risky one, before work happens. |
-| [Semantic Search & Rank](#semantic-search) | 132 | ●●○○○ | Score every candidate against what the user meant, then order them. |
-| [Live Feed Filter](#feed-filter) | 115 | ●●○○○ | Classify DOM nodes as they appear and hide, tag or recolour them. |
-| [Agent Context Manager](#context-manager) | 99 | ●●○○○ | Score what an agent is carrying and drop what is not earning its place. |
-| [Adaptive Interface](#adaptive-ui) | 69 | ●●●○○ | A typed decision chooses what the UI shows or asks next. |
+| [Bulk Scorer](#batch-scorer) | 971 | ●●○○○ | N items in, a typed judgment on each, ranked or filtered out. |
+| [Pipeline Quality Gate](#ci-gate) | 210 | ●○○○○ | An artifact meets N typed checks and passes or fails with a reason. |
+| [Router / Gate](#router-gate) | 186 | ●○○○○ | Middleware that picks a branch, or blocks a risky one, before work happens. |
+| [Real-time Control Loop](#control-loop) | 186 | ●●●○○ | Game or physical state in, next move out, at frame rate. |
+| [Semantic Search & Rank](#semantic-search) | 134 | ●●○○○ | Score every candidate against what the user meant, then order them. |
+| [Live Feed Filter](#feed-filter) | 124 | ●●○○○ | Classify DOM nodes as they appear and hide, tag or recolour them. |
+| [Agent Context Manager](#context-manager) | 101 | ●●○○○ | Score what an agent is carrying and drop what is not earning its place. |
+| [Adaptive Interface](#adaptive-ui) | 72 | ●●●○○ | A typed decision chooses what the UI shows or asks next. |
 | [Browser / Computer Agent](#browser-agent) | 56 | ●●●●○ | Indexed DOM snapshot in, one typed action out, loop until done. |
 | [Voice & Intent Dispatch](#voice-intent) | 38 | ●●●●○ | Speech in, a typed intent out, a function call executed. |
 
@@ -29,9 +29,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `source -> normalise -> fan-out typed calls -> store -> browse` |
-| Projects | 952 of 2026 |
+| Projects | 971 of 2078 |
 | Difficulty | 2 of 5 |
-| Commonest in | Software Engineering (519), Agent Infrastructure (131), Email, Chat & Support (48), Creative & Media (35), Games & Simulation (29) |
+| Commonest in | Software Engineering (533), Agent Infrastructure (133), Email, Chat & Support (48), Creative & Media (36), Games & Simulation (29) |
 | Usual capabilities | Typed classification & decision, Data store, Orchestration & scheduling, Fetch, scrape & ingest, Text generation, Image understanding |
 
 **Why a typed model suits it.** Cost and latency scale linearly with N. At 3,000+ items an LLM is unaffordable; a typed call at ~$0.042/M input is not.
@@ -53,9 +53,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `diff/doc -> N parallel typed checks -> aggregate -> pass | fail` |
-| Projects | 199 of 2026 |
+| Projects | 210 of 2078 |
 | Difficulty | 1 of 5 |
-| Commonest in | Software Engineering (72), Agent Infrastructure (50), Security & Trust (20), Email, Chat & Support (11), Finance & Markets (7) |
+| Commonest in | Software Engineering (75), Agent Infrastructure (53), Security & Trust (20), Email, Chat & Support (11), Finance & Markets (7) |
 | Usual capabilities | Typed classification & decision, Safety & guardrails, Orchestration & scheduling, Search & retrieval, Text generation, Browser automation |
 
 **Why a typed model suits it.** All N checks ride in one call, so adding a check is nearly free.
@@ -69,6 +69,30 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 - [jevmail](https://github.com/fazlerocks/jevmail) — Open-source AI email triage for Gmail. Sorts your inbox into Needs reply, Updates, Promos, Sales and Spam with Jev, Type
 - [jev-harness](https://github.com/AntonioCoppe/jev-harness) — Decision harness for TypeSafe Jev — confidence gates, shadow mode, recipes, and evals. Claude CLI 48.9s → Jev 1.3s on th
 
+## Router / Gate
+<a id="router-gate"></a>
+
+**Middleware that picks a branch, or blocks a risky one, before work happens.**
+
+| | |
+|---|---|
+| Shape | `intercept -> typed call -> dispatch | block | escalate` |
+| Projects | 186 of 2078 |
+| Difficulty | 1 of 5 |
+| Commonest in | Agent Infrastructure (116), Security & Trust (24), Email, Chat & Support (10), Software Engineering (7), Education & Learning (7) |
+| Usual capabilities | Typed classification & decision, Safety & guardrails, Orchestration & scheduling, Search & retrieval, Fetch, scrape & ingest, Browser automation |
+
+**Why a typed model suits it.** It sits on the hot path of every request, so it must be near-free and never the bottleneck.
+
+**Shipped examples**
+
+- [A shopping-agent safety check](https://x.com/godlovesu_n/status/2100972334182219919) — A shopping-agent safety check.
+- [awesome-jev](https://github.com/cobanov/awesome-jev) — A curated, source-backed list of projects built with Jev, TypeSafe AI's System One model for typed decisions.
+- [jev-router](https://github.com/prismhq/jev-router) — Open-source LLM router that uses TypeSafe's Jev to pick a model, on top of LiteLLM
+- [jev-flash-router](https://github.com/Ravinder82/jev-flash-router) — open-sourced jev-flash-router: an MCP server for TypeSafe's new Jev model. AI coding agents waste hundreds of reasoning 
+- [jev-1.13-mini-benchmark](https://github.com/alperenerol/jev-1.13-mini-benchmark) — Mini benchmark of TypeSafe's jev-1.13 structured decision model (OpenRouter Decisions API) on labeled support-triage: no
+- [Cerebellum-2B](https://github.com/mkeco/Cerebellum-2B) — Non-Autoregressive AI Agent Decision Model. Open-source SOTA alternative to TypeSafe Jev. O(1) Tool Routing & DOM Automa
+
 ## Real-time Control Loop
 <a id="control-loop"></a>
 
@@ -77,7 +101,7 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `sense state -> serialise -> typed move choice -> actuate -> repeat` |
-| Projects | 185 of 2026 |
+| Projects | 186 of 2078 |
 | Difficulty | 3 of 5 |
 | Commonest in | Games & Simulation (123), Robotics & Control (38), Software Engineering (6), Travel & Mobility (4), Agent Infrastructure (3) |
 | Usual capabilities | Typed classification & decision, Realtime transport, Orchestration & scheduling, Image understanding, Browser automation, Safety & guardrails |
@@ -93,30 +117,6 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 - [Show HN: Jev, Fly Me to the Moon](https://fly.rahmanyoonus.com) — I built Odyssey, a browser based journey from Earth to lunar orbit. It uses Jev from TypeSafe AI to choose between navig
 - [JevPilot](https://github.com/standardagents/jevpilot) — Three.js driving simulation where Jev chooses among candidate paths and speeds while local code handles vehicle dynamics
 
-## Router / Gate
-<a id="router-gate"></a>
-
-**Middleware that picks a branch, or blocks a risky one, before work happens.**
-
-| | |
-|---|---|
-| Shape | `intercept -> typed call -> dispatch | block | escalate` |
-| Projects | 181 of 2026 |
-| Difficulty | 1 of 5 |
-| Commonest in | Agent Infrastructure (115), Security & Trust (23), Email, Chat & Support (9), Software Engineering (7), Education & Learning (6) |
-| Usual capabilities | Typed classification & decision, Safety & guardrails, Orchestration & scheduling, Search & retrieval, Browser automation, Fetch, scrape & ingest |
-
-**Why a typed model suits it.** It sits on the hot path of every request, so it must be near-free and never the bottleneck.
-
-**Shipped examples**
-
-- [A shopping-agent safety check](https://x.com/godlovesu_n/status/2100972334182219919) — A shopping-agent safety check.
-- [awesome-jev](https://github.com/cobanov/awesome-jev) — A curated, source-backed list of projects built with Jev, TypeSafe AI's System One model for typed decisions.
-- [jev-router](https://github.com/prismhq/jev-router) — Open-source LLM router that uses TypeSafe's Jev to pick a model, on top of LiteLLM
-- [jev-flash-router](https://github.com/Ravinder82/jev-flash-router) — open-sourced jev-flash-router: an MCP server for TypeSafe's new Jev model. AI coding agents waste hundreds of reasoning 
-- [jev-1.13-mini-benchmark](https://github.com/alperenerol/jev-1.13-mini-benchmark) — Mini benchmark of TypeSafe's jev-1.13 structured decision model (OpenRouter Decisions API) on labeled support-triage: no
-- [Cerebellum-2B](https://github.com/mkeco/Cerebellum-2B) — Non-Autoregressive AI Agent Decision Model. Open-source SOTA alternative to TypeSafe Jev. O(1) Tool Routing & DOM Automa
-
 ## Semantic Search & Rank
 <a id="semantic-search"></a>
 
@@ -125,9 +125,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `candidates -> typed relevance score each -> sort -> present` |
-| Projects | 132 of 2026 |
+| Projects | 134 of 2078 |
 | Difficulty | 2 of 5 |
-| Commonest in | Software Engineering (49), Research & Knowledge (22), Agent Infrastructure (12), Marketing, SEO & Ads (9), Hiring & Careers (8) |
+| Commonest in | Software Engineering (49), Research & Knowledge (24), Agent Infrastructure (12), Marketing, SEO & Ads (9), Hiring & Careers (8) |
 | Usual capabilities | Typed classification & decision, Search & retrieval, Orchestration & scheduling, Fetch, scrape & ingest, Browser automation, Data store |
 
 **Why a typed model suits it.** Scoring every candidate individually is only affordable when each score is ~free.
@@ -149,9 +149,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `MutationObserver -> extract node text -> typed call -> mutate DOM` |
-| Projects | 115 of 2026 |
+| Projects | 124 of 2078 |
 | Difficulty | 2 of 5 |
-| Commonest in | Social & Feeds (39), Software Engineering (28), Agent Infrastructure (17), Email, Chat & Support (11), Security & Trust (6) |
+| Commonest in | Social & Feeds (39), Software Engineering (31), Agent Infrastructure (20), Email, Chat & Support (13), Security & Trust (7) |
 | Usual capabilities | Typed classification & decision, Browser automation, Realtime transport, Safety & guardrails, Fetch, scrape & ingest, Search & retrieval |
 
 **Why a typed model suits it.** Must decide in the gap before the user scrolls past. ~100ms works, 2s does not.
@@ -173,9 +173,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `context items -> relevance score each -> prune -> resume` |
-| Projects | 99 of 2026 |
+| Projects | 101 of 2078 |
 | Difficulty | 2 of 5 |
-| Commonest in | Agent Infrastructure (60), Hiring & Careers (7), Research & Knowledge (7), Email, Chat & Support (6), Software Engineering (5) |
+| Commonest in | Agent Infrastructure (61), Email, Chat & Support (7), Hiring & Careers (7), Research & Knowledge (7), Software Engineering (5) |
 | Usual capabilities | Typed classification & decision, Data store, Search & retrieval, Orchestration & scheduling, Text generation, Realtime transport |
 
 **Why a typed model suits it.** Pruning must cost far less than the tokens it saves, or it is pointless.
@@ -197,9 +197,9 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `user input -> typed call -> pick next component/field/format -> render` |
-| Projects | 69 of 2026 |
+| Projects | 72 of 2078 |
 | Difficulty | 3 of 5 |
-| Commonest in | Software Engineering (19), Documents & Back-office (17), Agent Infrastructure (11), Email, Chat & Support (5), Research & Knowledge (4) |
+| Commonest in | Software Engineering (21), Documents & Back-office (17), Agent Infrastructure (11), Email, Chat & Support (6), Research & Knowledge (4) |
 | Usual capabilities | Typed classification & decision, Realtime transport, Orchestration & scheduling, Text generation, Browser automation, Search & retrieval |
 
 **Why a typed model suits it.** It runs between keystrokes, so the decision has to beat the user's typing.
@@ -221,7 +221,7 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `snapshot -> index elements -> single typed call -> execute -> repeat` |
-| Projects | 56 of 2026 |
+| Projects | 56 of 2078 |
 | Difficulty | 4 of 5 |
 | Commonest in | Agent Infrastructure (19), Software Engineering (12), Personal Productivity (7), Commerce & Shopping (4), Research & Knowledge (3) |
 | Usual capabilities | Typed classification & decision, Browser automation, Page state extraction, Text generation, Search & retrieval, Orchestration & scheduling |
@@ -245,7 +245,7 @@ Recognising which shape a new idea is saves rediscovering an architecture that a
 | | |
 |---|---|
 | Shape | `mic -> VAD -> STT -> typed intent + slots -> dispatch -> TTS` |
-| Projects | 38 of 2026 |
+| Projects | 38 of 2078 |
 | Difficulty | 4 of 5 |
 | Commonest in | Software Engineering (15), Agent Infrastructure (5), Personal Productivity (5), Food & Nutrition (2), Games & Simulation (2) |
 | Usual capabilities | Typed classification & decision, Voice input, Realtime transport, Browser automation, Orchestration & scheduling, Voice output |

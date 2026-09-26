@@ -56487,5 +56487,1284 @@
   ],
   "stars": 0,
   "added_at": "2026-09-25"
+ },
+ {
+  "id": "github:1373977947",
+  "url": "https://github.com/itsmostafa/system-one-connector",
+  "handle": "itsmostafa",
+  "author": "itsmostafa",
+  "title": "system-one-connector",
+  "category": "",
+  "description": "System One MCP connector to evaluate anything fast and cheap. Give your AI agent direct access to models like: Typesafe AI's Jev model and Laya",
+  "date": "2026-09-17",
+  "tags": [
+   "mcp",
+   "mcp-tools"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "System One MCP connector to evaluate anything fast and cheap. Give your AI agent direct access to models like: Typesafe AI's Jev model and Laya",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "github"
+  ],
+  "stars": 309,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1387763129",
+  "url": "https://github.com/UditAkhourii/quicksilver",
+  "handle": "UditAkhourii",
+  "author": "UditAkhourii",
+  "title": "quicksilver",
+  "category": "",
+  "description": "Claude Code skill: hand bulk judgment calls to Jev. 86% fewer Claude tokens on a 12-task benchmark, up to 20x faster. One-line npx install.",
+  "date": "2026-09-25",
+  "tags": [
+   "ai-agents",
+   "claude",
+   "claude-code",
+   "developer-tools",
+   "jev",
+   "llm",
+   "skill",
+   "tokens",
+   "typesafe"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Claude Code skill: hand bulk judgment calls to Jev. 86% fewer Claude tokens on a 12-task benchmark, up to 20x faster. One-line npx install.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 48,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1378018272",
+  "url": "https://github.com/datawhalechina/jev-cookbook",
+  "handle": "datawhalechina",
+  "author": "datawhalechina",
+  "title": "jev-cookbook",
+  "category": "",
+  "description": "Jev 模型（TypeSafe AI）官方使用文档的中文翻译 | Unofficial Chinese translation of the official Jev (TypeSafe AI) docs — https://docs.typesafe.ai",
+  "date": "2026-09-20",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Jev 模型（TypeSafe AI）官方使用文档的中文翻译 | Unofficial Chinese translation of the official Jev (TypeSafe AI) docs — https://docs.typesafe.ai",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 14,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1377230523",
+  "url": "https://github.com/sanmai/typesafe-ai-php",
+  "handle": "sanmai",
+  "author": "sanmai",
+  "title": "typesafe-ai-php",
+  "category": "",
+  "description": "Jev for PHP, TypeSafe AI PHP SDK",
+  "date": "2026-09-19",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Jev for PHP, TypeSafe AI PHP SDK",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 14,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1380282856",
+  "url": "https://github.com/Elue-dev/jev_elixir",
+  "handle": "Elue-dev",
+  "author": "Elue-dev",
+  "title": "jev_elixir",
+  "category": "",
+  "description": "jev_elixir is a small, idiomatic interface for making typed decisions with Jev. It exposes application-level functions such as Jev.ask?/2 and Jev.analyze/3, while provider adapters handle the external API wire format.  The first release supports TypeSafe's System One API and Open",
+  "date": "2026-09-21",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "jev_elixir is a small, idiomatic interface for making typed decisions with Jev. It exposes application-level functions such as Jev.ask?/2 and Jev.analyze/3, while provider adapters handle the external API wire format.  The first release supports TypeSafe's System One API and OpenRouter's Decisions API. Both providers support all three System One qu",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "github"
+  ],
+  "stars": 7,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1385626192",
+  "url": "https://github.com/Emenowicz/jev-sap-commerce",
+  "handle": "Emenowicz",
+  "author": "Emenowicz",
+  "title": "jev-sap-commerce",
+  "category": "",
+  "description": "SAP Commerce extension using TypeSafe's Jev to moderate product reviews and suggest product categories and classification attribute values: dry runs on your own data first, an audit record per decision. Plus a Claude Code skill.",
+  "date": "2026-09-24",
+  "tags": [
+   "catalog-enrichment",
+   "content-moderation",
+   "hybris",
+   "jev",
+   "product-attributes",
+   "product-categorization",
+   "product-classification",
+   "sap-commerce",
+   "sap-commerce-cloud",
+   "typesafe-ai"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "SAP Commerce extension using TypeSafe's Jev to moderate product reviews and suggest product categories and classification attribute values: dry runs on your own data first, an audit record per decision. Plus a Claude Code skill.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 7,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1387750574",
+  "url": "https://github.com/charlesdove977/claude-x-jev",
+  "handle": "charlesdove977",
+  "author": "charlesdove977",
+  "title": "claude-x-jev",
+  "category": "",
+  "description": "Fast, cheap, typed decisions for Claude Code. Jev (TypeSafe's decision model on OpenRouter) sorts, checks, scores, gates and verifies at 0.3s and a fraction of a cent per item. Claude keeps the reading, writing and judgment.",
+  "date": "2026-09-25",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Fast, cheap, typed decisions for Claude Code. Jev (TypeSafe's decision model on OpenRouter) sorts, checks, scores, gates and verifies at 0.3s and a fraction of a cent per item. Claude keeps the reading, writing and judgment.",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "github"
+  ],
+  "stars": 7,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1385131216",
+  "url": "https://github.com/xz-dev/pi-jev-todo-audit",
+  "handle": "xz-dev",
+  "author": "xz-dev",
+  "title": "pi-jev-todo-audit",
+  "category": "",
+  "description": "Pi extension that audits rpiv-todo board drift every 10 agent loops using TypeSafe's jev model, injecting corrective nudges when the agent wanders off-task",
+  "date": "2026-09-24",
+  "tags": [
+   "agent-audit",
+   "pi",
+   "pi-extension",
+   "task-drift",
+   "todo",
+   "typesafe",
+   "typescript"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Pi extension that audits rpiv-todo board drift every 10 agent loops using TypeSafe's jev model, injecting corrective nudges when the agent wanders off-task",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 3,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1387969063",
+  "url": "https://github.com/Davidasx/pi-typesafe-approve",
+  "handle": "Davidasx",
+  "author": "Davidasx",
+  "title": "pi-typesafe-approve",
+  "category": "",
+  "description": "Pi extension: auto-approve routine Bash commands with a System One (Jev) decision model, escalate the rest to a human",
+  "date": "2026-09-25",
+  "tags": [
+   "approval",
+   "jev",
+   "pi-extension",
+   "typesafe-ai",
+   "typesafe-jev"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Pi extension: auto-approve routine Bash commands with a System One (Jev) decision model, escalate the rest to a human",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1380480901",
+  "url": "https://github.com/mingleiw/jev-oncall",
+  "handle": "mingleiw",
+  "author": "mingleiw",
+  "title": "jev-oncall",
+  "category": "",
+  "description": "Incident triage on TypeSafe Jev — the model judges, plain code decides. Routing on probability distributions with a human-review middle band and fail-open defaults.",
+  "date": "2026-09-21",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Incident triage on TypeSafe Jev — the model judges, plain code decides. Routing on probability distributions with a human-review middle band and fail-open defaults.",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "awesome"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1375638206",
+  "url": "https://github.com/eyenpi/actionreflex",
+  "handle": "eyenpi",
+  "author": "eyenpi",
+  "title": "actionreflex",
+  "category": "",
+  "description": "A pre-execution gate for AI agent actions, powered by TypeSafe's Jev (System One) model.",
+  "date": "2026-09-18",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "A pre-execution gate for AI agent actions, powered by TypeSafe's Jev (System One) model.",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1384279671",
+  "url": "https://github.com/ngallodev-software/agent-workflow-typesafe-ai",
+  "handle": "ngallodev-software",
+  "author": "ngallodev-software",
+  "title": "agent-workflow-typesafe-ai",
+  "category": "",
+  "description": "jev typesafe-ai implementation to enhance pure deterministic decisions and other modeling",
+  "date": "2026-09-23",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "jev typesafe-ai implementation to enhance pure deterministic decisions and other modeling",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 1,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1388722464",
+  "url": "https://github.com/jorgefspereira/opencode-auto-jev",
+  "handle": "jorgefspereira",
+  "author": "jorgefspereira",
+  "title": "opencode-auto-jev",
+  "category": "",
+  "description": "OpenCode plugin that adds an Auto (Jev) virtual model which routes each prompt to a configured real model using TypeSafe AI (Jev).",
+  "date": "2026-09-26",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "OpenCode plugin that adds an Auto (Jev) virtual model which routes each prompt to a configured real model using TypeSafe AI (Jev).",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 1,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1383551282",
+  "url": "https://github.com/DhanushNehru/jev-sec-audit",
+  "handle": "DhanushNehru",
+  "author": "DhanushNehru",
+  "title": "jev-sec-audit",
+  "category": "",
+  "description": "Lightning-fast AI supply chain security auditor using Jev (System 1 models). Catch typosquatting and malicious scripts in milliseconds.",
+  "date": "2026-09-23",
+  "tags": [
+   "ai",
+   "cli",
+   "devsecops",
+   "github-actions",
+   "jev",
+   "security",
+   "supply-chain",
+   "system-one"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Lightning-fast AI supply chain security auditor using Jev (System 1 models). Catch typosquatting and malicious scripts in milliseconds.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 3,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1386765250",
+  "url": "https://github.com/gitchw/LCT",
+  "handle": "gitchw",
+  "author": "gitchw",
+  "title": "LCT",
+  "category": "",
+  "description": "Jev-LCT: Open System-One Decision Engine with Free Calibrated Confidence from Recurrent Trajectories",
+  "date": "2026-09-25",
+  "tags": [
+   "agent-routing",
+   "decision-model",
+   "fast-inference",
+   "jev",
+   "open-jev",
+   "qwen",
+   "system-one",
+   "typesafe-ai",
+   "uncertainty-calibration"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Jev-LCT: Open System-One Decision Engine with Free Calibrated Confidence from Recurrent Trajectories",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 3,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1384713024",
+  "url": "https://github.com/SiliconLabAI/OpenJev-Cactus",
+  "handle": "SiliconLabAI",
+  "author": "SiliconLabAI",
+  "title": "OpenJev-Cactus",
+  "category": "",
+  "description": "High Performance OpenAI and System One Compatible CPU Edge Device Service",
+  "date": "2026-09-24",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "High Performance OpenAI and System One Compatible CPU Edge Device Service",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1383987235",
+  "url": "https://github.com/mmornati/system-one-router",
+  "handle": "mmornati",
+  "author": "mmornati",
+  "title": "system-one-router",
+  "category": "",
+  "description": "A fast System One decision model (Jev or local Laya) picks which LLM answers each prompt: OpenAI-compatible Go gateway + decision benchmark",
+  "date": "2026-09-23",
+  "tags": [
+   "ai-gateway",
+   "go",
+   "llm",
+   "llm-router",
+   "model-routing",
+   "openrouter"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "A fast System One decision model (Jev or local Laya) picks which LLM answers each prompt: OpenAI-compatible Go gateway + decision benchmark",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "awesome"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1381271129",
+  "url": "https://github.com/Shanghua-Gao/RSI-Jev",
+  "handle": "Shanghua-Gao",
+  "author": "Shanghua-Gao",
+  "title": "RSI-Jev",
+  "category": "",
+  "description": "Typed-decision models (noul / choice / score) trained by a self-improving loop of AI agents — checkpoints, the code that produced them, and every version that failed.",
+  "date": "2026-09-22",
+  "tags": [
+   "ai-agents",
+   "autonomous-research",
+   "decision-model",
+   "jev",
+   "llm",
+   "recursive-self-improvement",
+   "system-one",
+   "typed-decisions"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Typed-decision models (noul / choice / score) trained by a self-improving loop of AI agents — checkpoints, the code that produced them, and every version that failed.",
+  "media": [],
+  "discovered_via": [
+   "github",
+   "awesome"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1382391173",
+  "url": "https://github.com/Fox-Islam/jevlint",
+  "handle": "Fox-Islam",
+  "author": "Fox-Islam",
+  "title": "jevlint",
+  "category": "",
+  "description": "A linting tool combining static analysis and Jev queries to help improve... Jev queries",
+  "date": "2026-09-22",
+  "tags": [
+   "cli",
+   "jev",
+   "linter",
+   "llm",
+   "php",
+   "prompt-engineering",
+   "static-analysis",
+   "structured-output",
+   "system-one",
+   "typesafe"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "A linting tool combining static analysis and Jev queries to help improve... Jev queries",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1380380958",
+  "url": "https://github.com/aitofy-dev/jev-awesome-skills",
+  "handle": "aitofy-dev",
+  "author": "aitofy-dev",
+  "title": "jev-awesome-skills",
+  "category": "",
+  "description": "Open-source Jev skills for Claude Code, Codex, Cursor, and Grok. TypeSafe System One: choice, noul, score. Proceed, ask, or stop.",
+  "date": "2026-09-21",
+  "tags": [
+   "agent-skills",
+   "awesome-list",
+   "claude",
+   "claude-code",
+   "codex",
+   "cursor",
+   "grok",
+   "jev",
+   "llm",
+   "noul",
+   "system-one",
+   "typesafe",
+   "typesafe-ai"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Open-source Jev skills for Claude Code, Codex, Cursor, and Grok. TypeSafe System One: choice, noul, score. Proceed, ask, or stop.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1378464214",
+  "url": "https://github.com/LuticaCANARD/L2S1",
+  "handle": "LuticaCANARD",
+  "author": "LuticaCANARD",
+  "title": "L2S1",
+  "category": "",
+  "description": "jev-style adaptor for llama.cpp interface",
+  "date": "2026-09-20",
+  "tags": [
+   "ai",
+   "jev",
+   "laya",
+   "llama",
+   "llama-cpp",
+   "local-ai",
+   "local-first",
+   "local-llm",
+   "rust",
+   "system-one"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "jev-style adaptor for llama.cpp interface",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1377836243",
+  "url": "https://github.com/hiroki-abe-58/sokudan",
+  "handle": "hiroki-abe-58",
+  "author": "hiroki-abe-58",
+  "title": "sokudan",
+  "category": "",
+  "description": "Japanese System One decision model (Jev-style): typed answers and probabilities in one forward pass, no text generation. Includes bench_ja/bench_en and a Laya position-bias repro.",
+  "date": "2026-09-20",
+  "tags": [
+   "decision-model",
+   "japanese",
+   "jev",
+   "modernbert",
+   "nlp"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Japanese System One decision model (Jev-style): typed answers and probabilities in one forward pass, no text generation. Includes bench_ja/bench_en and a Laya position-bias repro.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1383036197",
+  "url": "https://github.com/swisnl/DecisionEngine",
+  "handle": "swisnl",
+  "author": "swisnl",
+  "title": "DecisionEngine",
+  "category": "",
+  "description": "Typed, probabilistic decisions (Choice / Score / Noul) for System One tasks, powered by TypeSafe Jev, with OpenAI and Anthropic as alternative engines",
+  "date": "2026-09-23",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Typed, probabilistic decisions (Choice / Score / Noul) for System One tasks, powered by TypeSafe Jev, with OpenAI and Anthropic as alternative engines",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 2,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1387755294",
+  "url": "https://github.com/jbpayton/jevless",
+  "handle": "jbpayton",
+  "author": "jbpayton",
+  "title": "jevless",
+  "category": "",
+  "description": "Jev-style typed decisions (Choice / Noul / Score) from any model whose API exposes logprobs, plus a local /v1/systemone server",
+  "date": "2026-09-25",
+  "tags": [
+   "agents",
+   "decision-making",
+   "llm",
+   "lm-studio",
+   "logprobs"
+  ],
+  "format": "repo",
+  "language": "en",
+  "postText": "Jev-style typed decisions (Choice / Noul / Score) from any model whose API exposes logprobs, plus a local /v1/systemone server",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "github:1388942499",
+  "url": "https://github.com/mategog/laya-desktop",
+  "handle": "mategog",
+  "author": "mategog",
+  "title": "laya-desktop",
+  "category": "",
+  "description": "Local decision workbench for Laya: run typed decisions offline, lint questions, label, calibrate, and serve /v1/systemone + MCP from a desktop app.",
+  "date": "2026-09-26",
+  "tags": [],
+  "format": "repo",
+  "language": "en",
+  "postText": "Local decision workbench for Laya: run typed decisions offline, lint questions, label, calibrate, and serve /v1/systemone + MCP from a desktop app.",
+  "media": [],
+  "discovered_via": [
+   "github"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "hackernews:49848279",
+  "url": "https://github.com/Contrastive-LM/CLM",
+  "handle": "yarapavan",
+  "author": "yarapavan",
+  "title": "Contrastive Language Models: A Fast, Generalizable System One Model",
+  "category": "",
+  "description": "",
+  "date": "2026-09-25",
+  "tags": [
+   "story",
+   "author_yarapavan",
+   "story_49848279"
+  ],
+  "format": "post",
+  "language": "en",
+  "postText": "",
+  "media": [],
+  "discovered_via": [
+   "hackernews"
+  ],
+  "stars": 3,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@ejstembler/pi-classifier-router",
+  "url": "git+https://gitlab.com/ejstembler/pi-classifier-router.git",
+  "handle": "ejstembler",
+  "author": "ejstembler",
+  "title": "@ejstembler/pi-classifier-router",
+  "category": "",
+  "description": "Classifier-driven model router for pi and Oh My Pi (omp): routes each prompt to a model using Jev (TypeSafe) or Laya typed decisions, with circuit breaking and fallback chains",
+  "date": "2026-09-23",
+  "tags": [
+   "pi-package",
+   "omp-extension",
+   "pi-extension",
+   "jev",
+   "laya",
+   "router"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Classifier-driven model router for pi and Oh My Pi (omp): routes each prompt to a model using Jev (TypeSafe) or Laya typed decisions, with circuit breaking and fallback chains",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:cascade-search-jev",
+  "url": "git+https://github.com/zaidmukaddam/cascade-search.git",
+  "handle": "zaidmukaddam",
+  "author": "zaidmukaddam",
+  "title": "cascade-search-jev",
+  "category": "",
+  "description": "Escalation client for cascade-search: asks Jev (TypeSafe System One) through Vercel AI Gateway.",
+  "date": "2026-09-18",
+  "tags": [
+   "cascade-search",
+   "jev",
+   "typesafe",
+   "ai-gateway",
+   "system-one"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Escalation client for cascade-search: asks Jev (TypeSafe System One) through Vercel AI Gateway.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:pi-jev-typesafe",
+  "url": "git+https://github.com/nardinmarcus/pi-jev-typesafe.git",
+  "handle": "nardinmarcus",
+  "author": "nardinmarcus",
+  "title": "pi-jev-typesafe",
+  "category": "",
+  "description": "TypeSafe Jev (System One judgments) for Pi: zero-dependency jev_ask tool with question linting, model discovery, probability-bar rendering, and daily budget caps.",
+  "date": "2026-09-18",
+  "tags": [
+   "pi-package",
+   "pi-extension",
+   "typesafe",
+   "jev",
+   "system-one",
+   "structured-decisions"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "TypeSafe Jev (System One judgments) for Pi: zero-dependency jev_ask tool with question linting, model discovery, probability-bar rendering, and daily budget caps.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:jevmod",
+  "url": "git+https://github.com/ohernandezdev/jevmod.git",
+  "handle": "ohernandezdev",
+  "author": "ohernandezdev",
+  "title": "jevmod",
+  "category": "",
+  "description": "Content moderation for user text, powered by Jev (TypeSafe System One): spam, scam, harassment, adult content, off-topic, self-harm, doxxing, minors, plus your own rules in plain language.",
+  "date": "2026-09-18",
+  "tags": [
+   "moderation",
+   "content-moderation",
+   "spam",
+   "toxicity",
+   "typesafe",
+   "jev"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Content moderation for user text, powered by Jev (TypeSafe System One): spam, scam, harassment, adult content, off-topic, self-harm, doxxing, minors, plus your own rules in plain language.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:pi-jev-task-router",
+  "url": "git+https://github.com/rizafahmi/pi-jev-task-router.git",
+  "handle": "rizafahmi",
+  "author": "rizafahmi",
+  "title": "pi-jev-task-router",
+  "category": "",
+  "description": "Per-prompt model routing for the Pi coding agent: classify each prompt with Jev (TypeSafe System One), map it to a model tier, and switch models before the turn runs.",
+  "date": "2026-09-19",
+  "tags": [
+   "pi-package",
+   "pi-extension",
+   "pi",
+   "llm-routing",
+   "model-routing",
+   "jev"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Per-prompt model routing for the Pi coding agent: classify each prompt with Jev (TypeSafe System One), map it to a model tier, and switch models before the turn runs.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:jev-mcp",
+  "url": "git+https://github.com/rashedInt32/jev-mcp.git",
+  "handle": "rashed.parvez",
+  "author": "rashed.parvez",
+  "title": "jev-mcp",
+  "category": "",
+  "description": "MCP server exposing TypeSafe Jev typed judgments: classify, score, check, a batched multi-question ask, a many-item triage with server-side file reads, and model discovery.",
+  "date": "2026-09-26",
+  "tags": [
+   "mcp",
+   "model-context-protocol",
+   "typesafe",
+   "jev",
+   "system-one",
+   "classification",
+   "confidence",
+   "ai"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "MCP server exposing TypeSafe Jev typed judgments: classify, score, check, a batched multi-question ask, a many-item triage with server-side file reads, and model discovery.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@bismawy/pi-jev-eye",
+  "url": "git+https://github.com/bismawy/pi-jev-eye.git",
+  "handle": "bismawy",
+  "author": "bismawy",
+  "title": "@bismawy/pi-jev-eye",
+  "category": "",
+  "description": "Ultra-lean, high-precision supervisor for Pi coding agent using local regex filters, verification state tracking, and TypeSafe Jev semantic gate.",
+  "date": "2026-09-24",
+  "tags": [
+   "pi-package",
+   "pi-extension",
+   "pi",
+   "pi-coding-agent",
+   "typesafe",
+   "jev",
+   "guardrail",
+   "supervisor",
+   "security"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Ultra-lean, high-precision supervisor for Pi coding agent using local regex filters, verification state tracking, and TypeSafe Jev semantic gate.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@narumitw/pi-typesafe",
+  "url": "git+https://github.com/narumiruna/pi-extensions.git",
+  "handle": "GitHub Actions",
+  "author": "GitHub Actions",
+  "title": "@narumitw/pi-typesafe",
+  "category": "",
+  "description": "Pi extension for typed Jev decisions through TypeSafe, with an opt-in OpenRouter fallback.",
+  "date": "2026-09-19",
+  "tags": [
+   "pi-package",
+   "pi-extension",
+   "pi",
+   "openrouter",
+   "typesafe",
+   "jev",
+   "classification",
+   "structured-decisions"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Pi extension for typed Jev decisions through TypeSafe, with an opt-in OpenRouter fallback.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@drkmttr/adhere",
+  "url": "git+https://github.com/darkmatter/adhere.git",
+  "handle": "GitHub Actions",
+  "author": "GitHub Actions",
+  "title": "@drkmttr/adhere",
+  "category": "",
+  "description": "Lints a repository against the rules in .adhere/, judged by Jev.",
+  "date": "2026-09-26",
+  "tags": [],
+  "format": "package",
+  "language": "en",
+  "postText": "Lints a repository against the rules in .adhere/, judged by Jev.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@effect-uai/typesafe-ai",
+  "url": "https://github.com/betalyra/effect-uai",
+  "handle": "GitHub Actions",
+  "author": "GitHub Actions",
+  "title": "@effect-uai/typesafe-ai",
+  "category": "",
+  "description": "TypeSafe AI provider for @effect-uai/core (Jev System One decision model).",
+  "date": "2026-09-18",
+  "tags": [
+   "ai",
+   "classification",
+   "decision-model",
+   "effect",
+   "jev",
+   "typesafe"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "TypeSafe AI provider for @effect-uai/core (Jev System One decision model).",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:@arizeai/openinference-instrumentation-typesafe",
+  "url": "git+https://github.com/Arize-ai/openinference.git",
+  "handle": "mikeldking",
+  "author": "mikeldking",
+  "title": "@arizeai/openinference-instrumentation-typesafe",
+  "category": "",
+  "description": "OpenInference instrumentation for the TypeSafe AI SDK",
+  "date": "2026-09-18",
+  "tags": [
+   "ai",
+   "instrumentation",
+   "llm",
+   "openinference",
+   "opentelemetry",
+   "typesafe"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "OpenInference instrumentation for the TypeSafe AI SDK",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:jev-is-odd",
+  "url": "git+https://github.com/robipop22/Jev-is-odd.git",
+  "handle": "poprobertdaniel",
+  "author": "poprobertdaniel",
+  "title": "jev-is-odd",
+  "category": "",
+  "description": "Ask Jev by TypeSafe AI whether a number is odd. One number. One decision.",
+  "date": "2026-09-18",
+  "tags": [
+   "jev",
+   "typesafe",
+   "ai",
+   "is-odd",
+   "odd",
+   "even",
+   "typescript"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Ask Jev by TypeSafe AI whether a number is odd. One number. One decision.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:openclaw-typesafe-ai",
+  "url": "git+https://github.com/Olli0103/openclaw-typesafe-ai.git",
+  "handle": "olli0103",
+  "author": "olli0103",
+  "title": "openclaw-typesafe-ai",
+  "category": "",
+  "description": "Optional typed Jev decisions for OpenClaw",
+  "date": "2026-09-18",
+  "tags": [
+   "openclaw",
+   "openclaw-plugin",
+   "typesafe-ai",
+   "jev",
+   "decision-tools"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "Optional typed Jev decisions for OpenClaw",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "npm:n8n-nodes-jev-classification",
+  "url": "git+https://github.com/khmuhtadin/n8n-nodes-jev-classification.git",
+  "handle": "khmuhtadin",
+  "author": "khmuhtadin",
+  "title": "n8n-nodes-jev-classification",
+  "category": "",
+  "description": "n8n community node for Jev by TypeSafe AI: classify, score and check text with calibrated probabilities. Parallel requests and multi-item batching for high-volume workflows.",
+  "date": "2026-09-25",
+  "tags": [
+   "n8n-community-node-package",
+   "n8n",
+   "jev",
+   "typesafe",
+   "typesafe-ai",
+   "system-one",
+   "classification",
+   "text-classifier",
+   "routing",
+   "scoring",
+   "ai"
+  ],
+  "format": "package",
+  "language": "en",
+  "postText": "n8n community node for Jev by TypeSafe AI: classify, score and check text with calibrated probabilities. Parallel requests and multi-item batching for high-volume workflows.",
+  "media": [],
+  "discovered_via": [
+   "npm"
+  ],
+  "stars": 1000,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/Yeachan-Heo/oh-my-claudecode",
+  "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+  "handle": "yibie",
+  "author": "yibie",
+  "title": "oh-my-claudecode",
+  "category": "",
+  "description": "**Codex** (6) — [Codex Jev Router](https://github.com/suenot/codex-jev-router) · [Jev Auto Router](https://github.com/miniLV/Jev-Auto-Router) · [Foreman](https://github.com/thruwire/foreman) · [fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction) · [jev-deskto",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "**Codex** (6) — [Codex Jev Router](https://github.com/suenot/codex-jev-router) · [Jev Auto Router](https://github.com/miniLV/Jev-Auto-Router) · [Foreman](https://github.com/thruwire/foreman) · [fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction) · [jev-desktop](https://github.co",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430",
+  "url": "https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430",
+  "handle": "yibie",
+  "author": "yibie",
+  "title": "TypeSafe AI draws $10bn interest",
+  "category": "",
+  "description": "News (Financial Times, via Traders Union): reports that TypeSafe is attracting funding approaches that could value it at $10bn or more, a week after Jev left stealth.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "News (Financial Times, via Traders Union): reports that TypeSafe is attracting funding approaches that could value it at $10bn or more, a week after Jev left stealth.",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://tradersunion.com/news/financial-news/show/3491019-typesafe-ai-jev-developer-automation/",
+  "url": "https://tradersunion.com/news/financial-news/show/3491019-typesafe-ai-jev-developer-automation/",
+  "handle": "yibie",
+  "author": "yibie",
+  "title": "Vercel and OpenRouter adoption numbers",
+  "category": "",
+  "description": "News: Vercel reports Jev drew more than twice the interest from paid developer accounts in its first 24 hours than any previous model launch on the service, and OpenRouter reports its token volume more than tripled over one weekend.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "News: Vercel reports Jev drew more than twice the interest from paid developer accounts in its first 24 hours than any previous model launch on the service, and OpenRouter reports its token volume more than tripled over one weekend.",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://www.reddit.com/r/ArtificialInteligence/comments/1wkhsyh/jev_typesafeai_is_revolutionary_as_llms/",
+  "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1wkhsyh/jev_typesafeai_is_revolutionary_as_llms/",
+  "handle": "yibie",
+  "author": "yibie",
+  "title": "Jev / TypesafeAI is revolutionary as LLMs",
+  "category": "",
+  "description": "Reddit r/ArtificialInteligence (182 upvotes, 195 comments): the largest single thread on the launch, arguing over whether a decision model changes what LLMs are for rather than merely being cheaper.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Reddit r/ArtificialInteligence (182 upvotes, 195 comments): the largest single thread on the launch, arguing over whether a decision model changes what LLMs are for rather than merely being cheaper.",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://laya.tools",
+  "url": "https://laya.tools",
+  "handle": "yibie",
+  "author": "yibie",
+  "title": "laya.tools",
+  "category": "",
+  "description": "Directory of about 950 projects built on the open Laya decision model (GitHub repos, npm packages, Hugging Face models and Spaces, and demos from X), browsable by platform and use case, with a Laya vs Jev comparison; independent and not affiliated with TypeSafe or ConvAI.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Directory of about 950 projects built on the open Laya decision model (GitHub repos, npm packages, Hugging Face models and Spaces, and demos from X), browsable by platform and use case, with a Laya vs Jev comparison; independent and not affiliated with TypeSafe or ConvAI.",
+  "media": [],
+  "discovered_via": [
+   "awesome",
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/VeridicalTech/Edward",
+  "url": "https://github.com/VeridicalTech/Edward",
+  "handle": "cobanov",
+  "author": "cobanov",
+  "title": "Edward",
+  "category": "",
+  "description": "External control plane for coding agents: one batched Jev call judges the whole cross-turn trajectory (continue, pause, or escalate, confidence-gated), while deterministic code owns dangerous-command blocking, budget caps, intervention execution, and an Ed25519-signed receipt cha",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "External control plane for coding agents: one batched Jev call judges the whole cross-turn trajectory (continue, pause, or escalate, confidence-gated), while deterministic code owns dangerous-command blocking, budget caps, intervention execution, and an Ed25519-signed receipt chain.",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/liaoyuhua/jev-trip",
+  "url": "https://github.com/liaoyuhua/jev-trip",
+  "handle": "cobanov",
+  "author": "cobanov",
+  "title": "jev-trip",
+  "category": "",
+  "description": "Trip planner where an LLM drafts the itinerary and Jev answers pass, flag, or unknown Choice questions to filter candidate places, check each planning step against the user's stated preferences, and catch unreasonable plans before they propagate.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Trip planner where an LLM drafts the itinerary and Jev answers pass, flag, or unknown Choice questions to filter candidate places, check each planning step against the user's stated preferences, and catch unreasonable plans before they propagate.",
+  "media": [],
+  "discovered_via": [
+   "awesome",
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://chriswijnia.com/experiments/emoji",
+  "url": "https://chriswijnia.com/experiments/emoji",
+  "handle": "cobanov",
+  "author": "cobanov",
+  "title": "1 Million Emojis",
+  "category": "",
+  "description": "Shared 1000 × 1000 emoji canvas, live for everyone: visitors paint strokes, and after each one Jev chooses a square next to it and its emoji as one Choice over named (square, emoji) pairs, its pick sampled from its probabilities ([source](https://github.com/cwdx/1-million-emojis)",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Shared 1000 × 1000 emoji canvas, live for everyone: visitors paint strokes, and after each one Jev chooses a square next to it and its emoji as one Choice over named (square, emoji) pairs, its pick sampled from its probabilities ([source](https://github.com/cwdx/1-million-emojis)).",
+  "media": [],
+  "discovered_via": [
+   "awesome",
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://chriswijnia.com/experiments/chess",
+  "url": "https://chriswijnia.com/experiments/chess",
+  "handle": "cobanov",
+  "author": "cobanov",
+  "title": "Chess with Jev",
+  "category": "",
+  "description": "Browser chess and Chess960 where code works out every legal move's facts (exchanges, mates, threats) and Jev picks one per turn as a single Choice, with its candidates drawn as arrows ([source](https://github.com/cwdx/chess-with-jev)).",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Browser chess and Chess960 where code works out every legal move's facts (exchanges, mates, threats) and Jev picks one per turn as a single Choice, with its candidates drawn as arrows ([source](https://github.com/cwdx/chess-with-jev)).",
+  "media": [],
+  "discovered_via": [
+   "awesome",
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/NicolaiLassen/open-bonsai-jev",
+  "url": "https://github.com/NicolaiLassen/open-bonsai-jev",
+  "handle": "cobanov",
+  "author": "cobanov",
+  "title": "open-bonsai-jev",
+  "category": "",
+  "description": "Applies the SemIf/OpenJev logit-reading method to PrismML's 1.75-bit Ternary Bonsai 27B GGUF under llama.cpp, returning typed choice probabilities from one forward pass on CPU, Metal, CUDA, or Vulkan; reports 74.6% on a 256-item WANLI sample.",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Applies the SemIf/OpenJev logit-reading method to PrismML's 1.75-bit Ternary Bonsai 27B GGUF under llama.cpp, returning typed choice probabilities from one forward pass on CPU, Metal, CUDA, or Vulkan; reports 74.6% on a 256-item WANLI sample.",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/semanticpolicy/semantic-policy",
+  "url": "https://github.com/semanticpolicy/semantic-policy",
+  "handle": "AbdelStark",
+  "author": "AbdelStark",
+  "title": "SemanticPolicy",
+  "category": "",
+  "description": "Alpha .NET 10 library (Apache-2.0) that writes application and agent decisions as Boolean, Choice or Score rules Jev answers, turns the probability into a verdict with thresholds measured on labelled examples by an evals CLI run from a clone, and adds checks before the model call",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "Alpha .NET 10 library (Apache-2.0) that writes application and agent decisions as Boolean, Choice or Score rules Jev answers, turns the probability into a verdict with thresholds measured on labelled examples by an evals CLI run from a clone, and adds checks before the model call, before a tool runs",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
+ },
+ {
+  "id": "awesome:https://github.com/FeiLiuEM/open-medical-jev",
+  "url": "https://github.com/FeiLiuEM/open-medical-jev",
+  "handle": "AbdelStark",
+  "author": "AbdelStark",
+  "title": "Open Medical Jev",
+  "category": "",
+  "description": "MIT-licensed independent reproduction of the Jev decision loop with two frozen open-weight readers, a fit-free confidence gate, and split-conformal candidate sets; its four-reading configuration lands within 2 points of hosted Jev 1.13.0 on three 600-item medical licensing papers",
+  "date": "",
+  "tags": [],
+  "format": "listed",
+  "language": "en",
+  "postText": "MIT-licensed independent reproduction of the Jev decision loop with two frozen open-weight readers, a fit-free confidence gate, and split-conformal candidate sets; its four-reading configuration lands within 2 points of hosted Jev 1.13.0 on three 600-item medical licensing papers without training an",
+  "media": [],
+  "discovered_via": [
+   "awesome"
+  ],
+  "stars": 0,
+  "added_at": "2026-09-26"
  }
 ]
